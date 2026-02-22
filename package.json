@@ -21,6 +21,7 @@
         "@types/react-dom": "^19",
         "eslint": "^10.0.1",
         "eslint-config-next": "^0.2.4",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
         "prettier": "^3.8.1",
         "tailwindcss": "^4",
         "typescript": "^5"
