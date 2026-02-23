@@ -13,7 +13,7 @@
     </td>
     <td>
       <div>
-        <img src="./resources/logo.png" alt="Logo do projeto DevResources" width="120px"/>
+        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do curso de Engenharia de Software na PUC Minas" width="120px"/>
       </div>
     </td>
   </tr> 
