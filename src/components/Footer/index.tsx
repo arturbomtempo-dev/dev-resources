@@ -28,19 +28,19 @@ export function Footer() {
                 <h3 className="font-semibold mb-2 text-neutral-500">Sociais - Artur</h3>
                 <ul className="flex flex-wrap gap-2">
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-blue-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-blue-500 transition-colors duration-300 ease-in-out"><GithubLogoIcon size={20} /></a>
+                        <a href="https://github.com/arturbomtempo-dev" target="blank" className="text-blue-500 transition-colors duration-300 ease-in-out"><GithubLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-blue-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-blue-500 transition-colors duration-300 ease-in-out"><LinkedinLogoIcon size={20} /></a>
+                        <a href="https://www.linkedin.com/in/artur-bomtempo/" target="blank"  className="text-blue-500 transition-colors duration-300 ease-in-out"><LinkedinLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-blue-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-blue-500 transition-colors duration-300 ease-in-out"><InstagramLogoIcon size={20} /></a>
+                        <a href="https://www.instagram.com/arturbomtempo.dev/" target="blank" className="text-blue-500 transition-colors duration-300 ease-in-out"><InstagramLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-blue-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-blue-500 transition-colors duration-300 ease-in-out"><YoutubeLogoIcon size={20} /></a>
+                        <a href="https://www.youtube.com/@ArturBomtempoDev" target="blank" className="text-blue-500 transition-colors duration-300 ease-in-out"><YoutubeLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-blue-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-blue-500 transition-colors duration-300 ease-in-out"><GlobeIcon size={20} /></a>
+                        <a href="https://arturbomtempo.dev" target="blank" className="text-blue-500 transition-colors duration-300 ease-in-out"><GlobeIcon size={20} /></a>
                     </li>
                 </ul>
             </div>
@@ -49,16 +49,16 @@ export function Footer() {
                 <h3 className="font-semibold mb-2 text-neutral-500">Sociais - Eduarda</h3>
                 <ul className="flex flex-wrap gap-2">
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-teal-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-teal-600 transition-colors duration-300 ease-in-out"><GithubLogoIcon size={20} /></a>
+                        <a href="https://github.com/eduardavieira-dev" target="blank" className="text-teal-600 transition-colors duration-300 ease-in-out"><GithubLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-teal-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-teal-600 transition-colors duration-300 ease-in-out"><LinkedinLogoIcon size={20} /></a>
+                        <a href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/" target="blank" className="text-teal-600 transition-colors duration-300 ease-in-out"><LinkedinLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-teal-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-teal-600 transition-colors duration-300 ease-in-out"><InstagramLogoIcon size={20} /></a>
+                        <a href="https://www.instagram.com/eduardavieira.dev/" target="blank" className="text-teal-600 transition-colors duration-300 ease-in-out"><InstagramLogoIcon size={20} /></a>
                     </li>
                     <li className="bg-gray-200 rounded-md p-2 hover:bg-teal-500/20 transition-colors duration-300 ease-in-out">
-                        <a href="#" className="text-teal-600 transition-colors duration-300 ease-in-out"><GlobeIcon size={20} /></a>
+                        <a href="https://portifolio-eduardavieira.vercel.app/" target="blank" className="text-teal-600 transition-colors duration-300 ease-in-out"><GlobeIcon size={20} /></a>
                     </li>
                 </ul>
             </div>
