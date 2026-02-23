@@ -1,28 +1,19 @@
-<!-- Este template foi criado para servir como referência e pode ser facilmente adaptado para diferentes projetos de desenvolvimento -->
-
-<!-- [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo) [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999)
--->
-
 <a href="https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo"><img src="https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg" width="200"/></a> <a href="https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999"><img src="https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg" width="250"/></a>
 
 ---
 
-# DevResources
-
-> [!NOTE]
-> Breve descrição do projeto. **Foque no principal valor/benefício.**  
-> Crie uma **logo** para o projeto que represente a aplicação em questão.
+# Dev Resources
 
 <table>
   <tr>
     <td width="800px">
       <div align="justify">
-        Este <b>README.md</b> apresenta um template organizado, ideal para servir como referência acadêmica e profissional em projetos de desenvolvimento, desde trabalhos da faculdade até projetos desenvolvidos para etapas técnicas de processos seletivos. Ele reúne as <i>seções essenciais</i> recomendadas pelo <a href="https://github.com/joaopauloaramuni">Prof. Dr. João Paulo Aramuni</a>, permitindo <i>organização clara</i>, <i>documentação eficiente</i> e <i>padronização</i> entre diferentes trabalhos. O objetivo deste esqueleto é <b>facilitar a construção de projetos bem documentados</b>, oferecendo um <i>guia completo</i> que inclui <b>boas práticas</b>, instruções de execução, tecnologias utilizadas, arquitetura, estruturas de pastas, testes, links úteis e orientações para colaboração. Esse template ajuda estudantes a desenvolverem <b>documentação de qualidade profissional</b> desde os primeiros períodos, promovendo <i>clareza</i>, <i>reprodutibilidade</i> e <i>padronização</i> nos projetos.
+        O <b>Dev Resources</b> é uma plataforma de <i>curadoria de recursos técnicos</i> desenvolvida por <a href="https://github.com/arturbomtempo-dev">Artur Bomtempo</a> e <a href="https://github.com/eduardavieira-dev">Eduarda Vieira</a>, estudantes do <i>quarto período</i> do curso de <b>Engenharia de Software</b> da <b>PUC Minas</b>. Este projeto representa o <i>primeiro trabalho</i> da disciplina <b>Laboratório de Desenvolvimento de Software</b>, tendo como propósito <b>auxiliar estudantes e profissionais de engenharia de software</b> a encontrarem <i>materiais confiáveis</i>, <i>recursos de qualidade</i> e <i>referências técnicas</i> para estudo e resolução de dúvidas. A plataforma reúne de forma <i>organizada</i> e <i>acessível</i> conteúdos selecionados, projetos de referência e documentações, promovendo o <b>compartilhamento de conhecimento</b> e facilitando o <i>aprendizado da comunidade</i>. Além disso, permite o <i>contato direto</i> com os desenvolvedores para troca de experiências e esclarecimentos. O Dev Resources demonstra a aplicação prática de <b>boas práticas de engenharia de software</b>, promovendo <i>qualidade</i>, <i>documentação técnica</i> e <i>colaboração</i> no ecossistema de desenvolvimento.
       </div>
     </td>
     <td>
       <div>
-        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do Projeto" width="120px"/>
+        <img src="./resources/logo.png" alt="Logo do Dev Resources" />
       </div>
     </td>
   </tr> 
@@ -56,13 +47,17 @@
 - [Instalação e Execução](#-instalação-e-execução)
     - [Pré-requisitos](#pré-requisitos)
     - [Variáveis de Ambiente](#-variáveis-de-ambiente)
+        - [1 Back-end (Spring Boot)](#1-back-end-spring-boot)
         - [2 Front-end (React, Vite)](#2-front-end-react-vite)
         - [3 Exemplos de Variáveis de Ambiente na Vercel](#3-exemplos-de-variáveis-de-ambiente-na-vercel)
     - [Instalação de Dependências](#-instalação-de-dependências)
         - [Front-end (React)](#front-end-react)
+        - [Back-end (Spring Boot)](#back-end-spring-boot)
     - [Inicialização do Banco de Dados (PostgreSQL)](#-inicialização-do-banco-de-dados-postgresql)
     - [Como Executar a Aplicação](#-como-executar-a-aplicação)
+        - [Terminal 1: Back-end (Spring Boot)](#terminal-1-back-end-spring-boot)
         - [Terminal 2: Front-end (React, Vite)](#terminal-2-front-end-react-vite)
+        - [Execução Local Completa com Docker Compose (Incluindo Banco de Dados)](#-execução-local-completa-com-docker-compose-incluindo-banco-de-dados)
         - [Passos para build, inicialização e execução](#-passos-para-build-inicialização-e-execução)
 - [Deploy](#-deploy)
 - [Estrutura de Pastas](#-estrutura-de-pastas)
@@ -83,6 +78,10 @@
 
 - 🌐 **Demo Online:** [Acesse a Aplicação Web](link-da-demo-web)
     > 💻 **Descrição:** Link para a aplicação em ambiente de produção (Ex: hospedado na Vercel, Netlify ou AWS S3).
+- 📱 **Download Mobile:** [App Store](link-app-store) | [Google Play](link-google-play) | [APK Direto](link-para-apk-direto)
+    > 📱 **Descrição:** Links diretos para download nas lojas de aplicativos (se aplicável) e para o arquivo de instalação direta no Android (APK).
+- 📖 **Documentação:** [Leia a Wiki/Docs](link-para-docs)
+    > 📚 **Descrição:** Acesso à documentação técnica completa do projeto (Ex: Swagger/OpenAPI para API, ou Wiki interna).
 
 ---
 
@@ -130,11 +129,19 @@ As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construç
 
 ### 💻 Front-end
 
-- **Framework/Biblioteca:** [Ex: React v18, Vue.js v3, Angular v17]
-- **Linguagem/Superset:** [Ex: TypeScript, JavaScript ES6+]
-- **Estilização:** [Ex: Tailwind CSS, Sass, Styled Components, Material UI]
-- **Gerenciamento de Estado:** [Ex: Redux Toolkit, Zustand, Context API]
-- **Build Tool:** [Ex: Vite, Webpack]
+- **Framework:** Next.js 16
+- **Biblioteca UI:** React 19
+- **Linguagem:** TypeScript 5
+- **Estilização:** Tailwind CSS v4
+- **Ícones:** Phosphor Icons
+- **Linter:** ESLint 10 com simple-import-sort
+- **Formatação:** Prettier 3.8 com tailwindcss plugin
+- **Fontes:** Google Fonts (Inter, Manrope)
+
+### ⚙️ Deploy
+
+- **Plataforma:** Vercel (recomendado para Next.js)
+- **CI/CD:** GitHub Actions (opcional)
 
 ---
 
@@ -152,16 +159,85 @@ Você pode incluir:
 - **Decisões arquiteturais importantes**
 - **Trade-offs** ou limitações relevantes
 
+### Exemplos de diagramas
+
+Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados lado a lado.
+
+|                                                              Diagrama de Arquitetura                                                              |                                                            Detalhe da Arquitetura                                                            |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                              **Visão Geral (Macro)**                                                              |                                                        **Camada de Serviço (Micro)**                                                         |
+|    <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema" width="120px" height="120px">     | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes ou Serviço X" width="120px" height="120px"> |
+|                                                          **Modelo de Dados (Entidades)**                                                          |                                                          **Fluxo de Autenticação**                                                           |
+| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Entidade-Relacionamento (DER)" width="120px" height="120px"> |    <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência de Login" width="120px" height="120px">    |
+|                                                            **Infraestrutura (Cloud)**                                                             |                                                           **API Gateway (Rotas)**                                                            |
+|     <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Deploy na AWS/Vercel" width="120px" height="120px">      |       <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Mapa de Endpoints da API" width="120px" height="120px">       |
+
+---
+
 ## 🔧 Instalação e Execução
 
 ### Pré-requisitos
 
 Certifique-se de que o usuário tenha o ambiente configurado.
 
-- **Node.js:** Versão LTS (v18.x ou superior) (Necessário para o **Front-end React**)
+- **Node.js:** Versão LTS (v18.x ou superior)
 - **Gerenciador de Pacotes:** npm ou yarn
+- **Docker** (Opcional, mas **altamente recomendado** para rodar o Banco de Dados)
 
 ---
+
+### 🔑 Variáveis de Ambiente
+
+Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
+
+#### Front-end (Next.js)
+
+Crie um arquivo **`.env.local`** na raiz do projeto Next.js. Use o prefixo `NEXT_PUBLIC_` para expor variáveis ao cliente.
+
+| Variável                         | Descrição                                        | Exemplo                      |
+| :------------------------------- | :----------------------------------------------- | :--------------------------- |
+| `NEXT_PUBLIC_SITE_URL`           | URL do site em produção.                         | `https://meusite.vercel.app` |
+| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui`        |
+| `NEXT_PUBLIC_GOOGLE_MAPS_KEY`    | Chave de API para serviços de mapas (Opcional).  | `AIzaSy...`                  |
+
+---
+
+#### Exemplos de Variáveis de Ambiente na Vercel
+
+A Vercel permite configurar variáveis no painel (Project Settings > Environment Variables).
+
+##### **Exemplo – Front-end Next.js com APIs externas**
+
+```
+NEXT_PUBLIC_API_URL=https://api.exemplo.com
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-seu_google_analytics_id_aqui
+NEXT_PUBLIC_SITE_URL=https://meu-sistema.vercel.app
+```
+
+---
+
+Para adicionar essas variáveis:
+
+1.  Acesse a página de Environment Variables do seu projeto no Vercel (ex.: `https://vercel.com/<seu-usuario>/<seu-projeto>/settings/environment-variables`)
+2.  Clique em **"Add"** para adicionar cada variável com o nome e valor correspondente.
+
+Alternativamente, se estiver desenvolvendo localmente, crie um arquivo **`.env.local`** dentro da pasta **`frontend`** do seu projeto com o seguinte conteúdo:
+
+```
+# Variável essencial para conectar ao Back-end Spring Boot rodando localmente (normalmente na porta 8080)
+VITE_API_URL=http://localhost:8080/api
+
+# Variáveis para integrações externas de serviço de e-mail
+VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
+VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
+VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
+VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
+
+# Outras chaves de serviço
+VITE_GOOGLE_MAPS_KEY=AIzaSy...
+```
+
+> 💡 **Localização:** Garanta que este arquivo esteja em **`/frontend/.env.local`** para que o **Vite** consiga carregá-lo e disponibilizar as variáveis para o Front-end durante o desenvolvimento.
 
 ### 📦 Instalação de Dependências
 
@@ -178,9 +254,7 @@ cd <pasta-do-projeto>
 
 Como o projeto está dividido, você precisa instalar as dependências separadamente para o Front-end (React, usando NPM/Yarn) e garantir que o Back-end (Spring Boot, usando Maven/Gradle Wrapper) tenha suas dependências resolvidas.
 
-#### Front-end (React)
-
-Instale as dependências do Node.js:
+Instale as dependências do projeto Next.js:
 
 ```bash
 npm install
@@ -188,89 +262,43 @@ npm install
 yarn install
 ```
 
+---
+
 ### ⚡ Como Executar a Aplicação
 
-Execute a aplicação em modo de desenvolvimento em **um terminal**.
-
-#### Terminal: Front-end (React, Vite)
-
-Inicie o servidor de desenvolvimento do Front-end.
+Execute a aplicação em modo de desenvolvimento:
 
 ```bash
-cd frontend
 npm run dev
 # ou
 yarn dev
 ```
 
-🎨 _O Front-end estará disponível em **http://localhost:5173** (ou a porta configurada no Vite/CRA)._
+🎨 _A aplicação estará disponível em **http://localhost:3000**._
 
 ---
-
-#### 📦 Passos para build, inicialização e execução
-
-1. Acesse a pasta raiz do projeto (onde o arquivo `docker-compose.yml` está localizado):
-
-```bash
-cd /caminho/do/projeto/nome-do-projeto
-```
-
-2. Suba todos os serviços (Back-end, Front-end e Banco de Dados) definidos no `docker-compose.yml`:
-
-```bash
-docker-compose up --build -d
-```
-
-> [!NOTE]
-> 💡 O parâmetro `--build` garante que as imagens mais recentes do projeto sejam geradas, e `-d` executa em segundo plano.
-
-3. Verifique se os containers estão rodando:
-
-```bash
-docker ps
-```
-
-4. **Execute as Migrações do Banco de Dados:**
-      O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados (via Flyway/Liquibase ou Hibernate) na **inicialização do serviço**.
-
-- **Verificação:** Se o serviço de Back-end (`backend` ou `api`) for o responsável pelas migrações, verifique os logs para confirmar se o processo foi concluído.
-    ```bash
-    docker logs <nome_do_container_backend>
-    ```
-- _Atenção:_ O comando `npm run db:migrate` é exclusivo para Node.js e **não** deve ser usado.
-
-5. Abra no navegador:
-      O Front-end deve estar acessível na porta configurada no `docker-compose` (Exemplo: <http://localhost:3000> ou <http://localhost:5173>)
-
-6. Para parar e remover todos os containers, redes e volumes (exceto volumes nomeados):
-
-```bash
-docker-compose down
-```
-
-✅ **Em resumo:** Usar **`docker-compose`** simplifica a execução do ambiente completo, isolando as dependências de **Java (Spring Boot)** e **Node.js (React)** e garantindo que o PostgreSQL esteja disponível.
-
----
-
-## 🚀 Deploy
 
 Instruções claras para deploy em produção.
 
 1.  **Build do Projeto:**
 Execute o build separadamente para os dois artefatos (JAR para o Back-end e arquivos estáticos para o Front-end).
 
-````bash
+```bash
 # 1. Build do Front-end (React/Vite) - Gera a pasta /dist com arquivos estáticos
 cd frontend
 npm run build
 
+# 2. Build do Back-end (Spring Boot/Maven) - Gera o arquivo .jar executável em /target
+cd ../backend
+./mvnw clean package
+```
 
 2.  **Configuração do Ambiente de Produção:** Defina as variáveis de ambiente no seu provedor (e.g., Vercel, Railway, Heroku, DigitalOcean).
 
 > 🔑 **Variáveis Cruciais:** Certifique-se de configurar as variáveis de **conexão com o banco de dados** (`SPRING_DATASOURCE_URL`, etc.) para o Back-end e a **URL da API de produção** (`VITE_API_URL`) para o Front-end.
 
 3.  **Execução em Produção:**
-    A forma de execução depende do seu provedor, mas geralmente envolve o seguinte:
+A forma de execução depende do seu provedor, mas geralmente envolve o seguinte:
 
 ```bash
 # ☕ Execução do Back-end Spring Boot (Java JAR)
@@ -283,7 +311,7 @@ java -jar backend/target/nome-do-do-projeto-0.0.1-SNAPSHOT.jar
 # Para simular a produção localmente ou rodar em uma VPS simples, use o pacote 'serve':
 npm install -g serve
 serve -s frontend/dist
-````
+```
 
 ---
 
@@ -410,6 +438,61 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 
 Caso o projeto seja focado em serviços de Back-end (API, microserviço, CLI), utilize esta seção para demonstrar a interação com o sistema e a resposta esperada.
 
+#### 1. Demonstração da API (Exemplo com cURL)
+
+Mostra uma chamada simples para um endpoint da API (ex: GET de listagem).
+
+```bash
+# Chama o endpoint de listagem de usuários com o token de autenticação
+curl -X GET 'http://localhost:3000/api/v1/users' \
+     -H 'Authorization: Bearer <seu-jwt-token>'
+```
+
+**Saída Esperada:**
+
+```json
+{
+    "total": 2,
+    "users": [
+        {
+            "id": "1a2b3c",
+            "name": "Prof. Aramuni",
+            "email": "contato@exemplo.com",
+            "status": "active"
+        },
+        {
+            "id": "4d5e6f",
+            "name": "Colaborador Teste",
+            "email": "teste@exemplo.com",
+            "status": "inactive"
+        }
+    ]
+}
+```
+
+---
+
+#### 2. Demonstração de Execução de CLI/Script
+
+Mostra como executar uma ferramenta de linha de comando ou um script de manutenção do projeto (ex: rodar migrações ou um job agendado).
+
+```bash
+# Executa a ferramenta de validação de Schema
+npm run cli validate:schema --target=production
+```
+
+**Saída Esperada:**
+
+```text
+[INFO] Iniciando validação do banco de dados...
+[SUCCESS] 15/15 tabelas verificadas.
+[WARNING] Coluna 'descricao' na tabela 'produtos' é nullable.
+[SUCCESS] Validação concluída. Nenhum erro crítico encontrado.
+Tempo de execução: 1.25s
+```
+
+---
+
 ## 🧪 Testes
 
 ### Testes Unitários e de Integração
@@ -451,10 +534,10 @@ Liste aqui links para documentação técnica, referências de bibliotecas compl
 
 Liste os principais contribuidores. Você pode usar links para seus perfis.
 
-| 👤 Nome        | 🖼️ Foto                                                                                                                                           | :octocat: GitHub                                                                                                                                                         | 💼 LinkedIn                                                                                                                                                                                                | 📤 Gmail                                                                                                                                                                |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Artur Bomtempo | <div align="center"><img src="https://avatars.githubusercontent.com/u/96635074?v=4" width="70px" height="70px" style="object-fit: cover;"></div>  | <div align="center"><a href="https://github.com/arturbomtempo-dev"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/artur-bomtempo/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div>                          | <div align="center"><a href="mailto:arturbcolen@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div>         |
-| Eduarda Vieira | <div align="center"><img src="https://avatars.githubusercontent.com/u/159597766?v=4" width="70px" height="70px" style="object-fit: cover;"></div> | <div align="center"><a href="https://github.com/eduardavieira-dev"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:eduarda.vieira.goncalves7.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| 👤 Nome | 🖼️ Foto                                                                                                                   | :octocat: GitHub                                                                                                                                             | 💼 LinkedIn                                                                                                                                                             | 📤 Gmail                                                                                                                                                  |
+| ------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nome 1  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| Nome 2  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
 
 > [!TIP]
 > 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
