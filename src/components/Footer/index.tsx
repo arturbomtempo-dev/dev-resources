@@ -4,14 +4,15 @@ import { GlobeIcon } from "@phosphor-icons/react/dist/icons/Globe";
 import { InstagramLogoIcon } from "@phosphor-icons/react/dist/icons/InstagramLogo";
 import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/icons/LinkedinLogo";
 import { YoutubeLogoIcon } from "@phosphor-icons/react/dist/icons/YoutubeLogo";
+import { Logo } from "../Logo";
 
 export function Footer() {
     return (
         <footer className="bg-gray-100 border-t border-neutral-200">
             <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto border-b border-neutral-200">
             <div className="max-w-sm">
-                <h3 className="font-semibold mb-2">Logo</h3>
-                <p className="text-sm text-neutral-500">Hub colaborativo de curadoria digital, projetos e experiências em tecnologia.</p>
+                <Logo size="small"/>
+                <p className="text-sm text-neutral-500 mt-2">Hub colaborativo de curadoria digital, projetos e experiências em tecnologia.</p>
             </div>
 
             <div>

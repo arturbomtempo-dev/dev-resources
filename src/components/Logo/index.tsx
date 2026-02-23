@@ -9,13 +9,13 @@ interface LogoProps {
 export function Logo({ size }: LogoProps) {
     const sizeClasses = {
         small: 'text-base',
-        large: 'text-2xl font-semibold',
+        large: 'text-2xl',
     };
 
     const className = size ? sizeClasses[size] : 'text-2xl font-semibold';
 
     return (
-        <div className={`flex items-center gap-4 ${className}`}>
+        <div className={`flex items-center font-semibold gap-4  ${className}`}>
             <CodeIcon className="text-blue-primary" />
             <h1>
                 Dev<span className="font-display text-blue-primary">Resources</span>
