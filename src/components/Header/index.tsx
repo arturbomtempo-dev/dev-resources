@@ -20,6 +20,9 @@ export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
 
+    const isHomePage = pathname === '/';
+    const isTransparent = isHomePage && !isScrolled;
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
@@ -40,7 +43,9 @@ export function Header() {
             }`}
         >
             <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:justify-around">
-                <Logo />
+                <Link href="/">
+                    <Logo variant={isTransparent ? 'light' : 'default'} />
+                </Link>
                 <nav className="hidden gap-8 lg:flex">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
@@ -48,13 +53,27 @@ export function Header() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="group inline-flex flex-col items-center font-medium text-neutral-500 transition-colors hover:text-black"
+                                className={`group inline-flex flex-col items-center font-medium transition-colors duration-300 ${
+                                    isTransparent
+                                        ? 'text-white/80 hover:text-white'
+                                        : 'text-neutral-500 hover:text-black'
+                                }`}
                             >
-                                <span className={isActive ? 'text-black' : ''}>{link.label}</span>
                                 <span
-                                    className={`bg-teal-primary mt-1 h-0.5 transition-all duration-300 ${
-                                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                                    }`}
+                                    className={
+                                        isActive
+                                            ? isTransparent
+                                                ? 'text-white'
+                                                : 'text-black'
+                                            : ''
+                                    }
+                                >
+                                    {link.label}
+                                </span>
+                                <span
+                                    className={`mt-1 h-0.5 transition-all duration-300 ${
+                                        isTransparent ? 'bg-white' : 'bg-teal-primary'
+                                    } ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
                                 />
                             </Link>
                         );
@@ -62,7 +81,11 @@ export function Header() {
                 </nav>
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="hover:text-blue-primary flex h-10 w-10 cursor-pointer items-center justify-center text-neutral-500 transition-colors lg:hidden"
+                    className={`flex h-10 w-10 cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden ${
+                        isTransparent
+                            ? 'text-white hover:text-white/80'
+                            : 'hover:text-blue-primary text-neutral-500'
+                    }`}
                     aria-label="Toggle menu"
                 >
                     <div className="relative h-6 w-6">
