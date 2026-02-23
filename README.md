@@ -407,7 +407,6 @@ Use GIFs e prints para mostrar o projeto em ação.
 | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 1" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 2" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 3" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 4" height="400"> |
 | _Sua gif aqui_                                                                                                   | _Sua gif aqui_                                                                                                   | _Sua gif aqui_                                                                                                   | _Sua gif aqui_                                                                                                   |
 
-
 ### 🌐 Aplicação Web
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
