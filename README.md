@@ -237,14 +237,6 @@ dev-resources/
 ├── /resources                   # 📂 Recursos do projeto
 │   ├── logo.png                 # 🖼️ Logo da plataforma
 │   └── /prototype               # 📸 Screenshots do protótipo Figma
-│       ├── Contato.png
-│       ├── Erro404.png
-│       ├── Experiencias.png
-│       ├── Home.png
-│       ├── Indicacoes.png
-│       ├── Projetos.png
-│       └── SobreNos.png
-│
 └── /src                         # 📂 Código-fonte da aplicação
     │
     ├── /app                     # 📂 App Router (rotas e layouts)
@@ -291,25 +283,32 @@ dev-resources/
 
 ## 🎥 Demonstração
 
-Use GIFs e prints para mostrar o projeto em ação.
+Veja a aplicação funcionando em tempo real:
 
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
+#### Página Inicial (Home)
+
+<img src="./resources/demonstrations/home.gif" alt="Demonstração da Página Home" width="800px">
+
+_Navegação fluida com header transparente que se adapta ao scroll, animações suaves e design responsivo da página inicial com hero section e gradiente animado WebGL._
+
+---
+
+> Mais demonstrações em vídeo de outras páginas serão adicionadas em breve.
 
 ### 🌐 Aplicação Web
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
-|                                             Tela                                             |                                       Captura de Tela                                       |
-| :------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
-|                                  **Página Inicial (Home)**                                   |                                        **Sobre Nós**                                        |
-| <img src="./resources/prototype/Home.png" alt="Tela Inicial da Aplicação Web" width="400px"> |      <img src="./resources/prototype/SobreNos.png" alt="Tela Sobre Nós" width="400px">      |
-|                                        **Indicações**                                        |                                      **Experiências**                                       |
-|   <img src="./resources/prototype/Indicacoes.png" alt="Tela de Indicações" width="400px">    | <img src="./resources/prototype/Experiencias.png" alt="Tela de Experiências" width="400px"> |
-|                                         **Projetos**                                         |                                         **Contato**                                         |
-|     <img src="./resources/prototype/Projetos.png" alt="Tela de Projetos" width="400px">      |      <img src="./resources/prototype/Contato.png" alt="Tela de Contato" width="400px">      |
-|                                         **Erro 404**                                         |                                                                                             |
-|     <img src="./resources/prototype/Erro404.png" alt="Página de Erro 404" width="400px">     |                                                                                             |
+|                                             Tela                                             |                                      Captura de Tela                                       |
+| :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+|                                  **Página Inicial (Home)**                                   |                                       **Sobre Nós**                                        |
+| <img src="./resources/prototype/home.png" alt="Tela Inicial da Aplicação Web" width="400px"> |       <img src="./resources/prototype/about.png" alt="Tela Sobre Nós" width="400px">       |
+|                                        **Indicações**                                        |                                      **Experiências**                                      |
+|   <img src="./resources/prototype/indications.png" alt="Tela de Indicações" width="400px">   | <img src="./resources/prototype/experiences.png" alt="Tela de Experiências" width="400px"> |
+|                                         **Projetos**                                         |                                        **Contato**                                         |
+|     <img src="./resources/prototype/projects.png" alt="Tela de Projetos" width="400px">      |     <img src="./resources/prototype/contact.png" alt="Tela de Contato" width="400px">      |
+|                                         **Erro 404**                                         |                                                                                            |
+|    <img src="./resources/prototype/not-found.png" alt="Página de Erro 404" width="400px">    |                                                                                            |
 
 ---
 
@@ -351,10 +350,10 @@ _Ferramenta utilizada: Cypress, Playwright, Selenium, etc._
 
 Liste os principais contribuidores. Você pode usar links para seus perfis.
 
-| 👤 Nome | 🖼️ Foto                                                                                                                   | :octocat: GitHub                                                                                                                                             | 💼 LinkedIn                                                                                                                                                             | 📤 Gmail                                                                                                                                                  |
-| ------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nome 1  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
-| Nome 2  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| 👤 Nome        | 🖼️ Foto                                                                                                                | :octocat: GitHub                                                                                                                                                         | 💼 LinkedIn                                                                                                                                                                       | 📤 Gmail                                                                                                                                     :octocat:                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nome 1 | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div>  | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div>               |
+| Nome 2 | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div>                                                                                                                                                       | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
 
 > [!TIP]
 > 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
