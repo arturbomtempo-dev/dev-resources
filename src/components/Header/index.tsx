@@ -99,14 +99,16 @@ export function Header() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`inline-flex flex-col rounded-lg px-4 py-3 font-medium transition-colors ${
+                                className={`rounded-lg px-4 py-3 font-medium transition-colors ${
                                     isActive
                                         ? 'text-teal-primary'
                                         : 'text-neutral-500 hover:bg-neutral-50 hover:text-black'
                                 }`}
                             >
-                                {link.label}
-                                {isActive && <span className="bg-teal-primary mt-1 h-0.5 w-full" />}
+                                <span className="inline-flex flex-col">
+                                    <span>{link.label}</span>
+                                    {isActive && <span className="bg-teal-primary mt-1 h-0.5" />}
+                                </span>
                             </Link>
                         );
                     })}
