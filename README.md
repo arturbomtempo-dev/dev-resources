@@ -412,27 +412,21 @@ Use GIFs e prints para mostrar o projeto em ação.
 | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 1" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 2" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 3" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 4" height="400"> |
 | _Sua gif aqui_                                                                                                   | _Sua gif aqui_                                                                                                   | _Sua gif aqui_                                                                                                   | _Sua gif aqui_                                                                                                   |
 
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-|                                                           Tela                                                           |                                                     Captura de Tela                                                      |
-| :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-|                                                 **Tela Inicial (Home)**                                                  |                                              **Tela de Perfil / Settings**                                               |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 1 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 2 do Mobile" width="120px" height="120px"> |
-|                                                   **Tela de Cadastro**                                                   |                                               **Tela de Lista / Detalhes**                                               |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 3 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 4 do Mobile" width="120px" height="120px"> |
 
 ### 🌐 Aplicação Web
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
-|                                                                 Tela                                                                  |                                                           Captura de Tela                                                            |
-| :-----------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
-|                                                       **Página Inicial (Home)**                                                       |                                                         **Página de Login**                                                          |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> |        <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px">         |
-|                                                       **Cadastro de Clientes**                                                        |                                                       **Cadastro de Produtos**                                                       |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px">  | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-|                                                      **Dashboard (Visão Geral)**                                                      |                                                   **Página Admin / Configurações**                                                   |
-|       <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px">       |     <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px">      |
+|                                             Tela                                             |                                       Captura de Tela                                       |
+| :------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
+|                                  **Página Inicial (Home)**                                   |                                        **Sobre Nós**                                        |
+| <img src="./resources/prototype/Home.png" alt="Tela Inicial da Aplicação Web" width="400px"> |      <img src="./resources/prototype/SobreNos.png" alt="Tela Sobre Nós" width="400px">      |
+|                                        **Indicações**                                        |                                      **Experiências**                                       |
+|   <img src="./resources/prototype/Indicacoes.png" alt="Tela de Indicações" width="400px">    | <img src="./resources/prototype/Experiencias.png" alt="Tela de Experiências" width="400px"> |
+|                                         **Projetos**                                         |                                         **Contato**                                         |
+|     <img src="./resources/prototype/Projetos.png" alt="Tela de Projetos" width="400px">      |      <img src="./resources/prototype/Contato.png" alt="Tela de Contato" width="400px">      |
+|                                         **Erro 404**                                         |                                                                                             |
+|     <img src="./resources/prototype/Erro404.png" alt="Página de Erro 404" width="400px">     |                                                                                             |
 
 ### 💻 Exemplo de Saída no Terminal (para Back-end, API, CLI)
 
