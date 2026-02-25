@@ -1,10 +1,9 @@
 'use client';
 
+import { Title } from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from '@phosphor-icons/react';
-import Grainient from './Grainient';
-import { Title } from '@/components/Title';
-import { Subtitle } from '@/components/Subtitle';
+import { Grainient } from './_components/Grainient';
 
 export default function Home() {
     return (
