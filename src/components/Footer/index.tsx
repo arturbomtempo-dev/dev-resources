@@ -46,7 +46,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Sociais - Artur</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">Redes Sociais | Artur</h3>
                     <ul className="flex flex-wrap gap-2">
                         <li>
                             <IconBox
@@ -97,7 +97,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Sociais - Eduarda</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">Redes Sociais | Eduarda</h3>
                     <ul className="flex flex-wrap gap-2">
                         <li>
                             <IconBox
