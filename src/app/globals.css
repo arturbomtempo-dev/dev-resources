@@ -14,6 +14,7 @@
 
     --teal-primary: #009689;
     --teal-light: #00bba7;
+    --teal-50: #eef8f7;
     --cyan-hero-start: #cffffa;
     --cyan-hero-end: #9ce1ff;
 
@@ -72,6 +73,7 @@
 
     --color-teal-primary: var(--teal-primary);
     --color-teal-light: var(--teal-light);
+    --color-teal-50: var(--teal-50);
     --color-cyan-hero-start: var(--cyan-hero-start);
     --color-cyan-hero-end: var(--cyan-hero-end);
 
@@ -174,8 +176,11 @@ body {
     * {
         @apply border-border outline-ring/50;
     }
+    
+    html,
     body {
         @apply bg-background text-foreground;
+        overflow-x: hidden;
     }
 }
 

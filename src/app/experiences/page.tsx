@@ -1,5 +1,3 @@
 export default function Experiences() {
-    return (
-        <h1>Experiências</h1>
-    );
+    return <h1>Experiências</h1>;
 }

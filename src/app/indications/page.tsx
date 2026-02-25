@@ -1,5 +1,3 @@
 export default function Indications() {
-    return (
-        <h1>Indicações</h1>
-    );
+    return <h1>Indicações</h1>;
 }

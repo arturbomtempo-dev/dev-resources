@@ -4,6 +4,7 @@ import { GlobeIcon } from '@phosphor-icons/react/dist/icons/Globe';
 import { InstagramLogoIcon } from '@phosphor-icons/react/dist/icons/InstagramLogo';
 import { LinkedinLogoIcon } from '@phosphor-icons/react/dist/icons/LinkedinLogo';
 import { YoutubeLogoIcon } from '@phosphor-icons/react/dist/icons/YoutubeLogo';
+import { IconBox } from '../IconBox';
 import { Logo } from '../Logo';
 
 export function Footer() {
@@ -45,94 +46,94 @@ export function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Sociais - Artur</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">Redes Sociais | Artur</h3>
                     <ul className="flex flex-wrap gap-2">
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-blue-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={GithubLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-blue-500/20"
+                                iconColor="text-blue-500"
+                                size={20}
                                 href="https://github.com/arturbomtempo-dev"
-                                target="blank"
-                                className="text-blue-500 transition-colors duration-300 ease-in-out"
-                            >
-                                <GithubLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-blue-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={LinkedinLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-blue-500/20"
+                                iconColor="text-blue-500"
+                                size={20}
                                 href="https://www.linkedin.com/in/artur-bomtempo/"
-                                target="blank"
-                                className="text-blue-500 transition-colors duration-300 ease-in-out"
-                            >
-                                <LinkedinLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-blue-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={InstagramLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-blue-500/20"
+                                iconColor="text-blue-500"
+                                size={20}
                                 href="https://www.instagram.com/arturbomtempo.dev/"
-                                target="blank"
-                                className="text-blue-500 transition-colors duration-300 ease-in-out"
-                            >
-                                <InstagramLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-blue-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={YoutubeLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-blue-500/20"
+                                iconColor="text-blue-500"
+                                size={20}
                                 href="https://www.youtube.com/@ArturBomtempoDev"
-                                target="blank"
-                                className="text-blue-500 transition-colors duration-300 ease-in-out"
-                            >
-                                <YoutubeLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-blue-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={GlobeIcon}
+                                bgColor="bg-gray-200 hover:bg-blue-500/20"
+                                iconColor="text-blue-500"
+                                size={20}
                                 href="https://arturbomtempo.dev"
-                                target="blank"
-                                className="text-blue-500 transition-colors duration-300 ease-in-out"
-                            >
-                                <GlobeIcon size={20} />
-                            </a>
+                            />
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Sociais - Eduarda</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">Redes Sociais | Eduarda</h3>
                     <ul className="flex flex-wrap gap-2">
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-teal-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={GithubLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-teal-500/20"
+                                iconColor="text-teal-600"
+                                size={20}
                                 href="https://github.com/eduardavieira-dev"
-                                target="blank"
-                                className="text-teal-600 transition-colors duration-300 ease-in-out"
-                            >
-                                <GithubLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-teal-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={LinkedinLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-teal-500/20"
+                                iconColor="text-teal-600"
+                                size={20}
                                 href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"
-                                target="blank"
-                                className="text-teal-600 transition-colors duration-300 ease-in-out"
-                            >
-                                <LinkedinLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-teal-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={InstagramLogoIcon}
+                                bgColor="bg-gray-200 hover:bg-teal-500/20"
+                                iconColor="text-teal-600"
+                                size={20}
                                 href="https://www.instagram.com/eduardavieira.dev/"
-                                target="blank"
-                                className="text-teal-600 transition-colors duration-300 ease-in-out"
-                            >
-                                <InstagramLogoIcon size={20} />
-                            </a>
+                            />
                         </li>
-                        <li className="rounded-md bg-gray-200 p-2 transition-colors duration-300 ease-in-out hover:bg-teal-500/20">
-                            <a
+                        <li>
+                            <IconBox
+                                icon={GlobeIcon}
+                                bgColor="bg-gray-200 hover:bg-teal-500/20"
+                                iconColor="text-teal-600"
+                                size={20}
                                 href="https://portifolio-eduardavieira.vercel.app/"
-                                target="blank"
-                                className="text-teal-600 transition-colors duration-300 ease-in-out"
-                            >
-                                <GlobeIcon size={20} />
-                            </a>
+                            />
                         </li>
                     </ul>
                 </div>
