@@ -104,7 +104,7 @@ export default function Home() {
                     <ContentCard
                         icon={UsersIcon}
                         title="Sobre Nós"
-                        description="Conheça Eduarda e Arthur, os criadores do DevResources."
+                        description="Conheça Eduarda e Artur, os criadores do DevResources."
                     />
                     <ContentCard
                         icon={ChatIcon}
