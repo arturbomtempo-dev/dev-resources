@@ -21,7 +21,8 @@ export function Header() {
     const pathname = usePathname();
 
     const isHomePage = pathname === '/';
-    const isTransparent = isHomePage && !isScrolled;
+    const isProjectDetailPage = pathname.startsWith('/projects/') && pathname !== '/projects';
+    const isTransparent = (isHomePage || isProjectDetailPage) && !isScrolled;
 
     useEffect(() => {
         const handleScroll = () => {
