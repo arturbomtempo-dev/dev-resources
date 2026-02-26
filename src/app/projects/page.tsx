@@ -1,42 +1,15 @@
+import { SectionContainer } from '@/components/SectionContainer';
 import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
+import { getAllProjects } from '@/data/pt/projects';
 import { ProjectCard } from './_components/ProjectCard';
-import { SectionContainer } from '@/components/SectionContainer';
-
-// TODO: Substituir placeholders por imagens reais dos projetos
-const projects = [
-    {
-        id: 1,
-        title: 'DevResources',
-        description: 'Plataforma web colaborativa de curadoria digital e portfólio de projetos.',
-        imageUrl: '/projects/devresources-placeholder.svg',
-        repositoryUrl: 'https://github.com',
-        demoUrl: 'https://devresources.com',
-    },
-    {
-        id: 2,
-        title: 'Studio Ghibli API',
-        description:
-            'Site desenvolvido para o workshop de React para ensinar o uso de API com o framework',
-        imageUrl: '/projects/studioghibli-placeholder.svg',
-        repositoryUrl: 'https://github.com',
-        demoUrl: 'https://studioghibli.com',
-    },
-    {
-        id: 3,
-        title: 'Craft API',
-        description:
-            'Site desenvolvido para aplicar os conhecimentos sobre API e design usando a API do Minecraft',
-        imageUrl: '/projects/craft-placeholder.svg',
-        repositoryUrl: 'https://github.com',
-        demoUrl: 'https://caftapi.com',
-    },
-];
 
 export default function Projects() {
+    const projects = getAllProjects();
+    
     return (
         <SectionContainer>
-            <div className="text-center">
+            <div className="text-left">
                 <Title text="Projetos" />
                 <Subtitle text="Conheça outros de nossos projetos desenvolvidos." />
             </div>
