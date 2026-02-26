@@ -67,12 +67,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         <SectionContainer>
                             <Link
                                 href="/projects"
-                                className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-white/90 transition-colors hover:text-white"
+                                className="mb-5 inline-flex items-center gap-2 text-base font-semibold text-white transition-colors hover:text-white/80"
                             >
-                                <ArrowLeftIcon size={20} weight="bold" />
+                                <ArrowLeftIcon size={24} weight="bold" />
                                 Voltar para projetos
                             </Link>
-                            <h1 className="font-family-manrope mb-3 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+                            <h1 className="font-family-manrope mb-3 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
                                 {project.title}
                             </h1>
                             <p className="max-w-3xl text-lg text-white/90 md:text-xl">
