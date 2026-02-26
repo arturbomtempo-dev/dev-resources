@@ -2,12 +2,18 @@ export interface Project {
     id: number;
     title: string;
     description: string;
+    longDescription: string;
     imageUrl: string;
     imageAlt?: string;
     repositoryUrl?: string;
     demoUrl?: string;
     tags?: string[];
     featured?: boolean;
+    authorIds?: number[];
+    screenshots?: {
+        imageUrl: string;
+        caption: string;
+    }[];
 }
 
 export interface Experience {

@@ -2,55 +2,54 @@
 
 import { ArrowSquareOutIcon, GithubLogoIcon } from '@phosphor-icons/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ProjectButton } from '../ProjectButton';
+import type { Project } from '@/data/types';
 
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    imageUrl: string;
-    imageAlt?: string;
-    repositoryUrl?: string;
-    demoUrl?: string;
+    project: Project;
 }
 
-export function ProjectCard({
-    title,
-    description,
-    imageUrl,
-    imageAlt = 'Imagem do projeto',
-    repositoryUrl,
-    demoUrl,
-}: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <div className="flex max-w-md min-w-70 flex-col overflow-hidden rounded-lg border border-neutral-200">
-            <div className="relative h-48 w-full">
-                <Image src={imageUrl} alt={imageAlt} fill className="object-cover" />
-            </div>
-            <div className="flex flex-col gap-4 p-5">
-                <div className="flex flex-col gap-2">
-                    <h3 className="font-family-manrope text-base font-bold">{title}</h3>
-                    <p className="text-sm font-normal">{description}</p>
+        <div className="group flex max-w-md min-w-70 flex-col overflow-hidden rounded-lg border border-neutral-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-200/50">
+            <Link href={`/projects/${project.id}`} className="block">
+                <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                        src={project.imageUrl}
+                        alt={project.imageAlt || project.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
                 </div>
-                <div className="flex gap-3">
-                    {repositoryUrl && (
-                        <ProjectButton
-                            variant="outline"
-                            href={repositoryUrl}
-                            icon={<GithubLogoIcon size={20} weight="regular" />}
-                        >
-                            Repositório
-                        </ProjectButton>
-                    )}
-                    {demoUrl && (
-                        <ProjectButton
-                            variant="gradient"
-                            href={demoUrl}
-                            icon={<ArrowSquareOutIcon size={20} weight="regular" />}
-                        >
-                            Demo
-                        </ProjectButton>
-                    )}
+                <div className="flex flex-col gap-4 p-5">
+                    <div className="flex flex-col gap-2">
+                        <h3 className="font-family-manrope text-base font-bold">{project.title}</h3>
+                        <p className="text-sm font-normal text-neutral-600">
+                            {project.description}
+                        </p>
+                    </div>
                 </div>
+            </Link>
+            <div className="flex gap-3 px-5 pb-5">
+                {project.repositoryUrl && (
+                    <ProjectButton
+                        variant="outline"
+                        href={project.repositoryUrl}
+                        icon={<GithubLogoIcon size={20} weight="regular" />}
+                    >
+                        Repositório
+                    </ProjectButton>
+                )}
+                {project.demoUrl && (
+                    <ProjectButton
+                        variant="gradient"
+                        href={project.demoUrl}
+                        icon={<ArrowSquareOutIcon size={20} weight="regular" />}
+                    >
+                        Demo
+                    </ProjectButton>
+                )}
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ import { ProjectCard } from './_components/ProjectCard';
 
 export default function Projects() {
     const projects = getAllProjects();
-    
+
     return (
         <SectionContainer>
             <div className="text-left">
@@ -15,14 +15,7 @@ export default function Projects() {
             </div>
             <div className="mx-auto mt-8 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
-                    <ProjectCard
-                        key={project.id}
-                        title={project.title}
-                        description={project.description}
-                        imageUrl={project.imageUrl}
-                        repositoryUrl={project.repositoryUrl}
-                        demoUrl={project.demoUrl}
-                    />
+                    <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
         </SectionContainer>
