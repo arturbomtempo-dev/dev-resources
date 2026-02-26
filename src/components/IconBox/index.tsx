@@ -33,7 +33,7 @@ export function IconBox({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transition-opacity duration-300 ease-in-out hover:opacity-80"
             >
                 {content}
             </a>
