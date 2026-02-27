@@ -12,6 +12,8 @@
     --black: #000000;
     --black-900: #090909;
 
+
+    --green-bg: #E5F6EC;
     --teal-primary: #009689;
     --teal-light: #00bba7;
     --teal-50: #eef8f7;
@@ -71,6 +73,7 @@
     --color-black: var(--black);
     --color-black-900: var(--black-900);
 
+    --color-green-bg: var(--green-bg);
     --color-teal-primary: var(--teal-primary);
     --color-teal-light: var(--teal-light);
     --color-teal-50: var(--teal-50);

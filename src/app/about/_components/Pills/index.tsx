@@ -12,7 +12,7 @@ export function Pills({ text, variant = 'interest', className }: PillsProps) {
     const variantClasses: Record<PillsVariant, string> = {
         interest: 'bg-pink-100 text-pink-500',
         interestEduarda: 'bg-pink-100 text-pink-500',
-        interestArtur: 'bg-green-100 text-green-600',
+        interestArtur: 'bg-green-bg text-green-600',
         technology: 'border border-gray-200 bg-gray-100 text-gray-500',
     };
 
