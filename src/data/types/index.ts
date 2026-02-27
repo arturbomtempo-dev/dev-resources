@@ -48,6 +48,29 @@ export interface TeamMember {
     };
 }
 
+export type AboutMemberKey = 'eduarda' | 'artur';
+
+export type AboutAccent = 'pink' | 'green';
+
+export interface AboutMember {
+    key: AboutMemberKey;
+    name: string;
+    role: string;
+    institution: string;
+    image: string;
+    bio: string;
+    interests: string[];
+    technologies: string[];
+    accent: AboutAccent;
+    socialLinks: {
+        github?: string;
+        linkedin?: string;
+        instagram?: string;
+        website?: string;
+        youtube?: string;
+    };
+}
+
 export type IndicationCategory =
     | 'Estudos'
     | 'Ferramentas'
