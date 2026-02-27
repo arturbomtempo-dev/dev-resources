@@ -1,4 +1,5 @@
 import { IconBox } from '@/components/IconBox';
+import Image from 'next/image';
 import {
     GithubLogoIcon,
     GlobeIcon,
@@ -15,6 +16,7 @@ type CardAboutProps = {
 const profiles = {
     eduarda: {
         initials: 'EV',
+        image: '/Eduarda.png',
         name: 'Eduarda Vieira',
         bio: 'Desenvolvedora frontend apaixonada por design, UX e tecnologias web modernas. Acredita que a tecnologia deve ser acessível e bonita.',
         interests: ['Frontend', 'UI/UX Design', 'APIs', 'Banco de dados'],
@@ -34,6 +36,7 @@ const profiles = {
     },
     artur: {
         initials: 'AB',
+        image: '/Artur.png',
         name: 'Artur Bomtempo',
         bio: 'Desenvolvedor fullstack focado em soluções escaláveis e experiências digitais impactantes. Entusiasta de backend, APIs e arquitetura de software.',
         interests: ['Backend', 'Cloud', 'IA', 'APIs', 'Banco de dados'],
@@ -60,10 +63,14 @@ export function CardAbout({ member }: CardAboutProps) {
         <article className={`rounded-xl border p-8 md:p-10 ${profile.cardClass}`}>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-[300px_1fr]">
                 <div className="flex flex-col items-center text-center">
-                    <div
-                        className={`mb-4 flex h-28 w-28 items-center justify-center rounded-full bg-linear-to-br text-2xl font-semibold ${profile.avatarClass}`}
-                    >
-                        {profile.initials}
+                    <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border border-gray-200">
+                        <Image
+                            src={profile.image}
+                            alt={`Foto de ${profile.name}`}
+                            fill
+                            className="object-cover"
+                            sizes="128px"
+                        />
                     </div>
 
                     <h3 className="text-2xl font-semibold text-black">{profile.name}</h3>
@@ -117,14 +124,16 @@ export function CardAbout({ member }: CardAboutProps) {
                 </div>
 
                 <div>
-                    <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                        {profile.bio}
-                    </p>
+                    <p className="mb-6 text-lg leading-relaxed text-gray-700">{profile.bio}</p>
 
                     <h4 className="mb-3 text-xl font-semibold text-black">Áreas de interesse</h4>
                     <div className="mb-6 flex flex-wrap gap-2">
                         {profile.interests.map((interest) => (
-                            <Pills key={interest} text={interest} variant={profile.interestVariant} />
+                            <Pills
+                                key={interest}
+                                text={interest}
+                                variant={profile.interestVariant}
+                            />
                         ))}
                     </div>
 
