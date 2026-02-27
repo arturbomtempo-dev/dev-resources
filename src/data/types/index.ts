@@ -47,3 +47,44 @@ export interface TeamMember {
         website?: string;
     };
 }
+
+export type IndicationCategory =
+    | 'Estudos'
+    | 'Ferramentas'
+    | 'Sites úteis'
+    | 'Desenvolvimento'
+    | 'Design UI/UX'
+    | 'Conteúdos educacionais';
+
+export type IndicationIconName =
+    | 'Monitor'
+    | 'PenNib'
+    | 'GithubLogo'
+    | 'Wrench'
+    | 'Code'
+    | 'PaintBrush'
+    | 'ChatCircle'
+    | 'Notebook'
+    | 'Video'
+    | 'FileText'
+    | 'Database'
+    | 'Rocket'
+    | 'Atom'
+    | 'BracketsCurly'
+    | 'Layout'
+    | 'Sparkle'
+    | 'Stack'
+    | 'GraduationCap'
+    | 'Trophy'
+    | 'Browsers';
+
+export interface Indication {
+    id: number;
+    title: string;
+    description: string;
+    url: string;
+    category: IndicationCategory;
+    tags: string[];
+    indicatedBy: 'Artur' | 'Eduarda';
+    iconName: IndicationIconName;
+}
