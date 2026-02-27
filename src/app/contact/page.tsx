@@ -1,7 +1,9 @@
 'use client';
+import emailjs from '@emailjs/browser';
 import { SectionContainer } from '@/components/SectionContainer';
 import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
+import { getEmailJsConfig } from '@/config/emailJsConfig';
 import {
     EnvelopeIcon,
     GithubLogoIcon,
@@ -10,8 +12,105 @@ import {
     PencilSimpleLineIcon,
     UserIcon,
 } from '@phosphor-icons/react';
+import { FormEvent, useState } from 'react';
+
+type FormStatus = {
+    type: 'success' | 'error';
+    message: string;
+};
 
 export default function Contact() {
+    const [status, setStatus] = useState<FormStatus | null>(null);
+    const [isSending, setIsSending] = useState(false);
+
+    async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setStatus(null);
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+        const name = String(formData.get('name') ?? '').trim();
+        const email = String(formData.get('email') ?? '').trim();
+        const subject = String(formData.get('subject') ?? '').trim();
+        const message = String(formData.get('message') ?? '').trim();
+
+        if (!name || !email || !subject || !message) {
+            setStatus({
+                type: 'error',
+                message: 'Preencha todos os campos antes de enviar.',
+            });
+            return;
+        }
+
+        const isValidEmail = /\S+@\S+\.\S+/.test(email);
+
+        if (!isValidEmail) {
+            setStatus({
+                type: 'error',
+                message: 'Digite um email válido.',
+            });
+            return;
+        }
+
+        setIsSending(true);
+
+        try {
+            const emailJsConfig = getEmailJsConfig();
+            const time = new Date().toLocaleString('pt-BR');
+            const baseTemplateParams = {
+                name,
+                email,
+                message,
+                subject,
+                time,
+            };
+
+            await emailjs.send(
+                emailJsConfig.SERVICE_ID,
+                emailJsConfig.TEMPLATE_ID_FOR_ME,
+                {
+                    ...baseTemplateParams,
+                    title: `Nova mensagem do site: ${subject}`,
+                },
+                emailJsConfig.PUBLIC_KEY
+            );
+
+            let senderConfirmationSent = true;
+
+            try {
+                await emailjs.send(
+                    emailJsConfig.SERVICE_ID,
+                    emailJsConfig.TEMPLATE_ID_FOR_SENDER,
+                    {
+                        ...baseTemplateParams,
+                        title: 'Recebemos sua mensagem!',
+                    },
+                    emailJsConfig.PUBLIC_KEY
+                );
+            } catch (error) {
+                senderConfirmationSent = false;
+                console.error('Falha ao enviar confirmação para remetente:', error);
+            }
+
+            setStatus({
+                type: 'success',
+                message: senderConfirmationSent
+                    ? 'Mensagem enviada com sucesso! Em breve entraremos em contato.'
+                    : 'Mensagem enviada com sucesso! Só não conseguimos disparar o e-mail de confirmação agora.',
+            });
+
+            form.reset();
+        } catch (error) {
+            console.error('Falha ao enviar e-mail principal:', error);
+            setStatus({
+                type: 'error',
+                message: 'Não foi possível enviar sua mensagem. Tente novamente em instantes.',
+            });
+        } finally {
+            setIsSending(false);
+        }
+    }
+
     return (
         <SectionContainer>
             <div className="mx-auto max-w-3xl">
@@ -48,7 +147,7 @@ export default function Contact() {
                     </a>
                 </div>
 
-                <form className="mt-5 space-y-4">
+                <form className="mt-5 space-y-4" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         <div>
                             <label
@@ -67,6 +166,7 @@ export default function Contact() {
                                     name="name"
                                     type="text"
                                     placeholder="Digite seu nome..."
+                                    autoComplete="name"
                                     className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                                 />
                             </div>
@@ -89,6 +189,7 @@ export default function Contact() {
                                     name="email"
                                     type="email"
                                     placeholder="seu@email.com"
+                                    autoComplete="email"
                                     className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                                 />
                             </div>
@@ -135,11 +236,22 @@ export default function Contact() {
 
                     <button
                         type="submit"
-                        className="flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-gradient-to-r from-sky-400 to-sky-500 text-base font-medium text-white transition-colors hover:from-sky-500 hover:to-sky-600"
+                        disabled={isSending}
+                        className="flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-linear-to-r from-sky-400 to-sky-500 text-base font-medium text-white transition-colors hover:from-sky-500 hover:to-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
                     >
                         <PaperPlaneTiltIcon size={16} />
-                        Enviar
+                        {isSending ? 'Enviando...' : 'Enviar'}
                     </button>
+
+                    {status && (
+                        <p
+                            role="status"
+                            aria-live="polite"
+                            className={`text-sm ${status.type === 'success' ? 'text-teal-700' : 'text-red-600'}`}
+                        >
+                            {status.message}
+                        </p>
+                    )}
                 </form>
             </div>
         </SectionContainer>
