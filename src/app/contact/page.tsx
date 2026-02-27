@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { SectionContainer } from '@/components/SectionContainer';
 import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
@@ -23,7 +23,7 @@ export default function Contact() {
                         href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"
                         target="_blank"
                         rel="noreferrer"
-                        className="border-sky-500 bg-sky-500/10 text-sky-500 hover:bg-sky-500/20 flex h-11 items-center justify-center gap-2 rounded-md border text-sm font-semibold transition-colors"
+                        className="flex h-11 items-center justify-center gap-2 rounded-md border border-sky-500 bg-sky-500/10 text-sm font-semibold text-sky-500 transition-colors hover:bg-sky-500/20"
                     >
                         <LinkedinLogoIcon size={16} />
                         LinkedIn
@@ -31,7 +31,7 @@ export default function Contact() {
 
                     <a
                         href="mailto:eduarda.vieira.goncalves7@gmail.com"
-                        className="border-teal-primary text-teal-primary hover:bg-teal-500/20 flex h-11 items-center justify-center gap-2 rounded-md border bg-teal-50 text-sm font-semibold transition-colors"
+                        className="border-teal-primary text-teal-primary flex h-11 items-center justify-center gap-2 rounded-md border bg-teal-50 text-sm font-semibold transition-colors hover:bg-teal-500/20"
                     >
                         <EnvelopeIcon size={16} />
                         Email
@@ -67,7 +67,7 @@ export default function Contact() {
                                     name="name"
                                     type="text"
                                     placeholder="Digite seu nome..."
-                                    className="focus:border-sky-500 h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500"
+                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                                 />
                             </div>
                         </div>
@@ -89,7 +89,7 @@ export default function Contact() {
                                     name="email"
                                     type="email"
                                     placeholder="seu@email.com"
-                                    className="focus:border-sky-500 h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500"
+                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                                 />
                             </div>
                         </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                                 name="subject"
                                 type="text"
                                 placeholder="Informe o assunto.."
-                                className="focus:border-sky-500 h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500"
+                                className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                             />
                         </div>
                     </div>
@@ -129,13 +129,13 @@ export default function Contact() {
                             name="message"
                             rows={7}
                             placeholder="Escreva uma mensagem..."
-                            className="focus:border-sky-500 w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500"
+                            className="w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="bg-linear-to-r from-sky-400 to-sky-500 hover:bg-sky-700 flex h-11 w-full items-center justify-center gap-2 rounded-md text-base font-medium text-white transition-colors cursor-pointer"
+                        className="flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-gradient-to-r from-sky-400 to-sky-500 text-base font-medium text-white transition-colors hover:from-sky-500 hover:to-sky-600"
                     >
                         <PaperPlaneTiltIcon size={16} />
                         Enviar
