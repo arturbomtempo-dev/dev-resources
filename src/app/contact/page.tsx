@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { SectionContainer } from '@/components/SectionContainer';
 import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
+import { Button } from '@/components/ui/button';
 import { getEmailJsConfig } from '@/config/emailJsConfig';
 import {
     EnvelopeIcon,
@@ -13,19 +14,13 @@ import {
     UserIcon,
 } from '@phosphor-icons/react';
 import { FormEvent, useState } from 'react';
-
-type FormStatus = {
-    type: 'success' | 'error';
-    message: string;
-};
+import { toast } from 'sonner';
 
 export default function Contact() {
-    const [status, setStatus] = useState<FormStatus | null>(null);
     const [isSending, setIsSending] = useState(false);
 
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setStatus(null);
 
         const form = event.currentTarget;
         const formData = new FormData(form);
@@ -35,20 +30,14 @@ export default function Contact() {
         const message = String(formData.get('message') ?? '').trim();
 
         if (!name || !email || !subject || !message) {
-            setStatus({
-                type: 'error',
-                message: 'Preencha todos os campos antes de enviar.',
-            });
+            toast.error('Preencha todos os campos antes de enviar.');
             return;
         }
 
         const isValidEmail = /\S+@\S+\.\S+/.test(email);
 
         if (!isValidEmail) {
-            setStatus({
-                type: 'error',
-                message: 'Digite um email válido.',
-            });
+            toast.error('Digite um email válido.');
             return;
         }
 
@@ -92,20 +81,17 @@ export default function Contact() {
                 console.error('Falha ao enviar confirmação para remetente:', error);
             }
 
-            setStatus({
-                type: 'success',
-                message: senderConfirmationSent
-                    ? 'Mensagem enviada com sucesso! Em breve entraremos em contato.'
-                    : 'Mensagem enviada com sucesso! Só não conseguimos disparar o e-mail de confirmação agora.',
-            });
+            if (senderConfirmationSent) {
+                toast.success('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+            } else {
+                toast.success('Mensagem enviada com sucesso!');
+                toast.warning('Não conseguimos disparar o e-mail de confirmação para você agora.');
+            }
 
             form.reset();
         } catch (error) {
             console.error('Falha ao enviar e-mail principal:', error);
-            setStatus({
-                type: 'error',
-                message: 'Não foi possível enviar sua mensagem. Tente novamente em instantes.',
-            });
+            toast.error('Não foi possível enviar sua mensagem. Tente novamente em instantes.');
         } finally {
             setIsSending(false);
         }
@@ -118,33 +104,46 @@ export default function Contact() {
                 <Subtitle text="Entre em contato conosco caso tenha interesse em fazer projetos ou dar sugestões" />
 
                 <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                    <a
-                        href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex h-11 items-center justify-center gap-2 rounded-md border border-sky-500 bg-sky-500/10 text-sm font-semibold text-sky-500 transition-colors hover:bg-sky-500/20"
+                    <Button
+                        asChild
+                        variant="ghost"
+                        className="h-11 rounded-md border border-sky-500 bg-sky-500/10 text-sm font-semibold text-sky-500  hover:text-sky-600  transition-colors hover:bg-sky-500/20"
                     >
-                        <LinkedinLogoIcon size={16} />
-                        LinkedIn
-                    </a>
+                        <a
+                            href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <LinkedinLogoIcon size={16} />
+                            LinkedIn
+                        </a>
+                    </Button>
 
-                    <a
-                        href="mailto:eduarda.vieira.goncalves7@gmail.com"
-                        className="border-teal-primary text-teal-primary flex h-11 items-center justify-center gap-2 rounded-md border bg-teal-50 text-sm font-semibold transition-colors hover:bg-teal-500/20"
+                    <Button
+                        asChild
+                        variant="ghost"
+                        className="border-teal-primary text-teal-primary hover:text-teal-600 h-11 rounded-md border bg-teal-50 text-sm font-semibold transition-colors hover:bg-teal-500/20"
                     >
-                        <EnvelopeIcon size={16} />
-                        Email
-                    </a>
+                        <a href="mailto:eduarda.vieira.goncalves7@gmail.com">
+                            <EnvelopeIcon size={16} />
+                            Email
+                        </a>
+                    </Button>
 
-                    <a
-                        href="https://github.com/eduardavieira-dev"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex h-11 items-center justify-center gap-2 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100"
+                    <Button
+                        asChild
+                        variant="ghost"
+                        className="h-11 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100"
                     >
-                        <GithubLogoIcon size={16} />
-                        GitHub
-                    </a>
+                        <a
+                            href="https://github.com/eduardavieira-dev"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <GithubLogoIcon size={16} />
+                            GitHub
+                        </a>
+                    </Button>
                 </div>
 
                 <form className="mt-5 space-y-4" onSubmit={handleSubmit}>
@@ -242,16 +241,6 @@ export default function Contact() {
                         <PaperPlaneTiltIcon size={16} />
                         {isSending ? 'Enviando...' : 'Enviar'}
                     </button>
-
-                    {status && (
-                        <p
-                            role="status"
-                            aria-live="polite"
-                            className={`text-sm ${status.type === 'success' ? 'text-teal-700' : 'text-red-600'}`}
-                        >
-                            {status.message}
-                        </p>
-                    )}
                 </form>
             </div>
         </SectionContainer>
