@@ -25,6 +25,8 @@ export interface Experience {
     technologies?: string[];
 }
 
+export type ExperienceCategory = 'Acadêmica' | 'Profissional' | 'Projetos' | 'Evento';
+
 export interface Link {
     id: number;
     title: string;

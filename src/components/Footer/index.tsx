@@ -1,4 +1,5 @@
 'use client';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import { GithubLogoIcon } from '@phosphor-icons/react/dist/icons/GithubLogo';
 import { GlobeIcon } from '@phosphor-icons/react/dist/icons/Globe';
 import { InstagramLogoIcon } from '@phosphor-icons/react/dist/icons/InstagramLogo';
@@ -8,45 +9,46 @@ import { IconBox } from '../IconBox';
 import { Logo } from '../Logo';
 
 export function Footer() {
+    const { t } = useI18n();
+
     return (
         <footer className="border-t border-neutral-200 bg-gray-100">
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 border-b border-neutral-200 p-6 md:grid-cols-2 lg:grid-cols-4">
                 <div className="max-w-sm">
                     <Logo size="small" />
-                    <p className="mt-2 text-sm text-neutral-500">
-                        Hub colaborativo de curadoria digital, projetos e experiências em
-                        tecnologia.
-                    </p>
+                    <p className="mt-2 text-sm text-neutral-500">{t.footer.description}</p>
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Navegação</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">
+                        {t.footer.navigation.title}
+                    </h3>
                     <ul className="space-y-1">
                         <li>
-                            <a href="#" className="text-neutral-500 hover:text-blue-500">
-                                Home
+                            <a href="/" className="text-neutral-500 hover:text-blue-500">
+                                {t.footer.navigation.home}
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="text-neutral-500 hover:text-blue-500">
-                                Indicações
+                            <a href="/indications" className="text-neutral-500 hover:text-blue-500">
+                                {t.footer.navigation.indications}
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="text-neutral-500 hover:text-blue-500">
-                                Projetos
+                            <a href="/projects" className="text-neutral-500 hover:text-blue-500">
+                                {t.footer.navigation.projects}
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="text-neutral-500 hover:text-blue-500">
-                                Contato
+                            <a href="/contact" className="text-neutral-500 hover:text-blue-500">
+                                {t.footer.navigation.contact}
                             </a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Redes Sociais | Artur</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">{t.footer.social.artur}</h3>
                     <ul className="flex flex-wrap gap-2">
                         <li>
                             <IconBox
@@ -97,7 +99,9 @@ export function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="mb-2 font-semibold text-neutral-500">Redes Sociais | Eduarda</h3>
+                    <h3 className="mb-2 font-semibold text-neutral-500">
+                        {t.footer.social.eduarda}
+                    </h3>
                     <ul className="flex flex-wrap gap-2">
                         <li>
                             <IconBox
@@ -141,7 +145,7 @@ export function Footer() {
 
             <div className="mx-auto my-3 flex max-w-7xl flex-col gap-4 sm:flex-row sm:justify-between sm:gap-0">
                 <div className="p-4 text-sm text-gray-600">
-                    &copy; {new Date().getFullYear()} DevResources. Todos os direitos reservados.
+                    &copy; {new Date().getFullYear()} DevResources. {t.footer.rights}
                 </div>
                 <div className="p-4 text-sm text-gray-600">Feito por Artur e Eduarda.</div>
             </div>

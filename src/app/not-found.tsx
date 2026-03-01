@@ -1,3 +1,7 @@
+'use client';
+import { useI18n } from '@/lib/i18n/I18nProvider';
+
 export default function NotFound() {
-    return <h1>404 - Ops, não foi possivel encontrar essa página</h1>;
+    const { t } = useI18n();
+    return <h1>{t.common.notFoundMessage}</h1>;
 }

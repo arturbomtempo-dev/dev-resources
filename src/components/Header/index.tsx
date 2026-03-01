@@ -1,24 +1,27 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { Logo } from '../Logo';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import { ListIcon, XIcon } from '@phosphor-icons/react';
-
-const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/indications', label: 'Indicações' },
-    { href: '/about', label: 'Sobre nós' },
-    { href: '/projects', label: 'Projetos' },
-    { href: '/experiences', label: 'Experiencias' },
-    { href: '/contact', label: 'Contato' },
-];
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { LanguageSwitcher } from '../LanguageSwitcher';
+import { Logo } from '../Logo';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
+    const { t } = useI18n();
+
+    const navLinks = [
+        { href: '/', label: t.nav.home },
+        { href: '/indications', label: t.nav.indications },
+        { href: '/about', label: t.nav.about },
+        { href: '/projects', label: t.nav.projects },
+        { href: '/experiences', label: t.nav.experiences },
+        { href: '/contact', label: t.nav.contact },
+    ];
 
     const isHomePage = pathname === '/';
     const isProjectDetailPage = pathname.startsWith('/projects/') && pathname !== '/projects';
@@ -43,7 +46,7 @@ export function Header() {
                 isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
             }`}
         >
-            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:justify-around">
+            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
                 <Link href="/">
                     <Logo variant={isTransparent ? 'light' : 'default'} />
                 </Link>
@@ -80,32 +83,35 @@ export function Header() {
                         );
                     })}
                 </nav>
-                <button
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className={`flex h-10 w-10 cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden ${
-                        isTransparent
-                            ? 'text-white hover:text-white/80'
-                            : 'hover:text-blue-primary text-neutral-500'
-                    }`}
-                    aria-label="Toggle menu"
-                >
-                    <div className="relative h-6 w-6">
-                        <ListIcon
-                            size={24}
-                            weight="bold"
-                            className={`absolute inset-0 transition-all duration-300 ${
-                                isMenuOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
-                            }`}
-                        />
-                        <XIcon
-                            size={24}
-                            weight="bold"
-                            className={`absolute inset-0 transition-all duration-300 ${
-                                isMenuOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'
-                            }`}
-                        />
-                    </div>
-                </button>
+                <div className="flex items-center gap-3">
+                    <LanguageSwitcher isTransparent={isTransparent} />
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className={`flex h-10 w-10 cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden ${
+                            isTransparent
+                                ? 'text-white hover:text-white/80'
+                                : 'hover:text-blue-primary text-neutral-500'
+                        }`}
+                        aria-label="Toggle menu"
+                    >
+                        <div className="relative h-6 w-6">
+                            <ListIcon
+                                size={24}
+                                weight="bold"
+                                className={`absolute inset-0 transition-all duration-300 ${
+                                    isMenuOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
+                                }`}
+                            />
+                            <XIcon
+                                size={24}
+                                weight="bold"
+                                className={`absolute inset-0 transition-all duration-300 ${
+                                    isMenuOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'
+                                }`}
+                            />
+                        </div>
+                    </button>
+                </div>
             </div>
             <nav
                 className={`overflow-hidden transition-all duration-300 lg:hidden ${

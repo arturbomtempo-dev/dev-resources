@@ -1,6 +1,8 @@
+'use client';
+
 import { IconBox } from '@/components/IconBox';
 import type { AboutMember } from '@/data';
-import Image from 'next/image';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import {
     GithubLogoIcon,
     GlobeIcon,
@@ -8,6 +10,7 @@ import {
     LinkedinLogoIcon,
     YoutubeLogoIcon,
 } from '@phosphor-icons/react';
+import Image from 'next/image';
 import { Pills } from '../Pills';
 
 type CardAboutProps = {
@@ -32,6 +35,7 @@ const accentStyles = {
 export function CardAbout({ member }: CardAboutProps) {
     const profile = member;
     const styles = accentStyles[profile.accent];
+    const { t } = useI18n();
 
     return (
         <article className={`rounded-xl border p-8 md:p-10 ${styles.cardClass}`}>
@@ -108,7 +112,7 @@ export function CardAbout({ member }: CardAboutProps) {
                 <div>
                     <p className="mb-6 text-lg leading-relaxed text-gray-700">{profile.bio}</p>
 
-                    <h4 className="mb-3 text-xl font-semibold text-black">Áreas de interesse</h4>
+                    <h4 className="mb-3 text-xl font-semibold text-black">{t.about.interests}</h4>
                     <div className="mb-6 flex flex-wrap gap-2">
                         {profile.interests.map((interest) => (
                             <Pills
@@ -119,7 +123,9 @@ export function CardAbout({ member }: CardAboutProps) {
                         ))}
                     </div>
 
-                    <h4 className="mb-3 text-xl font-semibold text-black">Stack de Tecnologias</h4>
+                    <h4 className="mb-3 text-xl font-semibold text-black">
+                        {t.about.technologies}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                         {profile.technologies.map((technology) => (
                             <Pills key={technology} text={technology} variant="technology" />

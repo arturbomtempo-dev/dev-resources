@@ -1,6 +1,7 @@
 'use client';
 
 import { Pills } from '@/app/experiences/_components/Pills';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import { cn } from '@/lib/utils';
 import { FunnelIcon, StarIcon } from '@phosphor-icons/react';
 import { useState } from 'react';
@@ -11,6 +12,7 @@ interface FilterBarProps {
     selectedCategory: string;
     selectedAuthor: string;
     showFavoritesOnly: boolean;
+    translateCategory: (category: string) => string;
     onCategoryChange: (category: string) => void;
     onAuthorChange: (author: string) => void;
     onToggleFavorites: () => void;
@@ -22,11 +24,13 @@ export function FilterBar({
     selectedCategory,
     selectedAuthor,
     showFavoritesOnly,
+    translateCategory,
     onCategoryChange,
     onAuthorChange,
     onToggleFavorites,
 }: FilterBarProps) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const { t } = useI18n();
 
     return (
         <div className="flex flex-col gap-3">
@@ -43,7 +47,7 @@ export function FilterBar({
                     )}
                 >
                     <FunnelIcon size={18} weight={isExpanded ? 'fill' : 'regular'} />
-                    {!isExpanded && 'Filtros'}
+                    {!isExpanded && t.indications.filters.label}
                 </button>
 
                 {isExpanded && (
@@ -51,7 +55,7 @@ export function FilterBar({
                         {categories.map((category) => (
                             <Pills
                                 key={category}
-                                text={category}
+                                text={translateCategory(category)}
                                 isActive={selectedCategory === category}
                                 onClick={() => onCategoryChange(category)}
                             />
@@ -70,13 +74,15 @@ export function FilterBar({
                     )}
                 >
                     <StarIcon size={18} weight={showFavoritesOnly ? 'fill' : 'regular'} />
-                    Favoritos
+                    {t.indications.filters.favorites}
                 </button>
             </div>
 
             {isExpanded && (
                 <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-sm font-medium text-gray-600">Indicado por:</span>
+                    <span className="text-sm font-medium text-gray-600">
+                        {t.indications.filters.author}:
+                    </span>
                     {authors.map((author) => (
                         <Pills
                             key={author}

@@ -3,9 +3,9 @@
 import { SectionContainer } from '@/components/SectionContainer';
 import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
-import { indications } from '@/data';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import { CaretLeftIcon, CaretRightIcon, MagnifyingGlassIcon } from '@phosphor-icons/react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { FilterBar } from './_components/FilterBar';
 import { IndicationCard } from './_components/IndicationCard';
 import { useFavorites } from './_hooks/useFavorites';
@@ -13,22 +13,36 @@ import { useFavorites } from './_hooks/useFavorites';
 const ITEMS_PER_PAGE = 12;
 
 export default function Indications() {
+    const { t, data, locale } = useI18n();
+    const indications = data.indications;
     const [searchQuery, setSearchQuery] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('Todos');
-    const [selectedAuthor, setSelectedAuthor] = useState('Todos');
+    const [selectedCategory, setSelectedCategory] = useState(t.indications.filters.all);
+    const [selectedAuthor, setSelectedAuthor] = useState(t.indications.filters.all);
     const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const { favorites, toggleFavorite, isFavorite, isLoaded } = useFavorites();
 
+    useEffect(() => {
+        setSelectedCategory(t.indications.filters.all);
+        setSelectedAuthor(t.indications.filters.all);
+    }, [locale, t.indications.filters.all]);
+
     const categories = useMemo(() => {
         const cats = new Set(indications.map((i) => i.category));
-        return ['Todos', ...Array.from(cats).sort()];
-    }, []);
+        return [t.indications.filters.all, ...Array.from(cats).sort()];
+    }, [indications, t.indications.filters.all]);
 
     const authors = useMemo(() => {
         const auths = new Set(indications.map((i) => i.indicatedBy));
-        return ['Todos', ...Array.from(auths).sort()];
-    }, []);
+        return [t.indications.filters.all, ...Array.from(auths).sort()];
+    }, [indications, t.indications.filters.all]);
+
+    const translateCategory = (category: string): string => {
+        if (category === t.indications.filters.all) return category;
+        return (
+            t.indications.categories[category as keyof typeof t.indications.categories] || category
+        );
+    };
 
     const filteredIndications = useMemo(() => {
         return indications.filter((indication) => {
@@ -41,16 +55,26 @@ export default function Indications() {
                 );
 
             const matchesCategory =
-                selectedCategory === 'Todos' || indication.category === selectedCategory;
+                selectedCategory === t.indications.filters.all ||
+                indication.category === selectedCategory;
 
             const matchesAuthor =
-                selectedAuthor === 'Todos' || indication.indicatedBy === selectedAuthor;
+                selectedAuthor === t.indications.filters.all ||
+                indication.indicatedBy === selectedAuthor;
 
             const matchesFavorites = !showFavoritesOnly || favorites.has(indication.id);
 
             return matchesSearch && matchesCategory && matchesAuthor && matchesFavorites;
         });
-    }, [searchQuery, selectedCategory, selectedAuthor, showFavoritesOnly, favorites]);
+    }, [
+        searchQuery,
+        selectedCategory,
+        selectedAuthor,
+        showFavoritesOnly,
+        favorites,
+        indications,
+        t.indications.filters.all,
+    ]);
 
     const totalPages = Math.ceil(filteredIndications.length / ITEMS_PER_PAGE);
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -80,8 +104,8 @@ export default function Indications() {
     return (
         <SectionContainer>
             <div className="text-left">
-                <Title text="Indicações" />
-                <Subtitle text="Recursos selecionados e recomendados por nós durante nossa trajetória dev." />
+                <Title text={t.indications.title} />
+                <Subtitle text={t.indications.subtitle} />
             </div>
 
             <div className="mt-6 mb-8 flex flex-col gap-4">
@@ -94,8 +118,8 @@ export default function Indications() {
                         type="search"
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
-                        placeholder="Buscar recursos..."
-                        className="border-teal-primary w-full rounded-full border bg-white focus:bg-neutral-50 py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:ring-2 focus:ring-[--teal-primary]/30"
+                        placeholder={t.indications.search.placeholder}
+                        className="border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:bg-neutral-50 focus:ring-2 focus:ring-[--teal-primary]/30"
                     />
                 </div>
 
@@ -105,6 +129,7 @@ export default function Indications() {
                     selectedCategory={selectedCategory}
                     selectedAuthor={selectedAuthor}
                     showFavoritesOnly={showFavoritesOnly}
+                    translateCategory={translateCategory}
                     onCategoryChange={handleCategoryChange}
                     onAuthorChange={handleAuthorChange}
                     onToggleFavorites={handleToggleFavorites}
@@ -119,13 +144,13 @@ export default function Indications() {
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                     <p className="text-lg font-medium text-gray-700">
                         {showFavoritesOnly
-                            ? 'Nenhuma indicação favoritada'
-                            : 'Nenhuma indicação encontrada'}
+                            ? t.indications.empty.noFavorites
+                            : t.indications.empty.noResults}
                     </p>
                     <p className="mt-2 text-sm text-gray-500">
                         {showFavoritesOnly
-                            ? 'Adicione recursos aos favoritos clicando na estrela.'
-                            : 'Tente ajustar seus filtros ou busca.'}
+                            ? t.indications.empty.noFavoritesDescription
+                            : t.indications.empty.noResultsDescription}
                     </p>
                 </div>
             ) : (
@@ -141,57 +166,48 @@ export default function Indications() {
                         ))}
                     </div>
 
-                    <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-                        <p className="text-sm text-gray-500">
-                            Exibindo {Math.min(endIndex, filteredIndications.length)} de{' '}
-                            {filteredIndications.length} recursos
-                        </p>
+                    {totalPages > 1 && (
+                        <div className="mt-8 flex items-center justify-center gap-2">
+                            <button
+                                type="button"
+                                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                                disabled={currentPage === 1}
+                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
+                            >
+                                <CaretLeftIcon size={16} />
+                                {t.indications.pagination.previous}
+                            </button>
 
-                        {totalPages > 1 && (
-                            <div className="flex items-center gap-2">
-                                <button
-                                    type="button"
-                                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                                    disabled={currentPage === 1}
-                                    className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
-                                >
-                                    <CaretLeftIcon size={16} />
-                                    Anterior
-                                </button>
-
-                                <div className="flex items-center gap-1">
-                                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                                        (page) => (
-                                            <button
-                                                key={page}
-                                                type="button"
-                                                onClick={() => setCurrentPage(page)}
-                                                className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-all ${
-                                                    currentPage === page
-                                                        ? 'bg-teal-600 text-white'
-                                                        : 'text-gray-600 hover:bg-teal-50 hover:text-teal-600'
-                                                }`}
-                                            >
-                                                {page}
-                                            </button>
-                                        )
-                                    )}
-                                </div>
-
-                                <button
-                                    type="button"
-                                    onClick={() =>
-                                        setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                                    }
-                                    disabled={currentPage === totalPages}
-                                    className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
-                                >
-                                    Próximo
-                                    <CaretRightIcon size={16} />
-                                </button>
+                            <div className="flex items-center gap-1">
+                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                    <button
+                                        key={page}
+                                        type="button"
+                                        onClick={() => setCurrentPage(page)}
+                                        className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-all ${
+                                            currentPage === page
+                                                ? 'bg-teal-600 text-white'
+                                                : 'text-gray-600 hover:bg-teal-50 hover:text-teal-600'
+                                        }`}
+                                    >
+                                        {page}
+                                    </button>
+                                ))}
                             </div>
-                        )}
-                    </div>
+
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                                }
+                                disabled={currentPage === totalPages}
+                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
+                            >
+                                {t.indications.pagination.next}
+                                <CaretRightIcon size={16} />
+                            </button>
+                        </div>
+                    )}
                 </>
             )}
         </SectionContainer>

@@ -2,6 +2,7 @@
 
 import { Title } from '@/components/Title';
 import { Button } from '@/components/ui/button';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import {
     ArrowRightIcon,
     ChatIcon,
@@ -13,6 +14,8 @@ import { ContentCard } from './_components/ContentCard';
 import { Grainient } from './_components/Grainient';
 
 export default function Home() {
+    const { t } = useI18n();
+
     return (
         <>
             <section>
@@ -51,22 +54,19 @@ export default function Home() {
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                         <div className="mx-3 max-w-2xl text-center">
                             <h1 className="mb-8 text-4xl font-semibold md:text-5xl">
-                                Um hub colaborativo de
-                                <span className="text-teal-200/90"> curadoria digital</span>,
-                                projetos e experiências em tecnologia.
+                                {t.home.hero.title}
+                                <span className="text-teal-200/90"> {t.home.hero.titleAccent}</span>
+                                {t.home.hero.titleEnd}
                             </h1>
 
-                            <p className="mb-8 text-lg text-white/80">
-                                Centraliza indicações, ferramentas, materiais de estudo e apresenta
-                                projetos desenvolvidos em conjunto.
-                            </p>
+                            <p className="mb-8 text-lg text-white/80">{t.home.hero.description}</p>
 
                             <div className="flex justify-center gap-2">
                                 <Button
                                     className="cursor-pointer gap-2 rounded-lg bg-linear-to-r from-teal-600 to-teal-500 text-white transition-colors duration-300 ease-in-out hover:from-teal-700 hover:to-teal-600"
                                     size="lg"
                                 >
-                                    Explorar indicações
+                                    {t.home.hero.exploreButton}
                                     <ArrowRightIcon size={32} />
                                 </Button>
 
@@ -75,7 +75,7 @@ export default function Home() {
                                     className="shadow-teal-400-md cursor-pointer rounded-lg border border-teal-600 bg-white text-teal-600 transition-colors duration-300 ease-in-out hover:border-white hover:bg-teal-300/20 hover:text-white"
                                     size="lg"
                                 >
-                                    Conhecer o Projeto
+                                    {t.home.hero.learnMoreButton}
                                 </Button>
                             </div>
                         </div>
@@ -84,32 +84,31 @@ export default function Home() {
             </section>
             <section className="my-30 flex flex-col justify-center">
                 <div className="text-center">
-                    <Title text="O que você encontra aqui" />
+                    <Title text={t.home.sections.title} />
                     <p className="text-subheading text-lg font-normal">
-                        Explore nossas seções e descubra recursos <br /> cuidadosamente
-                        selecionados.
+                        {t.home.sections.subtitle}
                     </p>
                 </div>
                 <div className="mx-auto mt-8 grid max-w-7xl gap-4 px-4 sm:grid-cols-2 lg:grid-cols-4">
                     <ContentCard
                         icon={LinkSimpleHorizontalIcon}
-                        title="Curadoria de Links"
-                        description="Indicações de sites, ferramentas e recursos selecionados."
+                        title={t.home.sections.curatedLinks.title}
+                        description={t.home.sections.curatedLinks.description}
                     />
                     <ContentCard
                         icon={FolderOpenIcon}
-                        title="Projetos em Conjunto"
-                        description="Portfólio colaborativo com projetos desenvolvidos pela equipe."
+                        title={t.home.sections.projects.title}
+                        description={t.home.sections.projects.description}
                     />
                     <ContentCard
                         icon={UsersIcon}
-                        title="Sobre Nós"
-                        description="Conheça Eduarda e Artur, os criadores do DevResources."
+                        title={t.home.sections.about.title}
+                        description={t.home.sections.about.description}
                     />
                     <ContentCard
                         icon={ChatIcon}
-                        title="Contato"
-                        description="Entre em contato conosco para sugestões ou colaboração."
+                        title={t.home.sections.contact.title}
+                        description={t.home.sections.contact.description}
                     />
                 </div>
             </section>

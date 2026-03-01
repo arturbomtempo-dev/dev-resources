@@ -2,6 +2,7 @@
 
 import { IconBox } from '@/components/IconBox';
 import { Indication, IndicationIconName } from '@/data';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import { ArrowSquareOutIcon, StarIcon } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { categoryColors } from './constants/categoryColors';
@@ -14,11 +15,16 @@ interface IndicationCardProps {
 }
 
 export function IndicationCard({ indication, isFavorite, onToggleFavorite }: IndicationCardProps) {
+    const { t } = useI18n();
     const IconComponent = iconMap[indication.iconName];
     const colors = categoryColors[indication.category] || {
         bg: 'bg-teal-50',
         icon: 'text-teal-600',
     };
+
+    const translatedCategory =
+        t.indications.categories[indication.category as keyof typeof t.indications.categories] ||
+        indication.category;
 
     return (
         <article className="group relative flex flex-col rounded-xl border border-neutral-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -28,7 +34,9 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                 className={`absolute top-2 right-2 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border transition-all hover:scale-105 ${
                     isFavorite ? 'border-yellow-200 bg-yellow-100' : 'border-gray-200 bg-neutral-50'
                 }`}
-                aria-label={isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+                aria-label={
+                    isFavorite ? t.indications.card.removeFavorite : t.indications.card.addFavorite
+                }
             >
                 <StarIcon
                     size={20}
@@ -44,7 +52,7 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                     size={22}
                 />
                 <span className="ml-auto rounded-full bg-teal-50 px-2.5 py-0.5 text-xs font-medium text-teal-600">
-                    {indication.category}
+                    {translatedCategory}
                 </span>
             </div>
 
@@ -67,7 +75,8 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
 
             <div className="flex items-center justify-between border-t border-gray-100 pt-4">
                 <span className="text-xs text-gray-500">
-                    por <span className="font-medium text-gray-700">{indication.indicatedBy}</span>
+                    {t.indications.card.indicatedBy}{' '}
+                    <span className="font-medium text-gray-700">{indication.indicatedBy}</span>
                 </span>
                 <Link
                     href={indication.url}
@@ -75,7 +84,7 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-teal-600 transition-colors hover:bg-teal-100 hover:text-teal-700"
                 >
-                    <span>Acessar</span>
+                    <span>{t.indications.card.access}</span>
                     <ArrowSquareOutIcon size={16} weight="bold" className="ml-1" />
                 </Link>
             </div>

@@ -4,6 +4,7 @@ import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { getEmailJsConfig } from '@/config/emailJsConfig';
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import emailjs from '@emailjs/browser';
 import {
     ChatTextIcon,
@@ -18,6 +19,7 @@ import { toast } from 'sonner';
 
 export default function Contact() {
     const [isSending, setIsSending] = useState(false);
+    const { t } = useI18n();
 
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -30,14 +32,14 @@ export default function Contact() {
         const message = String(formData.get('message') ?? '').trim();
 
         if (!name || !email || !subject || !message) {
-            toast.error('Preencha todos os campos antes de enviar.');
+            toast.error(t.contact.toast.fillAllFields);
             return;
         }
 
         const isValidEmail = /\S+@\S+\.\S+/.test(email);
 
         if (!isValidEmail) {
-            toast.error('Digite um email válido.');
+            toast.error(t.contact.toast.invalidEmail);
             return;
         }
 
@@ -82,16 +84,16 @@ export default function Contact() {
             }
 
             if (senderConfirmationSent) {
-                toast.success('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+                toast.success(t.contact.toast.success);
             } else {
-                toast.success('Mensagem enviada com sucesso!');
-                toast.warning('Não conseguimos disparar o e-mail de confirmação para você agora.');
+                toast.success(t.contact.toast.success);
+                toast.warning(t.contact.toast.confirmationWarning);
             }
 
             form.reset();
         } catch (error) {
             console.error('Falha ao enviar e-mail principal:', error);
-            toast.error('Não foi possível enviar sua mensagem. Tente novamente em instantes.');
+            toast.error(t.contact.toast.error);
         } finally {
             setIsSending(false);
         }
@@ -100,8 +102,8 @@ export default function Contact() {
     return (
         <SectionContainer>
             <div className="mx-auto max-w-3xl">
-                <Title text="Contato" />
-                <Subtitle text="Entre em contato conosco caso tenha interesse em fazer projetos ou dar sugestões" />
+                <Title text={t.contact.title} />
+                <Subtitle text={t.contact.subtitle} />
 
                 <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
                     <Button
@@ -115,7 +117,7 @@ export default function Contact() {
                             rel="noreferrer"
                         >
                             <LinkedinLogoIcon size={16} />
-                            LinkedIn
+                            {t.contact.socialButtons.linkedin}
                         </a>
                     </Button>
 
@@ -126,7 +128,7 @@ export default function Contact() {
                     >
                         <a href="mailto:arturbcolen@gmail.com">
                             <EnvelopeIcon size={16} />
-                            Email
+                            {t.contact.socialButtons.email}
                         </a>
                     </Button>
 
@@ -141,7 +143,7 @@ export default function Contact() {
                             rel="noreferrer"
                         >
                             <GithubLogoIcon size={16} />
-                            GitHub
+                            {t.contact.socialButtons.github}
                         </a>
                     </Button>
                 </div>
@@ -153,7 +155,7 @@ export default function Contact() {
                                 htmlFor="name"
                                 className="mb-1 block text-sm font-medium text-black"
                             >
-                                Nome
+                                {t.contact.form.name.label}
                             </label>
                             <div className="relative">
                                 <UserIcon
@@ -164,7 +166,7 @@ export default function Contact() {
                                     id="name"
                                     name="name"
                                     type="text"
-                                    placeholder="Digite seu nome..."
+                                    placeholder={t.contact.form.name.placeholder}
                                     autoComplete="name"
                                     className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                                 />
@@ -176,7 +178,7 @@ export default function Contact() {
                                 htmlFor="email"
                                 className="mb-1 block text-sm font-medium text-black"
                             >
-                                Email
+                                {t.contact.form.email.label}
                             </label>
                             <div className="relative">
                                 <EnvelopeIcon
@@ -187,7 +189,7 @@ export default function Contact() {
                                     id="email"
                                     name="email"
                                     type="email"
-                                    placeholder="seu@email.com"
+                                    placeholder={t.contact.form.email.placeholder}
                                     autoComplete="email"
                                     className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                                 />
@@ -200,7 +202,7 @@ export default function Contact() {
                             htmlFor="subject"
                             className="mb-1 block text-sm font-medium text-black"
                         >
-                            Assunto
+                            {t.contact.form.subject.label}
                         </label>
                         <div className="relative">
                             <ChatTextIcon
@@ -211,7 +213,7 @@ export default function Contact() {
                                 id="subject"
                                 name="subject"
                                 type="text"
-                                placeholder="Informe o assunto.."
+                                placeholder={t.contact.form.subject.placeholder}
                                 className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                             />
                         </div>
@@ -222,13 +224,13 @@ export default function Contact() {
                             htmlFor="message"
                             className="mb-1 block text-sm font-medium text-black"
                         >
-                            Mensagem
+                            {t.contact.form.message.label}
                         </label>
                         <textarea
                             id="message"
                             name="message"
                             rows={7}
-                            placeholder="Escreva uma mensagem..."
+                            placeholder={t.contact.form.message.placeholder}
                             className="w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
                         />
                     </div>
@@ -239,7 +241,7 @@ export default function Contact() {
                         className="flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-linear-to-r from-sky-400 to-sky-500 text-lg font-medium text-white transition-colors hover:from-sky-500 hover:to-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
                     >
                         <PaperPlaneTiltIcon size={18} />
-                        {isSending ? 'Enviando...' : 'Enviar'}
+                        {isSending ? t.contact.form.sending : t.contact.form.submit}
                     </button>
                 </form>
             </div>
