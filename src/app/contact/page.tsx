@@ -1,10 +1,10 @@
 'use client';
-import emailjs from '@emailjs/browser';
 import { SectionContainer } from '@/components/SectionContainer';
 import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { getEmailJsConfig } from '@/config/emailJsConfig';
+import emailjs from '@emailjs/browser';
 import {
     ChatTextIcon,
     EnvelopeIcon,
@@ -110,7 +110,7 @@ export default function Contact() {
                         className="h-11 rounded-md border border-sky-500 bg-sky-500/10 text-sm font-semibold text-sky-500 transition-colors hover:bg-sky-500/20 hover:text-sky-600"
                     >
                         <a
-                            href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"
+                            href="https://www.linkedin.com/in/artur-bomtempo"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -124,7 +124,7 @@ export default function Contact() {
                         variant="ghost"
                         className="border-teal-primary text-teal-primary h-11 rounded-md border bg-teal-50 text-sm font-semibold transition-colors hover:bg-teal-500/20 hover:text-teal-600"
                     >
-                        <a href="mailto:eduarda.vieira.goncalves7@gmail.com">
+                        <a href="mailto:arturbcolen@gmail.com">
                             <EnvelopeIcon size={16} />
                             Email
                         </a>
@@ -136,7 +136,7 @@ export default function Contact() {
                         className="h-11 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100"
                     >
                         <a
-                            href="https://github.com/eduardavieira-dev"
+                            href="https://github.com/arturbomtempo-dev"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -236,7 +236,7 @@ export default function Contact() {
                     <button
                         type="submit"
                         disabled={isSending}
-                        className="flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-linear-to-r from-sky-400 to-sky-500  text-lg font-medium text-white transition-colors hover:from-sky-500 hover:to-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
+                        className="flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-linear-to-r from-sky-400 to-sky-500 text-lg font-medium text-white transition-colors hover:from-sky-500 hover:to-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
                     >
                         <PaperPlaneTiltIcon size={18} />
                         {isSending ? 'Enviando...' : 'Enviar'}
