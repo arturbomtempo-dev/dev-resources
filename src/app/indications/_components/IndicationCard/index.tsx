@@ -21,11 +21,11 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
     };
 
     return (
-        <article className="group relative flex flex-col rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <article className="group relative flex flex-col rounded-xl border border-neutral-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <button
                 type="button"
                 onClick={() => onToggleFavorite(indication.id)}
-                className={`absolute -top-px -right-px flex h-11 w-11 cursor-pointer items-center justify-center rounded-tr-xl rounded-bl-lg transition-all hover:scale-105 ${
+                className={`absolute top-2 right-2 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border transition-all hover:scale-105 ${
                     isFavorite ? 'border-yellow-200 bg-yellow-100' : 'border-gray-200 bg-neutral-50'
                 }`}
                 aria-label={isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}

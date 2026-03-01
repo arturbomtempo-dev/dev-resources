@@ -95,7 +95,7 @@ export default function Indications() {
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
                         placeholder="Buscar recursos..."
-                        className="border-teal-primary focus:border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:ring-2 focus:ring-[--teal-primary]/30"
+                        className="border-teal-primary w-full rounded-full border bg-white focus:bg-neutral-50 py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:ring-2 focus:ring-[--teal-primary]/30"
                     />
                 </div>
 
@@ -124,8 +124,8 @@ export default function Indications() {
                     </p>
                     <p className="mt-2 text-sm text-gray-500">
                         {showFavoritesOnly
-                            ? 'Adicione recursos aos favoritos clicando na estrela'
-                            : 'Tente ajustar seus filtros ou busca'}
+                            ? 'Adicione recursos aos favoritos clicando na estrela.'
+                            : 'Tente ajustar seus filtros ou busca.'}
                     </p>
                 </div>
             ) : (
