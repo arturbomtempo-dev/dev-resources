@@ -138,9 +138,37 @@
 body {
     background: var(--white);
     color: var(--black);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.dark body {
+    background: #0a0a0a;
+    color: #f5f5f5;
 }
 
 .dark {
+    --white: #0a0a0a;
+    --neutral-50: #1a1a1a;
+    --neutral-200: #2a2a2a;
+    --neutral-500: #a0a0a0;
+    --neutral-600: #8a8a8a;
+    --neutral-700: #404040;
+    --neutral-800: #262626;
+    --neutral-900: #1a1a1a;
+
+    --black: #f5f5f5;
+    --black-900: #e0e0e0;
+
+    --green-bg: #0d2818;
+    --teal-primary: #00bba7;
+    --teal-light: #00d4be;
+    --teal-50: #0a2621;
+
+    --blue-primary: #00b8f4;
+    --blue-accent: #00d4f4;
+
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);

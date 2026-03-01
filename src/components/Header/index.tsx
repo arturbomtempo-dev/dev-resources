@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { Logo } from '../Logo';
+import { ThemeSwitcher } from '../ThemeSwitcher';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +44,9 @@ export function Header() {
     return (
         <header
             className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-                isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+                isScrolled
+                    ? 'bg-white shadow-sm dark:bg-neutral-900 dark:shadow-neutral-700/20'
+                    : 'bg-transparent'
             }`}
         >
             <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
@@ -59,24 +62,20 @@ export function Header() {
                                 href={link.href}
                                 className={`group inline-flex flex-col items-center font-medium transition-colors duration-300 ${
                                     isTransparent
-                                        ? 'text-white/80 hover:text-white'
-                                        : 'text-neutral-500 hover:text-black'
+                                        ? isActive
+                                            ? 'text-white'
+                                            : 'text-white/80 hover:text-white'
+                                        : isActive
+                                          ? 'text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
+                                          : 'text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white'
                                 }`}
                             >
-                                <span
-                                    className={
-                                        isActive
-                                            ? isTransparent
-                                                ? 'text-white'
-                                                : 'text-black'
-                                            : ''
-                                    }
-                                >
-                                    {link.label}
-                                </span>
+                                <span>{link.label}</span>
                                 <span
                                     className={`mt-1 h-0.5 transition-all duration-300 ${
-                                        isTransparent ? 'bg-white' : 'bg-teal-primary'
+                                        isTransparent
+                                            ? 'bg-white'
+                                            : 'bg-teal-primary dark:bg-teal-400'
                                     } ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
                                 />
                             </Link>
@@ -84,13 +83,14 @@ export function Header() {
                     })}
                 </nav>
                 <div className="flex items-center gap-3">
+                    <ThemeSwitcher isTransparent={isTransparent} />
                     <LanguageSwitcher isTransparent={isTransparent} />
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className={`flex h-10 w-10 cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden ${
                             isTransparent
                                 ? 'text-white hover:text-white/80'
-                                : 'hover:text-blue-primary text-neutral-500'
+                                : 'hover:text-blue-primary text-neutral-500 dark:text-neutral-400 dark:hover:text-teal-400'
                         }`}
                         aria-label="Toggle menu"
                     >
@@ -115,11 +115,13 @@ export function Header() {
             </div>
             <nav
                 className={`overflow-hidden transition-all duration-300 lg:hidden ${
-                    isMenuOpen ? 'max-h-96 border-t border-neutral-200' : 'max-h-0'
+                    isMenuOpen
+                        ? 'max-h-96 border-t border-neutral-200 dark:border-neutral-700'
+                        : 'max-h-0'
                 }`}
             >
                 <div
-                    className={`flex flex-col gap-1 bg-white/95 px-6 py-4 backdrop-blur-sm transition-opacity duration-300 ${
+                    className={`flex flex-col gap-1 bg-white/95 px-6 py-4 backdrop-blur-sm transition-opacity duration-300 dark:bg-neutral-900/95 ${
                         isMenuOpen ? 'opacity-100' : 'opacity-0'
                     }`}
                 >
@@ -131,8 +133,8 @@ export function Header() {
                                 href={link.href}
                                 className={`rounded-lg px-4 py-3 font-medium transition-colors ${
                                     isActive
-                                        ? 'text-teal-primary'
-                                        : 'text-neutral-500 hover:bg-neutral-50 hover:text-black'
+                                        ? 'text-teal-primary dark:text-teal-400'
+                                        : 'text-neutral-500 hover:bg-neutral-50 hover:text-black dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white'
                                 }`}
                             >
                                 <span className="inline-flex flex-col">

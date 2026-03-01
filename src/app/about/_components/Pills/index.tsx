@@ -10,10 +10,11 @@ interface PillsProps {
 
 export function Pills({ text, variant = 'interest', className }: PillsProps) {
     const variantClasses: Record<PillsVariant, string> = {
-        interest: 'bg-pink-100 text-pink-500',
-        interestEduarda: 'bg-pink-100 text-pink-500',
-        interestArtur: 'bg-green-bg text-green-600',
-        technology: 'border border-gray-200 bg-gray-100 text-gray-500',
+        interest: 'bg-pink-100 text-pink-500 dark:bg-pink-900/40 dark:text-pink-400',
+        interestEduarda: 'bg-pink-100 text-pink-500 dark:bg-pink-900/40 dark:text-pink-400',
+        interestArtur: 'bg-green-bg text-green-600 dark:bg-green-900/40 dark:text-green-400',
+        technology:
+            'border border-gray-200 bg-gray-100 text-gray-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-300',
     };
 
     return (

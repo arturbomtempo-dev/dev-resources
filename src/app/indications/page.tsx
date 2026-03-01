@@ -119,7 +119,7 @@ export default function Indications() {
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
                         placeholder={t.indications.search.placeholder}
-                        className="border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:bg-neutral-50 focus:ring-2 focus:ring-[--teal-primary]/30"
+                        className="border-teal-primary dark:focus:bg-neutral-750 w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:bg-neutral-50 focus:ring-2 focus:ring-[--teal-primary]/30 dark:border-teal-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-500"
                     />
                 </div>
 
@@ -142,12 +142,12 @@ export default function Indications() {
                 </div>
             ) : filteredIndications.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
-                    <p className="text-lg font-medium text-gray-700">
+                    <p className="text-lg font-medium text-gray-700 dark:text-neutral-300">
                         {showFavoritesOnly
                             ? t.indications.empty.noFavorites
                             : t.indications.empty.noResults}
                     </p>
-                    <p className="mt-2 text-sm text-gray-500">
+                    <p className="mt-2 text-sm text-gray-500 dark:text-neutral-400">
                         {showFavoritesOnly
                             ? t.indications.empty.noFavoritesDescription
                             : t.indications.empty.noResultsDescription}
@@ -172,7 +172,7 @@ export default function Indications() {
                                 type="button"
                                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                                 disabled={currentPage === 1}
-                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
+                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40 dark:text-neutral-400 dark:hover:text-teal-400"
                             >
                                 <CaretLeftIcon size={16} />
                                 {t.indications.pagination.previous}
@@ -186,8 +186,8 @@ export default function Indications() {
                                         onClick={() => setCurrentPage(page)}
                                         className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-all ${
                                             currentPage === page
-                                                ? 'bg-teal-600 text-white'
-                                                : 'text-gray-600 hover:bg-teal-50 hover:text-teal-600'
+                                                ? 'bg-teal-600 text-white dark:bg-teal-500'
+                                                : 'text-gray-600 hover:bg-teal-50 hover:text-teal-600 dark:text-neutral-400 dark:hover:bg-teal-900/40 dark:hover:text-teal-400'
                                         }`}
                                     >
                                         {page}
@@ -201,7 +201,7 @@ export default function Indications() {
                                     setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                                 }
                                 disabled={currentPage === totalPages}
-                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
+                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40 dark:text-neutral-400 dark:hover:text-teal-400"
                             >
                                 {t.indications.pagination.next}
                                 <CaretRightIcon size={16} />

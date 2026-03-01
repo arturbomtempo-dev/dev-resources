@@ -27,12 +27,14 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
         indication.category;
 
     return (
-        <article className="group relative flex flex-col rounded-xl border border-neutral-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <article className="group relative flex flex-col rounded-xl border border-neutral-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800">
             <button
                 type="button"
                 onClick={() => onToggleFavorite(indication.id)}
                 className={`absolute top-2 right-2 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border transition-all hover:scale-105 ${
-                    isFavorite ? 'border-yellow-200 bg-yellow-100' : 'border-gray-200 bg-neutral-50'
+                    isFavorite
+                        ? 'border-yellow-200 bg-yellow-100 dark:border-yellow-700 dark:bg-yellow-900/40'
+                        : 'border-gray-200 bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-700'
                 }`}
                 aria-label={
                     isFavorite ? t.indications.card.removeFavorite : t.indications.card.addFavorite
@@ -41,7 +43,11 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                 <StarIcon
                     size={20}
                     weight={isFavorite ? 'fill' : 'regular'}
-                    className={isFavorite ? 'text-yellow-500' : 'text-neutral-500'}
+                    className={
+                        isFavorite
+                            ? 'text-yellow-500 dark:text-yellow-400'
+                            : 'text-neutral-500 dark:text-neutral-400'
+                    }
                 />
             </button>
             <div className="mb-3 flex items-start gap-3 pr-10">
@@ -51,14 +57,16 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                     iconColor={colors.icon}
                     size={22}
                 />
-                <span className="ml-auto rounded-full bg-teal-50 px-2.5 py-0.5 text-xs font-medium text-teal-600">
+                <span className="ml-auto rounded-full bg-teal-50 px-2.5 py-0.5 text-xs font-medium text-teal-600 dark:bg-teal-950 dark:text-teal-400">
                     {translatedCategory}
                 </span>
             </div>
 
-            <h3 className="mb-2 text-base font-semibold text-gray-900">{indication.title}</h3>
+            <h3 className="mb-2 text-base font-semibold text-gray-900 dark:text-white">
+                {indication.title}
+            </h3>
 
-            <p className="mb-4 line-clamp-2 flex-1 text-sm leading-relaxed text-gray-600">
+            <p className="mb-4 line-clamp-2 flex-1 text-sm leading-relaxed text-gray-600 dark:text-neutral-400">
                 {indication.description}
             </p>
 
@@ -66,23 +74,25 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                 {indication.tags.map((tag: string) => (
                     <span
                         key={tag}
-                        className={`rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-700`}
+                        className={`rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-700 dark:bg-teal-900/40 dark:text-teal-400`}
                     >
                         {tag}
                     </span>
                 ))}
             </div>
 
-            <div className="flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-gray-500">
+            <div className="flex items-center justify-between border-t border-gray-100 pt-4 dark:border-neutral-700">
+                <span className="text-xs text-gray-500 dark:text-neutral-500">
                     {t.indications.card.indicatedBy}{' '}
-                    <span className="font-medium text-gray-700">{indication.indicatedBy}</span>
+                    <span className="font-medium text-gray-700 dark:text-neutral-300">
+                        {indication.indicatedBy}
+                    </span>
                 </span>
                 <Link
                     href={indication.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-teal-600 transition-colors hover:bg-teal-100 hover:text-teal-700"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-teal-600 transition-colors hover:bg-teal-100 hover:text-teal-700 dark:text-teal-400 dark:hover:bg-teal-900/40 dark:hover:text-teal-300"
                 >
                     <span>{t.indications.card.access}</span>
                     <ArrowSquareOutIcon size={16} weight="bold" className="ml-1" />

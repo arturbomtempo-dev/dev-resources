@@ -15,10 +15,11 @@ interface ExperienceCardProps {
 }
 
 const categoryClasses: Record<ExperienceCategory, string> = {
-    Acadêmica: 'border-sky-500 bg-sky-50 text-sky-500',
-    Profissional: 'border-green-600 bg-green-50 text-green-600',
-    Projetos: 'border-teal-600 bg-teal-50 text-teal-600',
-    Evento: 'border-orange-500 bg-orange-50 text-orange-500',
+    Acadêmica: 'border-sky-500 bg-sky-50 text-sky-500 dark:bg-sky-900/40 dark:text-sky-400',
+    Profissional:
+        'border-green-600 bg-green-50 text-green-600 dark:bg-green-900/40 dark:text-green-400',
+    Projetos: 'border-teal-600 bg-teal-50 text-teal-600 dark:bg-teal-900/40 dark:text-teal-400',
+    Evento: 'border-orange-500 bg-orange-50 text-orange-500 dark:bg-orange-900/40 dark:text-orange-400',
 };
 
 export function ExperienceCard({
@@ -38,17 +39,17 @@ export function ExperienceCard({
                     <CardIcon size={16} weight="regular" />
                 </div>
                 {showLine && (
-                    <span className="absolute top-9 h-[calc(100%+1rem)] w-px bg-gray-300 md:top-10" />
+                    <span className="absolute top-9 h-[calc(100%+1rem)] w-px bg-gray-300 md:top-10 dark:bg-neutral-600" />
                 )}
             </div>
 
-            <article className="w-full rounded-md border border-gray-300 bg-white px-3 py-3 md:px-4 md:py-3.5">
+            <article className="w-full rounded-md border border-gray-300 bg-white px-3 py-3 md:px-4 md:py-3.5 dark:border-neutral-700 dark:bg-neutral-800">
                 <div className="flex items-start justify-between gap-3">
                     <div>
-                        <h3 className="text-sm leading-tight font-semibold text-gray-900 md:text-base">
+                        <h3 className="text-sm leading-tight font-semibold text-gray-900 md:text-base dark:text-white">
                             {title}
                         </h3>
-                        <p className="mt-0.5 text-[11px] text-gray-900 md:text-xs">
+                        <p className="mt-0.5 text-[11px] text-gray-900 md:text-xs dark:text-neutral-200">
                             {organization}
                         </p>
                     </div>
@@ -59,7 +60,7 @@ export function ExperienceCard({
                     />
                 </div>
 
-                <p className="mt-3 text-center text-[11px] font-light text-slate-500 italic md:text-xs">
+                <p className="mt-3 text-center text-[11px] font-light text-slate-500 italic md:text-xs dark:text-neutral-400">
                     {period}
                 </p>
             </article>

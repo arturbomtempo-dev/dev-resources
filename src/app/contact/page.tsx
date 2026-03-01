@@ -109,7 +109,7 @@ export default function Contact() {
                     <Button
                         asChild
                         variant="ghost"
-                        className="h-11 rounded-md border border-sky-500 bg-sky-500/10 text-sm font-semibold text-sky-500 transition-colors hover:bg-sky-500/20 hover:text-sky-600"
+                        className="h-11 rounded-md border border-sky-500 bg-sky-500/10 text-sm font-semibold text-sky-500 transition-colors hover:bg-sky-500/20 hover:text-sky-600 dark:border-sky-400 dark:bg-sky-900/30 dark:text-sky-400 dark:hover:bg-sky-900/50"
                     >
                         <a
                             href="https://www.linkedin.com/in/artur-bomtempo"
@@ -124,7 +124,7 @@ export default function Contact() {
                     <Button
                         asChild
                         variant="ghost"
-                        className="border-teal-primary text-teal-primary h-11 rounded-md border bg-teal-50 text-sm font-semibold transition-colors hover:bg-teal-500/20 hover:text-teal-600"
+                        className="border-teal-primary text-teal-primary h-11 rounded-md border bg-teal-50 text-sm font-semibold transition-colors hover:bg-teal-500/20 hover:text-teal-600 dark:border-teal-400 dark:bg-teal-900/30 dark:text-teal-400 dark:hover:bg-teal-900/50"
                     >
                         <a href="mailto:arturbcolen@gmail.com">
                             <EnvelopeIcon size={16} />
@@ -135,7 +135,7 @@ export default function Contact() {
                     <Button
                         asChild
                         variant="ghost"
-                        className="h-11 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100"
+                        className="h-11 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100 dark:border-neutral-500 dark:bg-neutral-700 dark:text-white dark:hover:bg-neutral-600"
                     >
                         <a
                             href="https://github.com/arturbomtempo-dev"
@@ -153,14 +153,14 @@ export default function Contact() {
                         <div>
                             <label
                                 htmlFor="name"
-                                className="mb-1 block text-sm font-medium text-black"
+                                className="mb-1 block text-sm font-medium text-black dark:text-white"
                             >
                                 {t.contact.form.name.label}
                             </label>
                             <div className="relative">
                                 <UserIcon
                                     size={16}
-                                    className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500"
+                                    className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500 dark:text-neutral-400"
                                 />
                                 <input
                                     id="name"
@@ -168,7 +168,7 @@ export default function Contact() {
                                     type="text"
                                     placeholder={t.contact.form.name.placeholder}
                                     autoComplete="name"
-                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
+                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                                 />
                             </div>
                         </div>
@@ -176,14 +176,14 @@ export default function Contact() {
                         <div>
                             <label
                                 htmlFor="email"
-                                className="mb-1 block text-sm font-medium text-black"
+                                className="mb-1 block text-sm font-medium text-black dark:text-white"
                             >
                                 {t.contact.form.email.label}
                             </label>
                             <div className="relative">
                                 <EnvelopeIcon
                                     size={16}
-                                    className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500"
+                                    className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500 dark:text-neutral-400"
                                 />
                                 <input
                                     id="email"
@@ -191,7 +191,7 @@ export default function Contact() {
                                     type="email"
                                     placeholder={t.contact.form.email.placeholder}
                                     autoComplete="email"
-                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
+                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                                 />
                             </div>
                         </div>
@@ -200,21 +200,21 @@ export default function Contact() {
                     <div>
                         <label
                             htmlFor="subject"
-                            className="mb-1 block text-sm font-medium text-black"
+                            className="mb-1 block text-sm font-medium text-black dark:text-white"
                         >
                             {t.contact.form.subject.label}
                         </label>
                         <div className="relative">
                             <ChatTextIcon
                                 size={16}
-                                className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500"
+                                className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500 dark:text-neutral-400"
                             />
                             <input
                                 id="subject"
                                 name="subject"
                                 type="text"
                                 placeholder={t.contact.form.subject.placeholder}
-                                className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
+                                className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                             />
                         </div>
                     </div>
@@ -222,7 +222,7 @@ export default function Contact() {
                     <div>
                         <label
                             htmlFor="message"
-                            className="mb-1 block text-sm font-medium text-black"
+                            className="mb-1 block text-sm font-medium text-black dark:text-white"
                         >
                             {t.contact.form.message.label}
                         </label>
@@ -231,7 +231,7 @@ export default function Contact() {
                             name="message"
                             rows={7}
                             placeholder={t.contact.form.message.placeholder}
-                            className="w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500"
+                            className="w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                         />
                     </div>
 
