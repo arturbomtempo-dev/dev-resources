@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 </div>
                 <div className="flex flex-col gap-4 p-5">
                     <div className="flex flex-col gap-2">
-                        <h3 className="font-family-manrope text-base font-bold dark:text-white">
+                        <h3 className="font-family-manrope text-base font-bold dark:text-gray-100">
                             {project.title}
                         </h3>
                         <p className="text-sm font-normal text-neutral-600 dark:text-neutral-400">

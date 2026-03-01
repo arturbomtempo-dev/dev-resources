@@ -13,7 +13,7 @@ export function Pills({ text, className, onClick, isActive = false }: PillsProps
 
     const defaultClasses = isActive
         ? 'bg-linear-to-r from-teal-600 to-teal-500 text-white'
-        : 'bg-gray-200 text-gray-800 dark:bg-neutral-700 dark:text-white';
+        : 'bg-gray-200 text-gray-800 dark:bg-neutral-700 dark:text-gray-100';
 
     if (onClick) {
         return (

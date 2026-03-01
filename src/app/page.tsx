@@ -85,7 +85,7 @@ export default function Home() {
             <section className="my-30 flex flex-col justify-center">
                 <div className="text-center">
                     <Title text={t.home.sections.title} />
-                    <p className="text-subheading text-lg font-normal">
+                    <p className="text-subheading text-lg font-normal dark:text-neutral-400">
                         {t.home.sections.subtitle}
                     </p>
                 </div>

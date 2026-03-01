@@ -135,7 +135,7 @@ export default function Contact() {
                     <Button
                         asChild
                         variant="ghost"
-                        className="h-11 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100 dark:border-neutral-500 dark:bg-neutral-700 dark:text-white dark:hover:bg-neutral-600"
+                        className="h-11 rounded-md border border-black bg-white text-sm font-semibold text-black transition-colors hover:bg-gray-100 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:hover:bg-neutral-700"
                     >
                         <a
                             href="https://github.com/arturbomtempo-dev"
@@ -153,7 +153,7 @@ export default function Contact() {
                         <div>
                             <label
                                 htmlFor="name"
-                                className="mb-1 block text-sm font-medium text-black dark:text-white"
+                                className="mb-1 block text-sm font-medium text-black dark:text-gray-100"
                             >
                                 {t.contact.form.name.label}
                             </label>
@@ -168,7 +168,7 @@ export default function Contact() {
                                     type="text"
                                     placeholder={t.contact.form.name.placeholder}
                                     autoComplete="name"
-                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
+                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                                 />
                             </div>
                         </div>
@@ -176,7 +176,7 @@ export default function Contact() {
                         <div>
                             <label
                                 htmlFor="email"
-                                className="mb-1 block text-sm font-medium text-black dark:text-white"
+                                className="mb-1 block text-sm font-medium text-black dark:text-gray-100"
                             >
                                 {t.contact.form.email.label}
                             </label>
@@ -191,7 +191,7 @@ export default function Contact() {
                                     type="email"
                                     placeholder={t.contact.form.email.placeholder}
                                     autoComplete="email"
-                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
+                                    className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                                 />
                             </div>
                         </div>
@@ -200,7 +200,7 @@ export default function Contact() {
                     <div>
                         <label
                             htmlFor="subject"
-                            className="mb-1 block text-sm font-medium text-black dark:text-white"
+                            className="mb-1 block text-sm font-medium text-black dark:text-gray-100"
                         >
                             {t.contact.form.subject.label}
                         </label>
@@ -214,7 +214,7 @@ export default function Contact() {
                                 name="subject"
                                 type="text"
                                 placeholder={t.contact.form.subject.placeholder}
-                                className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
+                                className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                             />
                         </div>
                     </div>
@@ -222,7 +222,7 @@ export default function Contact() {
                     <div>
                         <label
                             htmlFor="message"
-                            className="mb-1 block text-sm font-medium text-black dark:text-white"
+                            className="mb-1 block text-sm font-medium text-black dark:text-gray-100"
                         >
                             {t.contact.form.message.label}
                         </label>
@@ -231,7 +231,7 @@ export default function Contact() {
                             name="message"
                             rows={7}
                             placeholder={t.contact.form.message.placeholder}
-                            className="w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
+                            className="w-full resize-none rounded-md border border-neutral-200 bg-white p-3 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-sky-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-sky-400"
                         />
                     </div>
 

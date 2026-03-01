@@ -55,7 +55,7 @@ export function CardAbout({ member }: CardAboutProps) {
                         />
                     </div>
 
-                    <h3 className="text-2xl font-semibold text-black dark:text-white">
+                    <h3 className="text-2xl font-semibold text-black dark:text-gray-100">
                         {profile.name}
                     </h3>
                     <p className="mt-1 text-sm text-black dark:text-neutral-300">{profile.role}</p>
@@ -122,7 +122,7 @@ export function CardAbout({ member }: CardAboutProps) {
                         {profile.bio}
                     </p>
 
-                    <h4 className="mb-3 text-xl font-semibold text-black dark:text-white">
+                    <h4 className="mb-3 text-xl font-semibold text-black dark:text-gray-100">
                         {t.about.interests}
                     </h4>
                     <div className="mb-6 flex flex-wrap gap-2">
@@ -135,7 +135,7 @@ export function CardAbout({ member }: CardAboutProps) {
                         ))}
                     </div>
 
-                    <h4 className="mb-3 text-xl font-semibold text-black dark:text-white">
+                    <h4 className="mb-3 text-xl font-semibold text-black dark:text-gray-100">
                         {t.about.technologies}
                     </h4>
                     <div className="flex flex-wrap gap-2">

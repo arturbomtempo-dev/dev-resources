@@ -16,7 +16,7 @@ export function ContentCard({ icon, title, description }: ContentCardProps) {
                 iconColor="text-teal-primary dark:text-teal-400"
                 size={20}
             />
-            <h2 className="text-lg font-semibold dark:text-white">{title}</h2>
+            <h2 className="text-lg font-semibold dark:text-gray-100">{title}</h2>
             <p className="text-sm font-normal dark:text-neutral-400">{description}</p>
         </div>
     );

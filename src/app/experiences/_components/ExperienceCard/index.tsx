@@ -46,10 +46,10 @@ export function ExperienceCard({
             <article className="w-full rounded-md border border-gray-300 bg-white px-3 py-3 md:px-4 md:py-3.5 dark:border-neutral-700 dark:bg-neutral-800">
                 <div className="flex items-start justify-between gap-3">
                     <div>
-                        <h3 className="text-sm leading-tight font-semibold text-gray-900 md:text-base dark:text-white">
+                        <h3 className="text-sm leading-tight font-semibold text-gray-900 md:text-base dark:text-gray-100">
                             {title}
                         </h3>
-                        <p className="mt-0.5 text-[11px] text-gray-900 md:text-xs dark:text-neutral-200">
+                        <p className="mt-0.5 text-[11px] text-gray-900 md:text-xs dark:text-gray-300">
                             {organization}
                         </p>
                     </div>

@@ -67,7 +67,7 @@ export function Header() {
                                             : 'text-white/80 hover:text-white'
                                         : isActive
                                           ? 'text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
-                                          : 'text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white'
+                                          : 'text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-gray-100'
                                 }`}
                             >
                                 <span>{link.label}</span>
@@ -134,7 +134,7 @@ export function Header() {
                                 className={`rounded-lg px-4 py-3 font-medium transition-colors ${
                                     isActive
                                         ? 'text-teal-primary dark:text-teal-400'
-                                        : 'text-neutral-500 hover:bg-neutral-50 hover:text-black dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white'
+                                        : 'text-neutral-500 hover:bg-neutral-50 hover:text-black dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-gray-100'
                                 }`}
                             >
                                 <span className="inline-flex flex-col">

@@ -62,7 +62,7 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                 </span>
             </div>
 
-            <h3 className="mb-2 text-base font-semibold text-gray-900 dark:text-white">
+            <h3 className="mb-2 text-base font-semibold text-gray-900 dark:text-gray-100">
                 {indication.title}
             </h3>
 

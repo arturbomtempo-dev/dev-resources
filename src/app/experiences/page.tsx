@@ -109,7 +109,7 @@ export default function Experiences() {
 
             <section className="mb-8 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-6">
                 <div className="w-full md:border-r md:border-gray-300 md:pr-8 dark:md:border-neutral-600">
-                    <h3 className="mb-4 text-center text-2xl font-semibold dark:text-white">
+                    <h3 className="mb-4 text-center text-2xl font-semibold dark:text-gray-100">
                         {t.experiences.tabs.artur} Bomtempo
                     </h3>
                     <div className="flex flex-col gap-4">
@@ -129,7 +129,7 @@ export default function Experiences() {
 
                 <div className="w-full">
                     <div className="w-full">
-                        <h3 className="mb-4 text-center text-2xl font-semibold dark:text-white">
+                        <h3 className="mb-4 text-center text-2xl font-semibold dark:text-gray-100">
                             {t.experiences.tabs.eduarda} Vieira
                         </h3>
                         <div className="flex flex-col gap-4">

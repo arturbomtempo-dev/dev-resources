@@ -8,6 +8,7 @@
     --neutral-50: #f3f4f6;
     --neutral-200: #e5e7eb;
     --neutral-500: #6a7282;
+    --subheading: #364153;
 
     --black: #000000;
     --black-900: #090909;
@@ -90,7 +91,7 @@
     --color-pink-50: var(--pink-50);
 
     --color-heading: var(--black);
-    --color-subheading: #364153;
+    --color-subheading: var(--subheading);
     --color-body: var(--black);
 
     --font-family-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -153,6 +154,7 @@ body {
     --neutral-50: #1a1a1a;
     --neutral-200: #2a2a2a;
     --neutral-500: #a0a0a0;
+    --subheading: #a0a0a0;
     --neutral-600: #8a8a8a;
     --neutral-700: #404040;
     --neutral-800: #262626;
