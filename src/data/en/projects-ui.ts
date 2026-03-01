@@ -11,7 +11,7 @@ export const projectsUI = {
     links: 'Project Links',
     backToProjects: 'Back to Projects',
     about: 'About the project',
-    screenshotsTitle: 'Screenshots',
+    screenshotsTitle: 'Application Screens',
     linksTitle: 'Links',
     technologiesTitle: 'Technologies',
     developedBy: 'Developed by',

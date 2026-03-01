@@ -41,21 +41,21 @@ export default function ProjectPage() {
                     priority
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/80 to-black/60" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#000000]/95 via-[#000000]/80 to-[#000000]/60" />
                 <div className="absolute inset-0 flex items-start">
                     <div className="w-full pt-5 md:pt-28">
                         <SectionContainer>
                             <Link
                                 href="/projects"
-                                className="mb-5 inline-flex items-center gap-2 text-base font-semibold text-white transition-colors hover:text-white/80"
+                                className="mb-5 inline-flex items-center gap-2 text-base font-semibold text-[#ffffff] transition-colors hover:text-[#ffffff]/80"
                             >
                                 <ArrowLeft size={24} weight="bold" />
                                 {t.projects.backToProjects}
                             </Link>
-                            <h1 className="font-family-manrope mb-3 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+                            <h1 className="font-family-manrope mb-3 text-3xl font-bold text-[#ffffff] md:text-4xl lg:text-5xl">
                                 {project.title}
                             </h1>
-                            <p className="max-w-3xl text-lg text-white/90 md:text-xl">
+                            <p className="max-w-3xl text-lg text-[#ffffff]/90 md:text-xl">
                                 {project.description}
                             </p>
                         </SectionContainer>
@@ -67,31 +67,31 @@ export default function ProjectPage() {
                 <div className="grid gap-12 py-8 md:py-12 lg:grid-cols-12 lg:gap-16">
                     <div className="lg:col-span-8">
                         <div className="mb-8">
-                            <h2 className="font-family-manrope mb-4 text-2xl font-bold text-neutral-900 md:text-3xl">
+                            <h2 className="font-family-manrope mb-4 text-2xl font-bold text-neutral-900 md:text-3xl dark:text-gray-100">
                                 {t.projects.about}
                             </h2>
-                            <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
+                            <p className="text-base leading-relaxed text-neutral-600 md:text-lg dark:text-neutral-400">
                                 {project.longDescription}
                             </p>
                         </div>
 
                         {project.screenshots && project.screenshots.length > 0 && (
                             <div className="mb-8">
-                                <h2 className="font-family-manrope mb-6 text-2xl font-bold text-neutral-900 md:text-3xl">
+                                <h2 className="font-family-manrope mb-6 text-2xl font-bold text-neutral-900 md:text-3xl dark:text-gray-100">
                                     {t.projects.screenshotsTitle}
                                 </h2>
                                 <div className="grid gap-6 md:gap-8">
                                     {project.screenshots.map((screenshot, index) => (
                                         <figure key={index} className="group">
-                                            <div className="relative aspect-video overflow-hidden rounded-lg bg-neutral-100 shadow-md transition-shadow duration-300 group-hover:shadow-xl">
+                                            <div className="relative aspect-video overflow-hidden rounded-lg bg-neutral-100 shadow-md transition-shadow duration-300 group-hover:shadow-xl dark:bg-neutral-800">
                                                 <Image
                                                     src={screenshot.imageUrl}
                                                     alt={screenshot.caption}
                                                     fill
-                                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                                    className="object-cover"
                                                 />
                                             </div>
-                                            <figcaption className="mt-3 text-sm text-neutral-600 md:text-base">
+                                            <figcaption className="mt-3 text-sm text-neutral-600 md:text-base dark:text-neutral-400">
                                                 {screenshot.caption}
                                             </figcaption>
                                         </figure>
@@ -104,7 +104,7 @@ export default function ProjectPage() {
                     <aside className="lg:col-span-4">
                         <div className="sticky top-6 space-y-8">
                             <div>
-                                <h3 className="mb-4 text-sm font-semibold tracking-wide text-neutral-700 uppercase">
+                                <h3 className="mb-4 text-sm font-semibold tracking-wide text-neutral-700 uppercase dark:text-neutral-400">
                                     {t.projects.linksTitle}
                                 </h3>
                                 <div className="flex flex-col gap-3">
@@ -131,14 +131,14 @@ export default function ProjectPage() {
 
                             {project.tags && project.tags.length > 0 && (
                                 <div>
-                                    <h3 className="mb-4 text-sm font-semibold tracking-wide text-neutral-700 uppercase">
+                                    <h3 className="mb-4 text-sm font-semibold tracking-wide text-neutral-700 uppercase dark:text-neutral-400">
                                         {t.projects.technologiesTitle}
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {project.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="rounded-full bg-neutral-100 px-3 py-1.5 text-sm font-medium text-neutral-700"
+                                                className="rounded-full bg-neutral-100 px-3 py-1.5 text-sm font-medium text-neutral-700 dark:bg-neutral-800 dark:text-gray-300"
                                             >
                                                 {tag}
                                             </span>
@@ -149,7 +149,7 @@ export default function ProjectPage() {
 
                             {authors.length > 0 && (
                                 <div>
-                                    <h3 className="mb-4 text-sm font-semibold tracking-wide text-neutral-700 uppercase">
+                                    <h3 className="mb-4 text-sm font-semibold tracking-wide text-neutral-700 uppercase dark:text-neutral-400">
                                         {t.projects.developedBy}
                                     </h3>
                                     <div className="space-y-4">
@@ -173,10 +173,10 @@ export default function ProjectPage() {
                                                     )}
                                                 </div>
                                                 <div className="min-w-0 flex-1">
-                                                    <p className="font-medium text-neutral-900">
+                                                    <p className="font-medium text-neutral-900 dark:text-gray-100">
                                                         {author.name}
                                                     </p>
-                                                    <p className="text-sm text-neutral-500">
+                                                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
                                                         {author.role}
                                                     </p>
                                                     {author.socialLinks.github && (

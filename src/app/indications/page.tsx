@@ -172,7 +172,7 @@ export default function Indications() {
                                 type="button"
                                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                                 disabled={currentPage === 1}
-                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40 dark:text-neutral-400 dark:hover:text-teal-400"
+                                className="flex cursor-pointer items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40 dark:text-neutral-400 dark:hover:text-teal-400"
                             >
                                 <CaretLeftIcon size={16} />
                                 {t.indications.pagination.previous}
@@ -184,7 +184,7 @@ export default function Indications() {
                                         key={page}
                                         type="button"
                                         onClick={() => setCurrentPage(page)}
-                                        className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-all ${
+                                        className={`flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg text-sm font-medium transition-all ${
                                             currentPage === page
                                                 ? 'bg-teal-600 text-white dark:bg-teal-500'
                                                 : 'text-gray-600 hover:bg-teal-50 hover:text-teal-600 dark:text-neutral-400 dark:hover:bg-teal-900/40 dark:hover:text-teal-400'
@@ -201,7 +201,7 @@ export default function Indications() {
                                     setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                                 }
                                 disabled={currentPage === totalPages}
-                                className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40 dark:text-neutral-400 dark:hover:text-teal-400"
+                                className="flex cursor-pointer items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40 dark:text-neutral-400 dark:hover:text-teal-400"
                             >
                                 {t.indications.pagination.next}
                                 <CaretRightIcon size={16} />
