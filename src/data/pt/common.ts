@@ -4,7 +4,7 @@ export const common = {
         indications: 'Indicações',
         about: 'Sobre nós',
         projects: 'Projetos',
-        experiences: 'Experiencias',
+        experiences: 'Experiências',
         contact: 'Contato',
     },
     footer: {
@@ -14,7 +14,9 @@ export const common = {
             title: 'Navegação',
             home: 'Home',
             indications: 'Indicações',
+            about: 'Sobre nós',
             projects: 'Projetos',
+            experiences: 'Experiências',
             contact: 'Contato',
         },
         social: {

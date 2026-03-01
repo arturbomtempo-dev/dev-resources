@@ -13,7 +13,9 @@ export const common = {
             title: 'Navigation',
             home: 'Home',
             indications: 'Resources',
+            about: 'About Us',
             projects: 'Projects',
+            experiences: 'Experiences',
             contact: 'Contact',
         },
         social: {

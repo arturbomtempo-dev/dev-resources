@@ -35,8 +35,18 @@ export function Footer() {
                             </a>
                         </li>
                         <li>
+                            <a href="/about" className="text-neutral-500 hover:text-blue-500">
+                                {t.footer.navigation.about}
+                            </a>
+                        </li>
+                        <li>
                             <a href="/projects" className="text-neutral-500 hover:text-blue-500">
                                 {t.footer.navigation.projects}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/experiences" className="text-neutral-500 hover:text-blue-500">
+                                {t.footer.navigation.experiences}
                             </a>
                         </li>
                         <li>

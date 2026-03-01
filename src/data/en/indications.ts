@@ -47,8 +47,7 @@ export const indications: Indication[] = [
     {
         id: 5,
         title: 'Tailwind CSS',
-        description:
-            'Utility-first CSS framework for building custom interfaces quickly.',
+        description: 'Utility-first CSS framework for building custom interfaces quickly.',
         url: 'https://tailwindcss.com',
         category: 'Desenvolvimento',
         tags: ['CSS', 'Frontend', 'Free'],
@@ -88,8 +87,7 @@ export const indications: Indication[] = [
     {
         id: 9,
         title: 'Notion',
-        description:
-            'All-in-one tool for organizing projects, notes, and documentation.',
+        description: 'All-in-one tool for organizing projects, notes, and documentation.',
         url: 'https://notion.so',
         category: 'Ferramentas',
         tags: ['Free', 'Productivity'],
