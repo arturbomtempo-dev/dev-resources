@@ -95,7 +95,7 @@ export default function Indications() {
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
                         placeholder="Buscar recursos..."
-                        className="border-teal-primary focus:border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all outline-none focus:ring-2 focus:ring-[--teal-primary]/20"
+                        className="border-teal-primary focus:border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:ring-2 focus:ring-[--teal-primary]/30"
                     />
                 </div>
 
@@ -119,8 +119,8 @@ export default function Indications() {
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                     <p className="text-lg font-medium text-gray-700">
                         {showFavoritesOnly
-                            ? 'Nenhum favorito encontrado'
-                            : 'Nenhum resultado encontrado'}
+                            ? 'Nenhuma indicação favoritada'
+                            : 'Nenhuma indicação encontrada'}
                     </p>
                     <p className="mt-2 text-sm text-gray-500">
                         {showFavoritesOnly
@@ -153,7 +153,7 @@ export default function Indications() {
                                     type="button"
                                     onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                                     disabled={currentPage === 1}
-                                    className="flex items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
                                 >
                                     <CaretLeftIcon size={16} />
                                     Anterior
@@ -169,7 +169,7 @@ export default function Indications() {
                                                 className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-all ${
                                                     currentPage === page
                                                         ? 'bg-teal-600 text-white'
-                                                        : 'text-gray-700 hover:bg-gray-100'
+                                                        : 'text-gray-600 hover:bg-teal-50 hover:text-teal-600'
                                                 }`}
                                             >
                                                 {page}
@@ -184,7 +184,7 @@ export default function Indications() {
                                         setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                                     }
                                     disabled={currentPage === totalPages}
-                                    className="flex items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-teal-600 disabled:cursor-not-allowed disabled:opacity-40"
                                 >
                                     Próximo
                                     <CaretRightIcon size={16} />

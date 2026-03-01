@@ -22,7 +22,21 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
 
     return (
         <article className="group relative flex flex-col rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <div className="mb-3 flex items-start justify-between gap-3">
+            <button
+                type="button"
+                onClick={() => onToggleFavorite(indication.id)}
+                className={`absolute -top-px -right-px flex h-11 w-11 cursor-pointer items-center justify-center rounded-tr-xl rounded-bl-lg transition-all hover:scale-105 ${
+                    isFavorite ? 'border-yellow-200 bg-yellow-100' : 'border-gray-200 bg-neutral-50'
+                }`}
+                aria-label={isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+            >
+                <StarIcon
+                    size={20}
+                    weight={isFavorite ? 'fill' : 'regular'}
+                    className={isFavorite ? 'text-yellow-500' : 'text-neutral-500'}
+                />
+            </button>
+            <div className="mb-3 flex items-start gap-3 pr-10">
                 <IconBox
                     icon={IconComponent}
                     bgColor={colors.bg}
@@ -32,22 +46,6 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                 <span className="ml-auto rounded-full bg-teal-50 px-2.5 py-0.5 text-xs font-medium text-teal-600">
                     {indication.category}
                 </span>
-                <button
-                    type="button"
-                    onClick={() => onToggleFavorite(indication.id)}
-                    className={`ml-2 shrink-0 cursor-pointer rounded-full p-1.5 transition-all hover:scale-110 ${
-                        isFavorite
-                            ? 'border-yellow-200 bg-yellow-100'
-                            : 'border-gray-200 bg-gray-50'
-                    }`}
-                    aria-label={isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-                >
-                    <StarIcon
-                        size={20}
-                        weight={isFavorite ? 'fill' : 'regular'}
-                        className={isFavorite ? 'text-yellow-500' : 'text-gray-300'}
-                    />
-                </button>
             </div>
 
             <h3 className="mb-2 text-base font-semibold text-gray-900">{indication.title}</h3>
@@ -75,7 +73,7 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                     href={indication.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-teal-600 transition-colors hover:bg-teal-100 hover:text-teal-700"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-teal-600 transition-colors hover:bg-teal-100 hover:text-teal-700"
                 >
                     <span>Acessar</span>
                     <ArrowSquareOutIcon size={16} weight="bold" className="ml-1" />
