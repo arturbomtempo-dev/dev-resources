@@ -27,8 +27,11 @@ export const common = {
     },
     loading: 'Carregando...',
     error: 'Erro ao carregar',
-    notFound: 'Não encontrado',
-    notFoundMessage: '404 - Ops, não foi possível encontrar essa página',
+    notFound: {
+        code: '404',
+        text: 'Ops, não foi possível encontrar essa página',
+        button: 'Ir para Home',
+    },
     backToHome: 'Voltar para Home',
 };
 

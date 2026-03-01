@@ -26,8 +26,11 @@ export const common = {
     },
     loading: 'Loading...',
     error: 'Error loading',
-    notFound: 'Not found',
-    notFoundMessage: "404 - Oops, we couldn't find this page",
+    notFound: {
+        code: '404',
+        text: "Oops, we couldn't find this page",
+        button: 'Go to Home',
+    },
     backToHome: 'Back to Home',
 };
 

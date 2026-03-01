@@ -31,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="pt-BR">
             <body
-                className={`${inter.variable} ${manrope.variable} flex min-h-screen flex-col antialiased`}
+                className={`${inter.variable} ${manrope.variable} font-family-inter flex min-h-screen flex-col antialiased`}
             >
                 <I18nProvider>
                     <Header />
