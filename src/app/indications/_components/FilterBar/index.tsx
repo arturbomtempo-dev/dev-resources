@@ -35,13 +35,12 @@ export function FilterBar({
                     type="button"
                     onClick={() => setIsExpanded(!isExpanded)}
                     className={cn(
-                        'flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all',
+                        'flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all',
                         isExpanded
                             ? 'bg-linear-to-r from-teal-600 to-teal-500 text-white'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     )}
                 >
-                    <FunnelIcon size={18} weight={isExpanded ? 'fill' : 'regular'} />
                     Filtros
                 </button>
 
@@ -62,13 +61,12 @@ export function FilterBar({
                     type="button"
                     onClick={onToggleFavorites}
                     className={cn(
-                        'flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all',
+                        'flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all',
                         showFavoritesOnly
                             ? 'bg-yellow-400 text-yellow-900'
                             : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
                     )}
                 >
-                    <StarIcon size={18} weight={showFavoritesOnly ? 'fill' : 'regular'} />
                     Favoritos
                 </button>
             </div>

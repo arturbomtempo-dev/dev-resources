@@ -88,14 +88,14 @@ export default function Indications() {
                 <div className="relative">
                     <MagnifyingGlassIcon
                         size={20}
-                        className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400"
+                        className="text-teal-primary absolute top-1/2 left-4 -translate-y-1/2"
                     />
                     <input
                         type="search"
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
                         placeholder="Buscar recursos..."
-                        className="w-full rounded-full border border-gray-200 bg-white py-3 pr-4 pl-12 text-sm transition-all outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+                        className="border-teal-primary focus:border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all outline-none focus:ring-2 focus:ring-[--teal-primary]/20"
                     />
                 </div>
 
