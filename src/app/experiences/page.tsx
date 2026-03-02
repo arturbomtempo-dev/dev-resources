@@ -11,7 +11,7 @@ import {
     GraduationCapIcon,
     Icon,
 } from '@phosphor-icons/react';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ExperienceCard, ExperienceCategory } from './_components/ExperienceCard';
 import { Pills } from './_components/Pills';
 
@@ -23,6 +23,8 @@ type ExperienceItem = {
     icon: Icon;
 };
 
+type FilterKey = 'all' | 'academic' | 'professional' | 'project' | 'event';
+
 const iconMap: Record<string, Icon> = {
     Briefcase: BriefcaseIcon,
     CalendarBlank: CalendarBlankIcon,
@@ -31,12 +33,8 @@ const iconMap: Record<string, Icon> = {
 };
 
 export default function Experiences() {
-    const { t, data, locale } = useI18n();
-    const [selectedFilter, setSelectedFilter] = useState<string>(t.experiences.filters.all);
-
-    useEffect(() => {
-        setSelectedFilter(t.experiences.filters.all);
-    }, [locale, t.experiences.filters.all]);
+    const { t, data } = useI18n();
+    const [selectedFilter, setSelectedFilter] = useState<FilterKey>('all');
 
     const arturExperiences: ExperienceItem[] = useMemo(
         () =>
@@ -56,21 +54,16 @@ export default function Experiences() {
         [data.experiences.eduarda]
     );
 
-    function matchFilter(item: ExperienceItem, filter: string) {
-        if (filter === t.experiences.filters.all) {
-            return true;
-        }
-
-        if (filter === t.experiences.filters.project) {
-            return item.category === 'Projeto';
-        }
-
-        const categoryMap: Record<string, ExperienceCategory> = {
-            [t.experiences.filters.academic]: 'Acadêmico',
-            [t.experiences.filters.professional]: 'Profissional',
-            [t.experiences.filters.event]: 'Evento',
+    function matchFilter(item: ExperienceItem, filter: FilterKey) {
+        if (filter === 'all') return true;
+        if (filter === 'project') return item.category === 'Projeto';
+        const categoryMap: Record<FilterKey, ExperienceCategory> = {
+            academic: 'Acadêmico',
+            professional: 'Profissional',
+            event: 'Evento',
+            all: 'Acadêmico', // dummy
+            project: 'Projeto', // dummy
         };
-
         return item.category === categoryMap[filter];
     }
 
@@ -84,12 +77,12 @@ export default function Experiences() {
         [eduardaExperiences, selectedFilter, t.experiences.filters]
     );
 
-    const filterOptions = [
-        t.experiences.filters.all,
-        t.experiences.filters.academic,
-        t.experiences.filters.professional,
-        t.experiences.filters.project,
-        t.experiences.filters.event,
+    const filterOptions: { key: FilterKey; label: string }[] = [
+        { key: 'all', label: t.experiences.filters.all },
+        { key: 'academic', label: t.experiences.filters.academic },
+        { key: 'professional', label: t.experiences.filters.professional },
+        { key: 'project', label: t.experiences.filters.project },
+        { key: 'event', label: t.experiences.filters.event },
     ];
 
     return (
@@ -99,10 +92,10 @@ export default function Experiences() {
             <div className="my-4 flex flex-wrap gap-2">
                 {filterOptions.map((filter) => (
                     <Pills
-                        key={filter}
-                        text={filter}
-                        isActive={selectedFilter === filter}
-                        onClick={() => setSelectedFilter(filter)}
+                        key={filter.key}
+                        text={filter.label}
+                        isActive={selectedFilter === filter.key}
+                        onClick={() => setSelectedFilter(filter.key)}
                     />
                 ))}
             </div>

@@ -17,29 +17,27 @@ export default function Indications() {
     const searchInputRef = useRef<HTMLInputElement>(null);
     const indications = data.indications;
     const [searchQuery, setSearchQuery] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState(t.indications.filters.all);
-    const [selectedAuthor, setSelectedAuthor] = useState(t.indications.filters.all);
+    const ALL = 'all';
+    const [selectedCategory, setSelectedCategory] = useState<string>(ALL);
+    const [selectedAuthor, setSelectedAuthor] = useState<string>(ALL);
     const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const { favorites, toggleFavorite, isFavorite, isLoaded } = useFavorites();
 
-    useEffect(() => {
-        setSelectedCategory(t.indications.filters.all);
-        setSelectedAuthor(t.indications.filters.all);
-    }, [locale, t.indications.filters.all]);
+    // Removido: não resetar filtro ao trocar idioma
 
     const categories = useMemo(() => {
         const cats = new Set(indications.map((i) => i.category));
-        return [t.indications.filters.all, ...Array.from(cats).sort()];
-    }, [indications, t.indications.filters.all]);
+        return [ALL, ...Array.from(cats).sort()];
+    }, [indications]);
 
     const authors = useMemo(() => {
         const auths = new Set(indications.map((i) => i.indicatedBy));
-        return [t.indications.filters.all, ...Array.from(auths).sort()];
-    }, [indications, t.indications.filters.all]);
+        return [ALL, ...Array.from(auths).sort()];
+    }, [indications]);
 
     const translateCategory = (category: string): string => {
-        if (category === t.indications.filters.all) return category;
+        if (category === ALL) return t.indications.filters.all;
         return (
             t.indications.categories[category as keyof typeof t.indications.categories] || category
         );
@@ -56,12 +54,10 @@ export default function Indications() {
                 );
 
             const matchesCategory =
-                selectedCategory === t.indications.filters.all ||
-                indication.category === selectedCategory;
+                selectedCategory === ALL || indication.category === selectedCategory;
 
             const matchesAuthor =
-                selectedAuthor === t.indications.filters.all ||
-                indication.indicatedBy === selectedAuthor;
+                selectedAuthor === ALL || indication.indicatedBy === selectedAuthor;
 
             const matchesFavorites = !showFavoritesOnly || favorites.has(indication.id);
 
