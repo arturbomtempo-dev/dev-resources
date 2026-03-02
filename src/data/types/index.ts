@@ -64,6 +64,7 @@ export interface AboutMember {
     interests: string[];
     technologies: string[];
     accent: AboutAccent;
+    githubUsername: string;
     socialLinks: {
         github?: string;
         linkedin?: string;
