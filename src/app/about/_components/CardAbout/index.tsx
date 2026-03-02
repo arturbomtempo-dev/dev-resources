@@ -2,7 +2,9 @@
 
 import { IconBox } from '@/components/IconBox';
 import type { AboutMember } from '@/data';
+import { useGitHubUser } from '@/hooks/useGitHubUser';
 import { useI18n } from '@/lib/i18n/I18nProvider';
+import { useTheme } from '@/lib/theme/ThemeProvider';
 import {
     GithubLogoIcon,
     GlobeIcon,
@@ -11,10 +13,22 @@ import {
     YoutubeLogoIcon,
 } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { GitHubCalendar } from 'react-github-calendar';
 import { Pills } from '../Pills';
 
 type CardAboutProps = {
     member: AboutMember;
+};
+
+const calendarThemes = {
+    pink: {
+        light: ['#f3f4f6', '#fce7f3', '#f9a8d4', '#ec4899', '#be185d'],
+        dark: ['#1f1f1f', '#4a1942', '#831843', '#be185d', '#ec4899'],
+    },
+    green: {
+        light: ['#f3f4f6', '#dcfce7', '#86efac', '#22c55e', '#15803d'],
+        dark: ['#1f1f1f', '#0a3022', '#14532d', '#15803d', '#22c55e'],
+    },
 };
 
 const accentStyles = {
@@ -24,6 +38,9 @@ const accentStyles = {
             'bg-pink-100 hover:bg-pink-200 dark:bg-pink-900/40 dark:hover:bg-pink-800/50',
         socialIconClass: 'text-pink-500 dark:text-pink-400',
         interestVariant: 'interestEduarda' as const,
+        statsBg: 'bg-pink-50 dark:bg-pink-900/30',
+        statsText: 'text-pink-600 dark:text-pink-400',
+        statsLabel: 'text-pink-500/80 dark:text-pink-400/70',
     },
     green: {
         cardClass: 'border-green-200 bg-green-50/30',
@@ -31,6 +48,9 @@ const accentStyles = {
             'bg-green-100 hover:bg-green-200 dark:bg-green-900/40 dark:hover:bg-green-800/50',
         socialIconClass: 'text-green-600 dark:text-green-400',
         interestVariant: 'interestArtur' as const,
+        statsBg: 'bg-green-50 dark:bg-green-900/30',
+        statsText: 'text-green-600 dark:text-green-400',
+        statsLabel: 'text-green-500/80 dark:text-green-400/70',
     },
 };
 
@@ -38,6 +58,8 @@ export function CardAbout({ member }: CardAboutProps) {
     const profile = member;
     const styles = accentStyles[profile.accent];
     const { t } = useI18n();
+    const { theme } = useTheme();
+    const { data: githubData, isLoading: githubLoading } = useGitHubUser(profile.githubUsername);
 
     return (
         <article
@@ -56,12 +78,61 @@ export function CardAbout({ member }: CardAboutProps) {
                     </div>
 
                     <h3 className="text-2xl font-semibold text-black dark:text-gray-100">
-                        {profile.name}
+                        {githubData?.name || profile.name}
                     </h3>
+                    <a
+                        href={`https://github.com/${profile.githubUsername}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 text-sm text-neutral-500 transition-colors hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300"
+                    >
+                        @{profile.githubUsername}
+                    </a>
                     <p className="mt-1 text-sm text-black dark:text-neutral-300">{profile.role}</p>
                     <p className="text-sm font-semibold text-black dark:text-neutral-300">
                         {profile.institution}
                     </p>
+
+                    {/* GitHub Stats */}
+                    {githubLoading ? (
+                        <div className="mt-5 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+                            <div className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-300 border-t-transparent dark:border-neutral-600" />
+                            {t.about.github.loading}
+                        </div>
+                    ) : githubData ? (
+                        <div className="mt-5 grid w-full grid-cols-3 gap-2">
+                            <div
+                                className={`rounded-lg p-3 text-center ${styles.statsBg} transition-colors`}
+                            >
+                                <p className={`text-lg font-bold ${styles.statsText}`}>
+                                    {githubData.publicRepos}
+                                </p>
+                                <p className={`text-xs ${styles.statsLabel}`}>
+                                    {t.about.github.repositories}
+                                </p>
+                            </div>
+                            <div
+                                className={`rounded-lg p-3 text-center ${styles.statsBg} transition-colors`}
+                            >
+                                <p className={`text-lg font-bold ${styles.statsText}`}>
+                                    {githubData.followers}
+                                </p>
+                                <p className={`text-xs ${styles.statsLabel}`}>
+                                    {t.about.github.followers}
+                                </p>
+                            </div>
+                            <div
+                                className={`rounded-lg p-3 text-center ${styles.statsBg} transition-colors`}
+                            >
+                                <p className={`text-lg font-bold ${styles.statsText}`}>
+                                    {githubData.following}
+                                </p>
+                                <p className={`text-xs ${styles.statsLabel}`}>
+                                    {t.about.github.following}
+                                </p>
+                            </div>
+                        </div>
+                    ) : null}
 
                     <div className="mt-5 flex flex-wrap justify-center gap-2">
                         {profile.socialLinks.github && (
@@ -138,10 +209,25 @@ export function CardAbout({ member }: CardAboutProps) {
                     <h4 className="mb-3 text-xl font-semibold text-black dark:text-gray-100">
                         {t.about.technologies}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="mb-6 flex flex-wrap gap-2">
                         {profile.technologies.map((technology) => (
                             <Pills key={technology} text={technology} variant="technology" />
                         ))}
+                    </div>
+
+                    {/* GitHub Contributions Calendar */}
+                    <h4 className="mb-3 text-xl font-semibold text-black dark:text-gray-100">
+                        {t.about.github.contributions}
+                    </h4>
+                    <div className="overflow-x-auto rounded-lg bg-white p-4 dark:bg-neutral-900">
+                        <GitHubCalendar
+                            username={profile.githubUsername}
+                            colorScheme={theme}
+                            theme={calendarThemes[profile.accent]}
+                            fontSize={12}
+                            blockSize={10}
+                            blockMargin={3}
+                        />
                     </div>
                 </div>
             </div>

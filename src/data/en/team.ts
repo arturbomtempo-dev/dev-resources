@@ -39,6 +39,7 @@ export const aboutMembers: AboutMember[] = [
         interests: ['Frontend', 'UI/UX Design', 'APIs', 'Databases'],
         technologies: ['React', 'Next.js', 'Tailwind CSS', 'Figma', 'Typescript', 'Node.js'],
         accent: 'pink',
+        githubUsername: 'eduardavieira-dev',
         socialLinks: {
             github: 'https://github.com/eduardavieira-dev',
             linkedin: 'https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/',
@@ -56,6 +57,7 @@ export const aboutMembers: AboutMember[] = [
         interests: ['Backend', 'Cloud', 'AI', 'APIs', 'Databases'],
         technologies: ['Node.js', 'Spring Boot', 'PostgreSQL', 'Docker', 'Typescript', 'React'],
         accent: 'green',
+        githubUsername: 'arturbomtempo-dev',
         socialLinks: {
             github: 'https://github.com/arturbomtempo-dev',
             linkedin: 'https://www.linkedin.com/in/artur-bomtempo/',
