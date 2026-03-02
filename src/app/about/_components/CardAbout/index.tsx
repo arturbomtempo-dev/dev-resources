@@ -73,6 +73,7 @@ export function CardAbout({ member }: CardAboutProps) {
                             fill
                             className="object-cover"
                             sizes="128px"
+                            loading="eager"
                         />
                     </div>
 
