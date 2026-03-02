@@ -71,7 +71,7 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-linear-to-r from-teal-500 to-teal-600 text-lg font-medium text-white transition-colors hover:from-teal-600 hover:to-teal-700 disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-teal-500 text-lg font-medium text-white transition-colors hover:bg-teal-600 disabled:cursor-not-allowed disabled:opacity-70"
             >
                 <PaperPlaneTiltIcon size={18} />
                 {isSubmitting ? t.guestbook.form.submitting : t.guestbook.form.submit}
