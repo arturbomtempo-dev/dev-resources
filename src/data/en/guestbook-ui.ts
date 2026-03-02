@@ -24,14 +24,6 @@ export const guestbookUI = {
         loading: 'Loading messages...',
         error: 'Error loading messages.',
     },
-    time: {
-        justNow: 'Just now',
-        minutesAgo: '{count} minute(s) ago',
-        hoursAgo: '{count} hour(s) ago',
-        daysAgo: '{count} day(s) ago',
-        monthsAgo: '{count} month(s) ago',
-        yearsAgo: '{count} year(s) ago',
-    },
 };
 
 export type GuestbookUITranslations = typeof guestbookUI;

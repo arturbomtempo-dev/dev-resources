@@ -15,41 +15,21 @@ function getInitials(name: string): string {
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-function formatRelativeTime(dateString: string, timeTranslations: Record<string, string>): string {
+function formatDateTime(dateString: string, locale: string): string {
     const date = new Date(dateString);
-    const now = new Date();
-    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-
-    if (diffInSeconds < 60) {
-        return timeTranslations.justNow;
-    }
-
-    const diffInMinutes = Math.floor(diffInSeconds / 60);
-    if (diffInMinutes < 60) {
-        return timeTranslations.minutesAgo.replace('{count}', String(diffInMinutes));
-    }
-
-    const diffInHours = Math.floor(diffInMinutes / 60);
-    if (diffInHours < 24) {
-        return timeTranslations.hoursAgo.replace('{count}', String(diffInHours));
-    }
-
-    const diffInDays = Math.floor(diffInHours / 24);
-    if (diffInDays < 30) {
-        return timeTranslations.daysAgo.replace('{count}', String(diffInDays));
-    }
-
-    const diffInMonths = Math.floor(diffInDays / 30);
-    if (diffInMonths < 12) {
-        return timeTranslations.monthsAgo.replace('{count}', String(diffInMonths));
-    }
-
-    const diffInYears = Math.floor(diffInMonths / 12);
-    return timeTranslations.yearsAgo.replace('{count}', String(diffInYears));
+    return new Intl.DateTimeFormat(locale, {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'America/Sao_Paulo',
+    }).format(date);
 }
 
 export function GuestbookCard({ entry }: GuestbookCardProps) {
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
 
     return (
         <div className="rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-teal-200 hover:shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:hover:border-teal-800">
@@ -65,7 +45,9 @@ export function GuestbookCard({ entry }: GuestbookCardProps) {
                     </h3>
                     <div className="flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400">
                         <ClockIcon size={12} />
-                        <span>{formatRelativeTime(entry.created_at, t.guestbook.time)}</span>
+                        <span>
+                            {formatDateTime(entry.created_at, locale === 'pt' ? 'pt-BR' : 'en-US')}
+                        </span>
                     </div>
                 </div>
             </div>

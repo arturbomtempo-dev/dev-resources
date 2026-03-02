@@ -24,14 +24,6 @@ export const guestbookUI = {
         loading: 'Carregando mensagens...',
         error: 'Erro ao carregar mensagens.',
     },
-    time: {
-        justNow: 'Agora mesmo',
-        minutesAgo: 'há {count} minuto(s)',
-        hoursAgo: 'há {count} hora(s)',
-        daysAgo: 'há {count} dia(s)',
-        monthsAgo: 'há {count} mês(es)',
-        yearsAgo: 'há {count} ano(s)',
-    },
 };
 
 export type GuestbookUITranslations = typeof guestbookUI;
