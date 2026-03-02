@@ -73,6 +73,9 @@
     --color-black: var(--black);
     --color-black-900: var(--black-900);
 
+    /* Cor estática para botão hero */
+    --color-hero-btn-bg: var(--hero-btn-bg);
+
     --color-green-bg: var(--green-bg);
     --color-teal-primary: var(--teal-primary);
     --color-teal-light: var(--teal-light);

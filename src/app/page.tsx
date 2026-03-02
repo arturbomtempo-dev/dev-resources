@@ -78,7 +78,7 @@ export default function Home() {
 
                                 <Button
                                     asChild
-                                    className="shadow-teal-400-md cursor-pointer rounded-lg border border-teal-600 bg-white! text-teal-600 transition-colors duration-300 ease-in-out hover:border-white hover:bg-teal-300/20! hover:text-white"
+                                    className="shadow-teal-400-md cursor-pointer rounded-lg border border-teal-600 bg-[#fff] text-teal-600 transition-colors duration-300 ease-in-out hover:border-[#fff] hover:bg-teal-300/20 hover:text-[#fff]"
                                     size="lg"
                                 >
                                     <Link href="/projects">{t.home.hero.learnMoreButton}</Link>
