@@ -150,6 +150,20 @@ export const experiences: ExperiencesData = {
             category: 'Acadêmico',
             iconName: 'GraduationCap',
         },
+         {
+            title: 'Lecture on Design Patterns',
+            organization: 'PUC Minas',
+            period: 'Jul 2025',
+            category: 'Evento',
+            iconName: 'CalendarBlank',
+        },
+        {
+            title: 'Introduction to Front-end Development for ASSPROM collaborators',
+            organization: 'WebTech Network & Elas++',
+            period: 'Mar 2025 - May 2025',
+            category: 'Projeto',
+            iconName: 'Code',
+        },
         {
             title: 'Software Engineering Degree',
             organization: 'PUC Minas',

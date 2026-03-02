@@ -151,6 +151,20 @@ export const experiences: ExperiencesData = {
             iconName: 'GraduationCap',
         },
         {
+            title: 'Palestra sobre Design Patterns',
+            organization: 'PUC Minas',
+            period: 'Jul 2025',
+            category: 'Evento',
+            iconName: 'CalendarBlank',
+        },
+        {
+            title: 'Introdução ao Desenvolvimento Front-end para colaboradores da ASSPROM',
+            organization: 'WebTech Network & Elas++',
+            period: 'Mar 2025 - Mai 2025',
+            category: 'Projeto',
+            iconName: 'Code',
+        },
+        {
             title: 'Graduação em Engenharia de Software',
             organization: 'PUC Minas',
             period: 'Ago 2024 - Jul 2028',

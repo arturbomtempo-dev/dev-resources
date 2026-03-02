@@ -54,7 +54,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-[#ffffff]">
                         <div className="mx-3 max-w-2xl text-center">
-                            <h1 className="mb-8 text-4xl font-semibold md:text-5xl">
+                            <h1 className="mb-8 text-4xl font-semibold md:text-5xl px-2">
                                 {t.home.hero.title}
                                 <span className="text-teal-200/90"> {t.home.hero.titleAccent}</span>
                                 {t.home.hero.titleEnd}
@@ -88,7 +88,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="my-30 flex flex-col justify-center">
+            <section className="my-30 flex flex-col justify-center px-3">
                 <div className="text-center">
                     <Title text={t.home.sections.title} />
                     <p className="text-subheading text-lg font-normal dark:text-neutral-400">

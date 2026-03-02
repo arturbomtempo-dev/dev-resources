@@ -43,7 +43,7 @@ export function FilterBar({
                         isExpanded ? 'px-3 py-2' : 'px-4 py-2',
                         isExpanded
                             ? 'bg-linear-to-r from-teal-600 to-teal-500 text-white'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-neutral-700 dark:text-gray-100 dark:hover:bg-neutral-600'
+                            : 'bg-gray-100 border border-gray-500 text-gray-700 hover:bg-gray-200 dark:bg-neutral-700 dark:text-gray-100 dark:hover:bg-neutral-600'
                     )}
                 >
                     <FunnelIcon size={18} weight={isExpanded ? 'fill' : 'regular'} />

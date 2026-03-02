@@ -85,7 +85,7 @@ export function Header() {
                         );
                     })}
                 </nav>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1 sm:gap-3">
                     <ThemeSwitcher isTransparent={isTransparent} />
                     <LanguageSwitcher isTransparent={isTransparent} />
                     <button
