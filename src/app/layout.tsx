@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { I18nProvider } from '@/lib/i18n/I18nProvider';
 import { ThemeProvider } from '@/lib/theme/ThemeProvider';
 import type { Metadata } from 'next';
-import { Inter, Manrope } from 'next/font/google';
+import { Inter, JetBrains_Mono, Manrope } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
@@ -15,6 +15,12 @@ const inter = Inter({
 
 const manrope = Manrope({
     variable: '--font-manrope',
+    subsets: ['latin'],
+    display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+    variable: '--font-jetbrains-mono',
     subsets: ['latin'],
     display: 'swap',
 });
@@ -32,7 +38,7 @@ export default function RootLayout({
     return (
         <html lang="pt-BR">
             <body
-                className={`${inter.variable} ${manrope.variable} font-family-inter flex min-h-screen flex-col antialiased`}
+                className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable} font-family-inter flex min-h-screen flex-col antialiased`}
             >
                 <ThemeProvider>
                     <I18nProvider>

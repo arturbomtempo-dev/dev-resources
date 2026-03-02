@@ -5,7 +5,7 @@ import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
 import { useI18n } from '@/lib/i18n/I18nProvider';
 import { CaretLeftIcon, CaretRightIcon, MagnifyingGlassIcon } from '@phosphor-icons/react';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { FilterBar } from './_components/FilterBar';
 import { IndicationCard } from './_components/IndicationCard';
 import { useFavorites } from './_hooks/useFavorites';
@@ -23,8 +23,6 @@ export default function Indications() {
     const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const { favorites, toggleFavorite, isFavorite, isLoaded } = useFavorites();
-
-    // Removido: não resetar filtro ao trocar idioma
 
     const categories = useMemo(() => {
         const cats = new Set(indications.map((i) => i.category));
