@@ -33,19 +33,18 @@ const calendarThemes = {
 
 const accentStyles = {
     pink: {
-        cardClass: 'border-pink-100 bg-pink-50/30',
-        socialBgClass:
-            'bg-pink-100 hover:bg-pink-200 dark:bg-pink-900/40 dark:hover:bg-pink-800/50',
-        socialIconClass: 'text-pink-500 dark:text-pink-400',
+        cardClass: 'border-neutral-200 bg-white',
+        socialBgClass: 'bg-pink-50 hover:bg-pink-200 dark:bg-pink-900/30 dark:hover:bg-pink-800/50',
+        socialIconClass: 'text-pink-600 dark:text-pink-400',
         interestVariant: 'interestEduarda' as const,
         statsBg: 'bg-pink-50 dark:bg-pink-900/30',
         statsText: 'text-pink-600 dark:text-pink-400',
         statsLabel: 'text-pink-500/80 dark:text-pink-400/70',
     },
     green: {
-        cardClass: 'border-green-200 bg-green-50/30',
+        cardClass: 'border-neutral-200 bg-white',
         socialBgClass:
-            'bg-green-100 hover:bg-green-200 dark:bg-green-900/40 dark:hover:bg-green-800/50',
+            'bg-green-50 hover:bg-green-100 dark:bg-green-900/30 dark:hover:bg-green-800/50',
         socialIconClass: 'text-green-600 dark:text-green-400',
         interestVariant: 'interestArtur' as const,
         statsBg: 'bg-green-50 dark:bg-green-900/30',
