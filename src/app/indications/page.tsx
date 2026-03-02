@@ -122,7 +122,7 @@ export default function Indications() {
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
                         placeholder={t.indications.search.placeholder}
-                        className="border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:bg-neutral-50 focus:ring-2 focus:ring-[--teal-primary]/30 dark:border-teal-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-500 dark:focus:bg-neutral-700 dark:focus:ring-teal-600/30"
+                        className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-12 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-teal-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-teal-400"
                     />
                 </div>
 

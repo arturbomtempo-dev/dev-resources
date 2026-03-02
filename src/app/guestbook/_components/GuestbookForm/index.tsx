@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { useI18n } from '@/lib/i18n/I18nProvider';
 import { ChatTextIcon, PaperPlaneTiltIcon, UserIcon } from '@phosphor-icons/react';
 import { FormEvent, useState } from 'react';
@@ -18,15 +17,8 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
-        const trimmedName = name.trim();
-        const trimmedMessage = message.trim();
+        const success = await onSubmit(name.trim(), message.trim());
 
-        if (!trimmedName || !trimmedMessage) {
-            return;
-        }
-
-        const success = await onSubmit(trimmedName, trimmedMessage);
-        
         if (success) {
             setName('');
             setMessage('');
@@ -36,53 +28,54 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
     return (
         <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-                <label className="flex items-center gap-2 text-sm font-semibold text-neutral-700 dark:text-neutral-300">
-                    <UserIcon size={16} className="text-teal-500" />
+                <label className="text-sm font-medium text-black dark:text-gray-100">
                     {t.guestbook.form.name.label}
                 </label>
-                <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder={t.guestbook.form.name.placeholder}
-                    className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-neutral-700 transition-colors placeholder:text-neutral-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-500"
-                    disabled={isSubmitting}
-                    maxLength={100}
-                />
+                <div className="relative">
+                    <UserIcon
+                        size={16}
+                        className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500 dark:text-neutral-400"
+                    />
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder={t.guestbook.form.name.placeholder}
+                        className="h-11 w-full rounded-md border border-neutral-200 bg-white pr-3 pl-9 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-teal-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-teal-400"
+                        disabled={isSubmitting}
+                        maxLength={100}
+                    />
+                </div>
             </div>
 
             <div className="space-y-2">
-                <label className="flex items-center gap-2 text-sm font-semibold text-neutral-700 dark:text-neutral-300">
-                    <ChatTextIcon size={16} className="text-teal-500" />
+                <label className="text-sm font-medium text-black dark:text-gray-100">
                     {t.guestbook.form.message.label}
                 </label>
-                <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder={t.guestbook.form.message.placeholder}
-                    className="min-h-30 w-full resize-none rounded-lg border border-neutral-300 bg-white px-4 py-3 text-neutral-700 transition-colors placeholder:text-neutral-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-500"
-                    disabled={isSubmitting}
-                    maxLength={500}
-                />
+                <div className="relative">
+                    <ChatTextIcon
+                        size={16}
+                        className="pointer-events-none absolute top-3 left-3 text-neutral-500 dark:text-neutral-400"
+                    />
+                    <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        placeholder={t.guestbook.form.message.placeholder}
+                        className="min-h-30 w-full resize-none rounded-md border border-neutral-200 bg-white p-3 pl-10 text-sm text-black outline-none placeholder:text-neutral-500 focus:border-teal-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-400 dark:focus:border-teal-400"
+                        disabled={isSubmitting}
+                        maxLength={500}
+                    />
+                </div>
             </div>
 
-            <Button
+            <button
                 type="submit"
-                disabled={isSubmitting || !name.trim() || !message.trim()}
-                className="w-full bg-linear-to-r from-teal-500 to-teal-600 py-6 text-base font-semibold text-white transition-all hover:from-teal-600 hover:to-teal-700 disabled:cursor-not-allowed disabled:opacity-50"
+                disabled={isSubmitting}
+                className="flex h-13 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-linear-to-r from-teal-500 to-teal-600 text-lg font-medium text-white transition-colors hover:from-teal-600 hover:to-teal-700 disabled:cursor-not-allowed disabled:opacity-70"
             >
-                {isSubmitting ? (
-                    <>
-                        <span className="mr-2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                        {t.guestbook.form.submitting}
-                    </>
-                ) : (
-                    <>
-                        <PaperPlaneTiltIcon size={18} weight="bold" />
-                        {t.guestbook.form.submit}
-                    </>
-                )}
-            </Button>
+                <PaperPlaneTiltIcon size={18} />
+                {isSubmitting ? t.guestbook.form.submitting : t.guestbook.form.submit}
+            </button>
         </form>
     );
 }
