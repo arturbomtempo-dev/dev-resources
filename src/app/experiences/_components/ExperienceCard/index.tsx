@@ -3,7 +3,7 @@
 import { Icon } from '@phosphor-icons/react';
 import { Pills } from '../Pills';
 
-export type ExperienceCategory = 'Acadêmica' | 'Profissional' | 'Projetos' | 'Evento';
+export type ExperienceCategory = 'Acadêmico' | 'Profissional' | 'Projeto' | 'Evento';
 
 interface ExperienceCardProps {
     title: string;
@@ -15,10 +15,10 @@ interface ExperienceCardProps {
 }
 
 const categoryClasses: Record<ExperienceCategory, string> = {
-    Acadêmica: 'border-sky-500 bg-sky-50 text-sky-500 dark:bg-sky-900/40 dark:text-sky-400',
+    Acadêmico: 'border-sky-500 bg-sky-50 text-sky-500 dark:bg-sky-900/40 dark:text-sky-400',
     Profissional:
         'border-green-600 bg-green-50 text-green-600 dark:bg-green-900/40 dark:text-green-400',
-    Projetos: 'border-teal-600 bg-teal-50 text-teal-600 dark:bg-teal-900/40 dark:text-teal-400',
+    Projeto: 'border-teal-600 bg-teal-50 text-teal-600 dark:bg-teal-900/40 dark:text-teal-400',
     Evento: 'border-orange-500 bg-orange-50 text-orange-500 dark:bg-orange-900/40 dark:text-orange-400',
 };
 

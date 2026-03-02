@@ -62,11 +62,11 @@ export default function Experiences() {
         }
 
         if (filter === t.experiences.filters.project) {
-            return item.category === 'Projetos';
+            return item.category === 'Projeto';
         }
 
         const categoryMap: Record<string, ExperienceCategory> = {
-            [t.experiences.filters.academic]: 'Acadêmica',
+            [t.experiences.filters.academic]: 'Acadêmico',
             [t.experiences.filters.professional]: 'Profissional',
             [t.experiences.filters.event]: 'Evento',
         };
