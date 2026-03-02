@@ -1,5 +1,6 @@
 'use client';
 
+import { useI18n } from '@/lib/i18n/I18nProvider';
 import { Icon } from '@phosphor-icons/react';
 import { Pills } from '../Pills';
 
@@ -30,6 +31,15 @@ export function ExperienceCard({
     icon: CardIcon,
     showLine = true,
 }: ExperienceCardProps) {
+    const { t } = useI18n();
+
+    const categoryLabels: Record<ExperienceCategory, string> = {
+        Acadêmico: t.experiences.filters.academic,
+        Profissional: t.experiences.filters.professional,
+        Projeto: t.experiences.filters.project,
+        Evento: t.experiences.filters.event,
+    };
+
     return (
         <div className="flex gap-3">
             <div className="relative flex w-9 shrink-0 justify-center md:w-10">
@@ -55,7 +65,7 @@ export function ExperienceCard({
                     </div>
 
                     <Pills
-                        text={category}
+                        text={categoryLabels[category]}
                         className={`shrink-0 border px-2 py-0.5 text-[10px] md:px-2.5 md:py-0.5 md:text-[11px] ${categoryClasses[category]}`}
                     />
                 </div>
