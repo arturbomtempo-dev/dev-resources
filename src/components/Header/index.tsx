@@ -46,7 +46,9 @@ export function Header() {
             className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
                 isScrolled
                     ? 'bg-white shadow-sm dark:bg-neutral-900 dark:shadow-neutral-700/20'
-                    : 'bg-transparent'
+                    : isTransparent
+                      ? 'bg-transparent'
+                      : 'bg-white dark:bg-neutral-900'
             }`}
         >
             <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
@@ -63,8 +65,8 @@ export function Header() {
                                 className={`group inline-flex flex-col items-center font-medium transition-colors duration-300 ${
                                     isTransparent
                                         ? isActive
-                                            ? 'text-white'
-                                            : 'text-white/80 hover:text-white'
+                                            ? 'text-[#ffffff]'
+                                            : 'text-[#ffffff]/80 hover:text-[#ffffff]'
                                         : isActive
                                           ? 'text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
                                           : 'text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-gray-100'
@@ -74,7 +76,7 @@ export function Header() {
                                 <span
                                     className={`mt-1 h-0.5 transition-all duration-300 ${
                                         isTransparent
-                                            ? 'bg-white'
+                                            ? 'bg-[#ffffff]'
                                             : 'bg-teal-primary dark:bg-teal-400'
                                     } ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
                                 />
@@ -89,7 +91,7 @@ export function Header() {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className={`flex h-10 w-10 cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden ${
                             isTransparent
-                                ? 'text-white hover:text-white/80'
+                                ? 'text-[#ffffff] hover:text-[#ffffff]/80'
                                 : 'hover:text-blue-primary text-neutral-500 dark:text-neutral-400 dark:hover:text-teal-400'
                         }`}
                         aria-label="Toggle menu"

@@ -19,13 +19,13 @@ export function Logo({ size, variant = 'default' }: LogoProps) {
     return (
         <div
             className={`flex items-center gap-4 font-semibold transition-colors duration-300 ${className} ${
-                isLight ? 'text-white' : 'text-black'
+                isLight ? 'text-[#ffffff]' : 'text-black dark:text-gray-100'
             }`}
         >
-            <CodeIcon className={isLight ? 'text-white' : 'text-blue-primary'} />
+            <CodeIcon className={isLight ? 'text-[#ffffff]' : 'text-blue-primary'} />
             <h1>
                 Dev
-                <span className={isLight ? 'text-white' : 'font-display text-blue-primary'}>
+                <span className={isLight ? 'text-[#ffffff]' : 'font-display text-blue-primary'}>
                     Resources
                 </span>
             </h1>

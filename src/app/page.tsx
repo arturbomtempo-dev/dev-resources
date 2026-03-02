@@ -10,6 +10,7 @@ import {
     LinkSimpleHorizontalIcon,
     UsersIcon,
 } from '@phosphor-icons/react';
+import Link from 'next/link';
 import { ContentCard } from './_components/ContentCard';
 import { Grainient } from './_components/Grainient';
 
@@ -65,19 +66,22 @@ export default function Home() {
 
                             <div className="flex justify-center gap-2">
                                 <Button
-                                    className="cursor-pointer gap-2 rounded-lg bg-linear-to-r from-teal-600 to-teal-500 text-white transition-colors duration-300 ease-in-out hover:from-teal-700 hover:to-teal-600 dark:from-teal-500 dark:to-teal-400 dark:hover:from-teal-600 dark:hover:to-teal-500"
+                                    asChild
+                                    className="cursor-pointer gap-2 rounded-lg bg-linear-to-r from-teal-600 to-teal-500 text-[#ffffff] transition-colors duration-300 ease-in-out hover:from-teal-700 hover:to-teal-600"
                                     size="lg"
                                 >
-                                    {t.home.hero.exploreButton}
-                                    <ArrowRightIcon size={32} />
+                                    <Link href="/indications">
+                                        {t.home.hero.exploreButton}
+                                        <ArrowRightIcon size={32} />
+                                    </Link>
                                 </Button>
 
                                 <Button
-                                    variant="outline"
-                                    className="shadow-teal-400-md cursor-pointer rounded-lg border border-teal-600 bg-white text-teal-600 transition-colors duration-300 ease-in-out hover:border-white hover:bg-teal-300/20 hover:text-white dark:border-teal-400 dark:bg-neutral-900 dark:text-teal-400 dark:hover:border-teal-300 dark:hover:bg-teal-900/30 dark:hover:text-teal-300"
+                                    asChild
+                                    className="shadow-teal-400-md cursor-pointer rounded-lg border border-teal-600 bg-white! text-teal-600 transition-colors duration-300 ease-in-out hover:border-white hover:bg-teal-300/20! hover:text-white"
                                     size="lg"
                                 >
-                                    {t.home.hero.learnMoreButton}
+                                    <Link href="/projects">{t.home.hero.learnMoreButton}</Link>
                                 </Button>
                             </div>
                         </div>

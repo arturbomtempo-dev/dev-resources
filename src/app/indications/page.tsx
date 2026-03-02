@@ -5,7 +5,7 @@ import { Subtitle } from '@/components/Subtitle';
 import { Title } from '@/components/Title';
 import { useI18n } from '@/lib/i18n/I18nProvider';
 import { CaretLeftIcon, CaretRightIcon, MagnifyingGlassIcon } from '@phosphor-icons/react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { FilterBar } from './_components/FilterBar';
 import { IndicationCard } from './_components/IndicationCard';
 import { useFavorites } from './_hooks/useFavorites';
@@ -14,6 +14,7 @@ const ITEMS_PER_PAGE = 12;
 
 export default function Indications() {
     const { t, data, locale } = useI18n();
+    const searchInputRef = useRef<HTMLInputElement>(null);
     const indications = data.indications;
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState(t.indications.filters.all);
@@ -112,14 +113,16 @@ export default function Indications() {
                 <div className="relative">
                     <MagnifyingGlassIcon
                         size={20}
-                        className="text-teal-primary absolute top-1/2 left-4 -translate-y-1/2"
+                        className="text-teal-primary absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer"
+                        onClick={() => searchInputRef.current?.focus()}
                     />
                     <input
+                        ref={searchInputRef}
                         type="search"
                         value={searchQuery}
                         onChange={(e) => handleSearchChange(e.target.value)}
                         placeholder={t.indications.search.placeholder}
-                        className="border-teal-primary dark:focus:bg-neutral-750 w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:bg-neutral-50 focus:ring-2 focus:ring-[--teal-primary]/30 dark:border-teal-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-500"
+                        className="border-teal-primary w-full rounded-full border bg-white py-3 pr-4 pl-12 text-sm transition-all duration-200 outline-none focus:bg-neutral-50 focus:ring-2 focus:ring-[--teal-primary]/30 dark:border-teal-600 dark:bg-neutral-800 dark:text-gray-100 dark:placeholder:text-neutral-500 dark:focus:bg-neutral-700 dark:focus:ring-teal-600/30"
                     />
                 </div>
 
