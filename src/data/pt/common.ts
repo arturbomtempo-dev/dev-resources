@@ -5,6 +5,7 @@ export const common = {
         about: 'Sobre nós',
         projects: 'Projetos',
         experiences: 'Experiências',
+        guestbook: 'Livro de Visitas',
         contact: 'Contato',
     },
     footer: {
@@ -17,6 +18,7 @@ export const common = {
             about: 'Sobre nós',
             projects: 'Projetos',
             experiences: 'Experiências',
+            guestbook: 'Livro de Visitas',
             contact: 'Contato',
         },
         social: {

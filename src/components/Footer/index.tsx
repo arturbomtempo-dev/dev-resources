@@ -68,6 +68,14 @@ export function Footer() {
                         </li>
                         <li>
                             <a
+                                href="/guestbook"
+                                className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
+                            >
+                                {t.footer.navigation.guestbook}
+                            </a>
+                        </li>
+                        <li>
+                            <a
                                 href="/contact"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >

@@ -21,6 +21,7 @@ export function Header() {
         { href: '/about', label: t.nav.about },
         { href: '/projects', label: t.nav.projects },
         { href: '/experiences', label: t.nav.experiences },
+        { href: '/guestbook', label: t.nav.guestbook },
         { href: '/contact', label: t.nav.contact },
     ];
 

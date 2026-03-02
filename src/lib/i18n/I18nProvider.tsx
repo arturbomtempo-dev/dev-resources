@@ -1,51 +1,54 @@
 'use client';
 
-import { createContext, ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import { defaultLocale, Locale } from '@/config/i18n';
+import { createContext, ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 
+import { aboutUI as ptAboutUI } from '@/data/pt/about-ui';
 import { common as ptCommon } from '@/data/pt/common';
+import { contactUI as ptContactUI } from '@/data/pt/contact-ui';
+import { experiencesUI as ptExperiencesUI } from '@/data/pt/experiences-ui';
+import { guestbookUI as ptGuestbookUI } from '@/data/pt/guestbook-ui';
 import { home as ptHome } from '@/data/pt/home';
 import { indicationsUI as ptIndicationsUI } from '@/data/pt/indications-ui';
-import { aboutUI as ptAboutUI } from '@/data/pt/about-ui';
 import { projectsUI as ptProjectsUI } from '@/data/pt/projects-ui';
-import { experiencesUI as ptExperiencesUI } from '@/data/pt/experiences-ui';
-import { contactUI as ptContactUI } from '@/data/pt/contact-ui';
 
+import { aboutUI as enAboutUI } from '@/data/en/about-ui';
 import { common as enCommon } from '@/data/en/common';
+import { contactUI as enContactUI } from '@/data/en/contact-ui';
+import { experiencesUI as enExperiencesUI } from '@/data/en/experiences-ui';
+import { guestbookUI as enGuestbookUI } from '@/data/en/guestbook-ui';
 import { home as enHome } from '@/data/en/home';
 import { indicationsUI as enIndicationsUI } from '@/data/en/indications-ui';
-import { aboutUI as enAboutUI } from '@/data/en/about-ui';
 import { projectsUI as enProjectsUI } from '@/data/en/projects-ui';
-import { experiencesUI as enExperiencesUI } from '@/data/en/experiences-ui';
-import { contactUI as enContactUI } from '@/data/en/contact-ui';
 
-import { team as ptTeam } from '@/data/pt/team';
 import { team as enTeam } from '@/data/en/team';
+import { team as ptTeam } from '@/data/pt/team';
 
-import { aboutMembers as ptAboutMembers } from '@/data/pt/team';
 import { aboutMembers as enAboutMembers } from '@/data/en/team';
+import { aboutMembers as ptAboutMembers } from '@/data/pt/team';
 
-import { projects as ptProjects } from '@/data/pt/projects';
 import { projects as enProjects } from '@/data/en/projects';
+import { projects as ptProjects } from '@/data/pt/projects';
 
-import { indications as ptIndications } from '@/data/pt/indications';
 import { indications as enIndications } from '@/data/en/indications';
+import { indications as ptIndications } from '@/data/pt/indications';
 
-import { experiences as ptExperiences } from '@/data/pt/experiences';
 import { experiences as enExperiences } from '@/data/en/experiences';
+import { experiences as ptExperiences } from '@/data/pt/experiences';
 
-import { links as ptLinks } from '@/data/pt/links';
 import { links as enLinks } from '@/data/en/links';
+import { links as ptLinks } from '@/data/pt/links';
 
-import type { TeamMember, AboutMember, Project, Indication, Link } from '@/data/types';
-import type { ExperiencesData } from '@/data/pt/experiences';
+import type { AboutUITranslations } from '@/data/pt/about-ui';
 import type { CommonTranslations } from '@/data/pt/common';
+import type { ContactUITranslations } from '@/data/pt/contact-ui';
+import type { ExperiencesData } from '@/data/pt/experiences';
+import type { ExperiencesUITranslations } from '@/data/pt/experiences-ui';
+import type { GuestbookUITranslations } from '@/data/pt/guestbook-ui';
 import type { HomeTranslations } from '@/data/pt/home';
 import type { IndicationsUITranslations } from '@/data/pt/indications-ui';
-import type { AboutUITranslations } from '@/data/pt/about-ui';
 import type { ProjectsUITranslations } from '@/data/pt/projects-ui';
-import type { ExperiencesUITranslations } from '@/data/pt/experiences-ui';
-import type { ContactUITranslations } from '@/data/pt/contact-ui';
+import type { AboutMember, Indication, Link, Project, TeamMember } from '@/data/types';
 
 export interface UITranslations {
     nav: CommonTranslations['nav'];
@@ -57,6 +60,7 @@ export interface UITranslations {
     projects: ProjectsUITranslations;
     experiences: ExperiencesUITranslations;
     contact: ContactUITranslations;
+    guestbook: GuestbookUITranslations;
 }
 
 interface LocaleData {
@@ -84,6 +88,7 @@ const ptUI: UITranslations = {
     projects: ptProjectsUI,
     experiences: ptExperiencesUI,
     contact: ptContactUI,
+    guestbook: ptGuestbookUI,
 };
 
 const enUI: UITranslations = {
@@ -101,6 +106,7 @@ const enUI: UITranslations = {
     projects: enProjectsUI,
     experiences: enExperiencesUI,
     contact: enContactUI,
+    guestbook: enGuestbookUI,
 };
 
 const localeData: Record<Locale, LocaleData> = {
