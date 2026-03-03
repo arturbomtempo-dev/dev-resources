@@ -130,14 +130,14 @@ export const experiences: ExperiencesData = {
     ],
     eduarda: [
         {
-            title: 'Extension student and lead website developer',
+            title: 'Software developer and lead website developer',
             organization: 'Elas++',
             period: 'Aug 2025 - Present',
             category: 'Projeto',
             iconName: 'Code',
         },
         {
-            title: 'Extension student and software developer',
+            title: 'Full Stack Developer',
             organization: 'WebTech Network',
             period: 'Mar 2025 - Present',
             category: 'Projeto',
@@ -149,6 +149,20 @@ export const experiences: ExperiencesData = {
             period: 'Mar 2025 - Present',
             category: 'Acadêmico',
             iconName: 'GraduationCap',
+        },
+         {
+            title: 'Lecture on Design Patterns',
+            organization: 'PUC Minas',
+            period: 'Jul 2025',
+            category: 'Evento',
+            iconName: 'CalendarBlank',
+        },
+        {
+            title: 'Introduction to Front-end Development for ASSPROM collaborators',
+            organization: 'WebTech Network & Elas++',
+            period: 'Mar 2025 - May 2025',
+            category: 'Projeto',
+            iconName: 'Code',
         },
         {
             title: 'Software Engineering Degree',

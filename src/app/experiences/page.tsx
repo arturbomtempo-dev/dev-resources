@@ -100,11 +100,14 @@ export default function Experiences() {
                 ))}
             </div>
 
-            <section className="mb-8 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-6">
+            <section className="mt-12 mb-8 grid max-w-6xl grid-cols-1 gap-10 md:grid-cols-2 md:gap-6">
                 <div className="w-full md:border-r md:border-gray-300 md:pr-8 dark:md:border-neutral-600">
-                    <h3 className="mb-4 text-center text-2xl font-semibold dark:text-gray-100">
-                        {t.experiences.tabs.artur} Bomtempo
-                    </h3>
+                    <div className="mb-6 flex flex-col items-center">
+                        <h3 className="text-2xl font-semibold dark:text-gray-100">
+                            {t.experiences.tabs.artur} Bomtempo
+                        </h3>
+                        <div className="mt-1 h-1 w-12 rounded-md bg-green-500" />
+                    </div>
                     <div className="flex flex-col gap-4">
                         {filteredArtur.map((experience, index) => (
                             <ExperienceCard
@@ -122,9 +125,13 @@ export default function Experiences() {
 
                 <div className="w-full">
                     <div className="w-full">
-                        <h3 className="mb-4 text-center text-2xl font-semibold dark:text-gray-100">
-                            {t.experiences.tabs.eduarda} Vieira
-                        </h3>
+                        <div className="mb-6 flex flex-col items-center">
+                            <h3 className="text-2xl font-semibold dark:text-gray-100">
+                                {t.experiences.tabs.eduarda} Vieira
+                            </h3>
+                            <div className="mt-1 h-1 w-12 rounded-md bg-pink-500" />
+                        </div>
+
                         <div className="flex flex-col gap-4">
                             {filteredEduarda.map((experience, index) => (
                                 <ExperienceCard

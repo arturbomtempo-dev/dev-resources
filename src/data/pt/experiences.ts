@@ -130,14 +130,14 @@ export const experiences: ExperiencesData = {
     ],
     eduarda: [
         {
-            title: 'Extensionista e líder no desenvolvimento do site',
+            title: 'Desenvolvedora e líder no desenvolvimento do site',
             organization: 'Elas++',
             period: 'Ago 2025 - Atualmente',
             category: 'Projeto',
             iconName: 'Code',
         },
         {
-            title: 'Extensionista e desenvolvedora de software',
+            title: 'Desenvolvedora Full Stack',
             organization: 'WebTech Network',
             period: 'Mar 2025 - Atualmente',
             category: 'Projeto',
@@ -149,6 +149,20 @@ export const experiences: ExperiencesData = {
             period: 'Mar 2025 - Atualmente',
             category: 'Acadêmico',
             iconName: 'GraduationCap',
+        },
+        {
+            title: 'Palestra sobre Design Patterns',
+            organization: 'PUC Minas',
+            period: 'Jul 2025',
+            category: 'Evento',
+            iconName: 'CalendarBlank',
+        },
+        {
+            title: 'Introdução ao Desenvolvimento Front-end para colaboradores da ASSPROM',
+            organization: 'WebTech Network & Elas++',
+            period: 'Mar 2025 - Mai 2025',
+            category: 'Projeto',
+            iconName: 'Code',
         },
         {
             title: 'Graduação em Engenharia de Software',
