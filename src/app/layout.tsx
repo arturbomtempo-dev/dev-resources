@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { I18nProvider } from '@/lib/i18n/I18nProvider';
 import { ThemeProvider } from '@/lib/theme/ThemeProvider';
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono, Manrope } from 'next/font/google';
+import { Inter, JetBrains_Mono, Manrope, Varela_Round } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
@@ -25,6 +25,13 @@ const jetbrainsMono = JetBrains_Mono({
     display: 'swap',
 });
 
+const varelaRound = Varela_Round({
+    variable: '--font-varela-round',
+    subsets: ['latin'],
+    weight: '400',
+    display: 'swap',
+});
+
 export const metadata: Metadata = {
     title: 'DevResources',
     description: 'Hub colaborativo de curadoria digital, projetos e experiências em tecnologia',
@@ -38,7 +45,7 @@ export default function RootLayout({
     return (
         <html lang="pt-BR">
             <body
-                className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable} font-family-inter flex min-h-screen flex-col antialiased`}
+                className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable} ${varelaRound.variable} font-family-inter flex min-h-screen flex-col antialiased`}
             >
                 <ThemeProvider>
                     <I18nProvider>

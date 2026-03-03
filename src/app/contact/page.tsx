@@ -135,10 +135,10 @@ export default function Contact() {
                     <Button
                         asChild
                         variant="ghost"
-                        className="h-11 rounded-md border border-neutral-200 bg-white text-sm font-semibold text-black transition-colors hover:bg-neutral-50 dark:border-neutral-600 dark:bg-[#0a0a0a] dark:text-gray-100 dark:hover:bg-[#1a1a1a]"
+                        className="h-11 rounded-md border border-neutral-600 bg-neutral-50 text-sm font-semibold text-black transition-colors hover:bg-neutral-200 dark:border-neutral-600 dark:bg-[#0a0a0a] dark:text-gray-100 dark:hover:bg-[#1a1a1a]"
                     >
                         <a
-                            href="https://github.com/arturbomtempo-dev"
+                            href="https://github.com/eduardavieira-dev"
                             target="_blank"
                             rel="noreferrer"
                         >
