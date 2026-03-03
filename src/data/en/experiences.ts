@@ -130,14 +130,14 @@ export const experiences: ExperiencesData = {
     ],
     eduarda: [
         {
-            title: 'Extension student and lead website developer',
+            title: 'Software developer and lead website developer',
             organization: 'Elas++',
             period: 'Aug 2025 - Present',
             category: 'Projeto',
             iconName: 'Code',
         },
         {
-            title: 'Extension student and software developer',
+            title: 'Full Stack Developer',
             organization: 'WebTech Network',
             period: 'Mar 2025 - Present',
             category: 'Projeto',
