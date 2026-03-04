@@ -5,6 +5,7 @@ import { GlobeIcon } from '@phosphor-icons/react/dist/icons/Globe';
 import { InstagramLogoIcon } from '@phosphor-icons/react/dist/icons/InstagramLogo';
 import { LinkedinLogoIcon } from '@phosphor-icons/react/dist/icons/LinkedinLogo';
 import { YoutubeLogoIcon } from '@phosphor-icons/react/dist/icons/YoutubeLogo';
+import Link from 'next/link';
 import { IconBox } from '../IconBox';
 import { Logo } from '../Logo';
 
@@ -15,7 +16,7 @@ export function Footer() {
         <footer className="border-t border-neutral-200 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-900">
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 border-b border-neutral-200 p-6 md:grid-cols-2 lg:grid-cols-4 dark:border-neutral-700">
                 <div className="max-w-sm">
-                    <Logo size="small" />
+                    <Logo size="small" as="p" />
                     <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
                         {t.footer.description}
                     </p>
@@ -27,60 +28,60 @@ export function Footer() {
                     </h3>
                     <ul className="space-y-1">
                         <li>
-                            <a
+                            <Link
                                 href="/"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.home}
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/indications"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.indications}
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/about"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.about}
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/projects"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.projects}
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/experiences"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.experiences}
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/guestbook"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.guestbook}
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/contact"
                                 className="text-neutral-500 hover:text-blue-500 dark:text-neutral-400 dark:hover:text-blue-400"
                             >
                                 {t.footer.navigation.contact}
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

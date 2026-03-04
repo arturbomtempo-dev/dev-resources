@@ -52,9 +52,9 @@ export default function Home() {
                         centerY={0}
                         zoom={0.9}
                     />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-[#ffffff]">
-                        <div className="mx-3 max-w-2xl text-center">
-                            <h1 className="mb-8 text-4xl font-semibold md:text-5xl px-2">
+                    <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-[#ffffff]">
+                        <div className="pointer-events-auto mx-3 max-w-2xl text-center">
+                            <h1 className="mb-8 px-2 text-4xl font-semibold md:text-5xl">
                                 {t.home.hero.title}
                                 <span className="text-teal-200/90"> {t.home.hero.titleAccent}</span>
                                 {t.home.hero.titleEnd}

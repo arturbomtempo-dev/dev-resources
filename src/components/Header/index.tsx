@@ -56,7 +56,7 @@ export function Header() {
                 <Link href="/">
                     <Logo variant={isTransparent ? 'light' : 'default'} />
                 </Link>
-                <nav className="hidden gap-8 lg:flex">
+                <nav className="hidden gap-8 lg:flex" aria-label="Main navigation">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
                         return (
@@ -122,6 +122,7 @@ export function Header() {
                         ? 'max-h-96 border-t border-neutral-200 dark:border-neutral-700'
                         : 'max-h-0'
                 }`}
+                aria-label="Mobile navigation"
             >
                 <div
                     className={`flex flex-col gap-1 bg-white/95 px-6 py-4 backdrop-blur-sm transition-opacity duration-300 dark:bg-neutral-900/95 ${

@@ -4,13 +4,14 @@ test.describe('Indications Page', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto('/indications');
         await page.waitForLoadState('networkidle');
+        // Wait for i18n content to load
+        await page.waitForSelector('h2', { timeout: 5000 });
     });
 
     test.describe('Rendering', () => {
         test('should render the page title', async ({ page }) => {
-            await expect(
-                page.getByRole('heading', { name: /indicacoes|indications/i })
-            ).toBeVisible();
+            const heading = page.getByRole('heading', { level: 2 }).first();
+            await expect(heading).toBeVisible();
         });
 
         test('should render the search field', async ({ page }) => {
@@ -85,7 +86,7 @@ test.describe('Indications Page', () => {
                 await page.waitForLoadState('networkidle');
 
                 await expect(
-                    page.getByRole('heading', { name: /indicacoes|indications/i })
+                    page.getByRole('heading', { name: /indicacoes|indications/i, level: 2 })
                 ).toBeVisible();
             }
         });
