@@ -174,10 +174,6 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         },
     };
 
-    if (!isHydrated) {
-        return null;
-    }
-
     return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 

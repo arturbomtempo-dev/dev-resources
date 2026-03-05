@@ -28,7 +28,10 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
     return (
         <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-                <label className="text-sm font-medium text-black dark:text-gray-100">
+                <label
+                    htmlFor="guestbook-name"
+                    className="text-sm font-medium text-black dark:text-gray-100"
+                >
                     {t.guestbook.form.name.label}
                 </label>
                 <div className="relative">
@@ -37,6 +40,7 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
                         className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500 dark:text-neutral-400"
                     />
                     <input
+                        id="guestbook-name"
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -49,7 +53,10 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
             </div>
 
             <div className="space-y-2">
-                <label className="text-sm font-medium text-black dark:text-gray-100">
+                <label
+                    htmlFor="guestbook-message"
+                    className="text-sm font-medium text-black dark:text-gray-100"
+                >
                     {t.guestbook.form.message.label}
                 </label>
                 <div className="relative">
@@ -58,6 +65,7 @@ export function GuestbookForm({ onSubmit, isSubmitting }: GuestbookFormProps) {
                         className="pointer-events-none absolute top-3 left-3 text-neutral-500 dark:text-neutral-400"
                     />
                     <textarea
+                        id="guestbook-message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder={t.guestbook.form.message.placeholder}
