@@ -1,55 +1,40 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Template from '../template';
-
-jest.mock('@/components/Loading', () => ({
-    __esModule: true,
-    default: () => <div data-testid="loading">Loading</div>,
-}));
 
 jest.mock('next/navigation', () => ({
     usePathname: () => '/test',
 }));
 
 describe('Template Component', () => {
-    it('should show loading initially', () => {
+    it('should render children immediately', () => {
         render(
             <Template>
                 <div data-testid="content">Content</div>
             </Template>
         );
-        expect(screen.getByTestId('loading')).toBeInTheDocument();
+        expect(screen.getByTestId('content')).toBeInTheDocument();
     });
 
-    it('should show children after loading', async () => {
-        render(
-            <Template>
-                <div data-testid="content">Content</div>
-            </Template>
-        );
-
-        await waitFor(
-            () => {
-                expect(screen.getByTestId('content')).toBeInTheDocument();
-            },
-            { timeout: 500 }
-        );
-    });
-
-    it('should render children container', async () => {
+    it('should apply fade-in animation class', () => {
         const { container } = render(
             <Template>
                 <div data-testid="content">Content</div>
             </Template>
         );
 
-        await waitFor(
-            () => {
-                expect(screen.getByTestId('content')).toBeInTheDocument();
-            },
-            { timeout: 500 }
+        const wrapper = container.querySelector('.animate-fade-in');
+        expect(wrapper).toBeInTheDocument();
+    });
+
+    it('should render children container', () => {
+        const { container } = render(
+            <Template>
+                <div data-testid="content">Content</div>
+            </Template>
         );
 
         const divs = container.querySelectorAll('div');
         expect(divs.length).toBeGreaterThan(0);
+        expect(screen.getByTestId('content')).toBeInTheDocument();
     });
 });

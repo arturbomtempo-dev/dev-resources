@@ -86,7 +86,7 @@ export function Grainient({
     return (
         <div
             ref={containerRef}
-            className={`relative h-full w-full overflow-hidden ${className}`.trim()}
+            className={`pointer-events-none relative h-full w-full overflow-hidden ${className}`.trim()}
         />
     );
 }

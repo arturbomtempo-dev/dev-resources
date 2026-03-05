@@ -1,8 +1,10 @@
 ﻿import { expect, test } from '@playwright/test';
+import { mockSupabaseGuestbook } from './helpers/mocks';
 import { navigateAndWait, waitForPageLoad } from './helpers/test-utils';
 
 test.describe('Guestbook', () => {
     test.beforeEach(async ({ page }) => {
+        await mockSupabaseGuestbook(page);
         await navigateAndWait(page, '/guestbook');
     });
 
