@@ -90,7 +90,6 @@ test.describe('Guestbook', () => {
             await page.keyboard.press('Tab');
             await page.keyboard.press('Tab');
 
-            // Ignre Next.js dev tools elements
             const focusedElement = page
                 .locator(':focus')
                 .and(page.locator(':not(nextjs-portal):not([data-nextjs-dev-tools-button])'));
@@ -115,14 +114,19 @@ test.describe('Guestbook', () => {
         test('should display loading state initially', async ({ page }) => {
             await page.reload();
             await waitForPageLoad(page);
-            await expect(page.getByRole('heading', { name: /guestbook/i, level: 2 })).toBeVisible();
+            await expect(
+                page.getByRole('heading', { name: /guestbook|livro de visitas/i, level: 2 })
+            ).toBeVisible();
         });
 
         test('should display messages after loading', async ({ page }) => {
             await page.waitForLoadState('networkidle');
             await page.waitForTimeout(1000);
 
-            const hasMessages = (await page.locator('article, [class*="card"]').count()) > 0;
+            // Look for message headings (h3 elements inside message list)
+            const messageHeadings = page.locator('h3');
+            const hasMessages = (await messageHeadings.count()) > 1; // At least one message (besides section heading)
+
             const hasEmptyMessage = await page
                 .getByText(/nenhuma mensagem|no messages|empty/i)
                 .isVisible()

@@ -84,7 +84,10 @@ test.describe('Indications Page', () => {
                 await waitForPageLoad(page);
 
                 await expect(
-                    page.getByRole('heading', { name: /indicacoes|indications/i, level: 2 })
+                    page.getByRole('heading', {
+                        name: /indicações|indicacoes|indications/i,
+                        level: 2,
+                    })
                 ).toBeVisible();
             }
         });

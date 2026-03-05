@@ -18,7 +18,7 @@ test.describe('Navigation', () => {
         await openMobileMenuIfNeeded(page);
 
         await page
-            .getByRole('link', { name: /indicacoes|indications/i })
+            .getByRole('link', { name: /indicações|indicacoes|indications/i })
             .first()
             .click();
         await waitForPageLoad(page);
@@ -67,7 +67,7 @@ test.describe('Navigation', () => {
         await openMobileMenuIfNeeded(page);
 
         await page
-            .getByRole('link', { name: /guestbook/i })
+            .getByRole('link', { name: /guestbook|livro de visitas/i })
             .first()
             .click();
         await waitForPageLoad(page);
@@ -103,7 +103,7 @@ test.describe('Responsiveness', () => {
         await page.waitForTimeout(500);
 
         await expect(
-            page.getByRole('link', { name: /indicacoes|indications/i }).first()
+            page.getByRole('link', { name: /indicações|indicacoes|indications/i }).first()
         ).toBeVisible();
     });
 
@@ -114,7 +114,7 @@ test.describe('Responsiveness', () => {
         await expect(
             page
                 .getByRole('navigation', { name: /main navigation/i })
-                .getByRole('link', { name: /indicacoes|indications/i })
+                .getByRole('link', { name: /indicações|indicacoes|indications/i })
         ).toBeVisible();
     });
 });

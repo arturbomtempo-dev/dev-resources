@@ -34,15 +34,24 @@ export function useWebGLRenderer({
     color2,
     color3,
 }: UseWebGLRendererProps) {
+    const rendererRef = useRef<Renderer | null>(null);
+
     useEffect(() => {
         if (!containerRef.current) return;
 
-        const renderer = new Renderer({
-            webgl: 2,
-            alpha: true,
-            antialias: false,
-            dpr: Math.min(window.devicePixelRatio || 1, 2),
-        });
+        let renderer: Renderer;
+        try {
+            renderer = new Renderer({
+                webgl: 2,
+                alpha: true,
+                antialias: false,
+                dpr: Math.min(window.devicePixelRatio || 1, 2),
+            });
+        } catch {
+            return;
+        }
+
+        rendererRef.current = renderer;
 
         const gl = renderer.gl;
         const canvas = gl.canvas as HTMLCanvasElement;
