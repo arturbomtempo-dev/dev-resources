@@ -16,7 +16,7 @@ export function Footer() {
         <footer className="border-t border-neutral-200 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-900">
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 border-b border-neutral-200 p-6 md:grid-cols-2 lg:grid-cols-4 dark:border-neutral-700">
                 <div className="max-w-sm">
-                    <Logo size="small" as="p" />
+                    <Logo size="small" />
                     <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
                         {t.footer.description}
                     </p>
