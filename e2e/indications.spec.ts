@@ -1,11 +1,9 @@
 ﻿import { test, expect } from '@playwright/test';
+import { navigateAndWait, waitForPageLoad } from './helpers/test-utils';
 
 test.describe('Indications Page', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/indications');
-        await page.waitForLoadState('networkidle');
-        // Wait for i18n content to load
-        await page.waitForSelector('h2', { timeout: 5000 });
+        await navigateAndWait(page, '/indications');
     });
 
     test.describe('Rendering', () => {
@@ -83,7 +81,7 @@ test.describe('Indications Page', () => {
             if ((await favoriteButtons.count()) > 0) {
                 await favoriteButtons.first().click();
                 await page.reload();
-                await page.waitForLoadState('networkidle');
+                await waitForPageLoad(page);
 
                 await expect(
                     page.getByRole('heading', { name: /indicacoes|indications/i, level: 2 })

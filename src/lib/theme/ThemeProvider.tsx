@@ -51,10 +51,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         toggleTheme,
     };
 
-    if (!isHydrated) {
-        return null;
-    }
-
     return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 

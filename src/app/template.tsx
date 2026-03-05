@@ -13,7 +13,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 400);
+        }, 100);
 
         return () => clearTimeout(timer);
     }, [pathname]);

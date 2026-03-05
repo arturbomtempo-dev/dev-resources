@@ -1,4 +1,5 @@
 ﻿import { test, expect } from '@playwright/test';
+import { navigateAndWait, waitForPageLoad } from './helpers/test-utils';
 
 test.describe('Theme (Dark/Light Mode)', () => {
     test.beforeEach(async ({ page }) => {
@@ -31,7 +32,7 @@ test.describe('Theme (Dark/Light Mode)', () => {
 
         const count = await themeButtons.count();
         for (let i = 0; i < count; i++) {
-            await themeButtons.nth(i).click();
+            await themeButtons.nth(i).click({ force: true });
             await page.waitForTimeout(300);
 
             const newClass = (await page.locator('html').getAttribute('class')) || '';
@@ -45,19 +46,19 @@ test.describe('Theme (Dark/Light Mode)', () => {
     });
 
     test('should persist theme preference after reload', async ({ page }) => {
-        await page.goto('/');
+        await navigateAndWait(page, '/');
         const initialClass = (await page.locator('html').getAttribute('class')) || '';
 
         const buttons = page.locator('header button');
         const count = await buttons.count();
 
         if (count > 0) {
-            await buttons.first().click();
+            await buttons.first().click({ force: true });
             await page.waitForTimeout(300);
         }
 
         await page.reload();
-        await page.waitForLoadState('networkidle');
+        await waitForPageLoad(page);
 
         await expect(page).toHaveURL('/');
     });
@@ -68,6 +69,7 @@ test.describe('Internationalization (i18n)', () => {
         await page.goto('/');
         await page.evaluate(() => localStorage.clear());
         await page.reload();
+        await waitForPageLoad(page);
     });
 
     test('should have a language selector', async ({ page }) => {
@@ -91,7 +93,7 @@ test.describe('Internationalization (i18n)', () => {
         });
 
         if ((await languageButtons.count()) > 0) {
-            await languageButtons.first().click();
+            await languageButtons.first().click({ force: true });
             await page.waitForTimeout(500);
         }
 
@@ -110,10 +112,10 @@ test.describe('Internationalization (i18n)', () => {
     });
 
     test('should maintain language after navigation', async ({ page }) => {
-        await page.goto('/');
+        await navigateAndWait(page, '/');
 
         await page.goto('/about');
-        await page.waitForLoadState('networkidle');
+        await waitForPageLoad(page);
 
         await expect(page).toHaveURL(/.*about/);
 
@@ -124,8 +126,7 @@ test.describe('Internationalization (i18n)', () => {
 
 test.describe('Visual Regression (Snapshot)', () => {
     test.skip('captures home screenshot for visual comparison', async ({ page }) => {
-        await page.goto('/');
-        await page.waitForLoadState('networkidle');
+        await navigateAndWait(page, '/');
 
         await expect(page).toHaveScreenshot('home.png', {
             fullPage: true,

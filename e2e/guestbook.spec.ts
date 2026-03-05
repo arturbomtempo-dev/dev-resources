@@ -1,11 +1,9 @@
 ﻿import { expect, test } from '@playwright/test';
+import { navigateAndWait, waitForPageLoad } from './helpers/test-utils';
 
 test.describe('Guestbook', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/guestbook');
-        await page.waitForLoadState('networkidle');
-        // Wait for i18n content to load
-        await page.waitForSelector('h2', { timeout: 5000 });
+        await navigateAndWait(page, '/guestbook');
     });
 
     test.describe('Rendering', () => {
@@ -92,8 +90,10 @@ test.describe('Guestbook', () => {
             await page.keyboard.press('Tab');
             await page.keyboard.press('Tab');
 
-            // Ignore Next.js dev tools elements
-            const focusedElement = page.locator(':focus').and(page.locator(':not(nextjs-portal):not([data-nextjs-dev-tools-button])'));
+            // Ignre Next.js dev tools elements
+            const focusedElement = page
+                .locator(':focus')
+                .and(page.locator(':not(nextjs-portal):not([data-nextjs-dev-tools-button])'));
             const count = await focusedElement.count();
             expect(count).toBeGreaterThan(0);
         });
@@ -114,6 +114,7 @@ test.describe('Guestbook', () => {
     test.describe('Messages List', () => {
         test('should display loading state initially', async ({ page }) => {
             await page.reload();
+            await waitForPageLoad(page);
             await expect(page.getByRole('heading', { name: /guestbook/i, level: 2 })).toBeVisible();
         });
 
