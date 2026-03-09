@@ -304,11 +304,23 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 |                                        **Indicações**                                        |                                      **Experiências**                                      |
 |   <img src="./resources/prototype/indications.png" alt="Tela de Indicações" width="400px">   | <img src="./resources/prototype/experiences.png" alt="Tela de Experiências" width="400px"> |
 |                                         **Projetos**                                         |                                        **Contato**                                         |
-|     <img src="./resources/prototype/projects.png" alt="Tela de Projetos" width="400px">      |     <img src="./resources/prototype/contact.png" alt="Tela de Contato" width="400px">      |
-|                                         **Erro 404**                                         |                                                                                            |
-|    <img src="./resources/prototype/not-found.png" alt="Página de Erro 404" width="400px">    |                                                                                            |
+| <img src="./resources/prototype/projects.png" alt="Tela de Projetos" width="400px">         | <img src="./resources/prototype/contact.png" alt="Tela de Contato" width="400px">          |
+|                                    **Livro de Visitas**                                      |                                       **Erro 404**                                         |
+| <img src="./resources/prototype/guestbook.png" alt="Tela de Livro de Visitas" width="400px"> | <img src="./resources/prototype/not-found.png" alt="Página de Erro 404" width="400px">     |
 
 ---
+## 📖 Livro de Visitas
+
+Uma seção interativa onde visitantes podem deixar mensagens, comentários e feedback sobre a plataforma. Acesse a página de [Livro de Visitas](/guestbook) para compartilhar sua experiência com o Dev Resources.
+
+### Funcionalidades
+
+- ✍️ **Deixar Mensagens:** Registre suas impressões e sugestões sobre o projeto
+- 💬 **Visualizar Comentários:** Veja o que outros visitantes acharam da plataforma
+- 🌟 **Avaliações:** Compartilhe sua opinião com uma experiência simples e intuitiva
+
+---
+
 
 ## 🔗 Documentações utilizadas
 
