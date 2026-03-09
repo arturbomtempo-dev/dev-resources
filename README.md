@@ -81,14 +81,30 @@ As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construç
 
 ### 💻 Front-end
 
-- **Framework:** Next.js 16
-- **Biblioteca UI:** React 19
-- **Linguagem:** TypeScript 5
-- **Estilização:** Tailwind CSS v4
-- **Ícones:** Phosphor Icons
-- **Linter:** ESLint 10 com simple-import-sort
-- **Formatação:** Prettier 3.8 com tailwindcss plugin
-- **Fontes:** Google Fonts (Inter, Manrope)
+**Framework:** Next.js 16
+**Biblioteca UI:** React 19
+**Linguagem:** TypeScript 5
+**Estilização:** Tailwind CSS v4
+**Componentes UI:** shadcn/ui
+**Internacionalização:** i18n (custom)
+**Ícones:** Phosphor Icons
+**Linter:** ESLint 10 com simple-import-sort
+**Formatação:** Prettier 3.8 com tailwindcss plugin
+**Fontes:** Google Fonts (Inter, Manrope)
+**Notificações:** Sonner
+**Testes unitários:** Jest
+**Testes E2E:** Playwright
+**Integração com API:** Axios
+
+### 🗄️ Backend & Integrações
+
+**Banco de dados e autenticação:** Supabase
+**Envio de e-mails:** EmailJS
+**Integração com API do GitHub:** Consumo de dados públicos de usuários e repositórios via GitHub REST API
+
+### 🛠️ Outras ferramentas
+
+**Processamento de CSS:** PostCSS
 
 ### ⚙️ Deploy
 
