@@ -117,6 +117,8 @@ A aplicação segue o padrão de **arquitetura em camadas** do Next.js, organiza
 - `about/` - Página sobre os desenvolvedores
 - `contact/` - Formulário de contato
 - `experiences/` - Trajetória e experiências
+- `guestbook/` -
+  Livro de visitas
 - `indications/` - Links e recursos curados
 - `projects/` - Portfólio de projetos
 
@@ -217,64 +219,65 @@ dev-resources/
 ├── .vscode/                     # ⚙️ Configurações do VS Code (opcional)
 ├── README.md                    # 📘 Documentação principal do projeto
 ├── components.json              # 🧩 Configuração do shadcn/ui
+├── docs/                        # 📚 Documentação auxiliar
+│   └── TESTING.md               # 🧪 Guia de testes
+├── e2e/                         # 🎭 Testes end-to-end (Playwright)
+│   ├── fixtures/                # 🧰 Fixtures de testes
+│   └── *.spec.ts                # ✅ Cenários E2E
 ├── eslint.config.mjs            # ✨ Configuração do ESLint para qualidade de código
+├── helpers/                     # 🛟 Utilitários de suporte para testes
+│   └── *.ts
 ├── next.config.ts               # ⚙️ Configurações do Next.js
 ├── next-env.d.ts                # 📝 Tipos TypeScript do Next.js
 ├── package.json                 # 📦 Dependências e scripts do projeto
 ├── package-lock.json            # 🔒 Lockfile das dependências
+├── playwright.config.ts         # 🎭 Configuração do Playwright
 ├── postcss.config.mjs           # 🎨 Configuração do PostCSS
+├── resources/                   # 📂 Recursos do projeto
+│   ├── demonstrations/          # 🎥 GIFs e demonstrações
+│   └── prototype/               # 📸 Screenshots do protótipo Figma
 ├── tsconfig.json                # 📘 Configuração do TypeScript
-│
-├── /public                      # 📂 Arquivos estáticos públicos
-│   ├── file.svg                 # 🖼️ Ícones e SVGs
-│   ├── globe.svg
-│   ├── next.svg
-│   ├── vercel.svg
-│   └── window.svg
-│
-├── /resources                   # 📂 Recursos do projeto
-│   ├── logo.png                 # 🖼️ Logo da plataforma
-│   └── /prototype               # 📸 Screenshots do protótipo Figma
-└── /src                         # 📂 Código-fonte da aplicação
-    │
-    ├── /app                     # 📂 App Router (rotas e layouts)
-    │   ├── globals.css          # 🎨 Estilos globais da aplicação
-    │   ├── Grainient.tsx        # 🎨 Componente de efeito visual de fundo
-    │   ├── layout.tsx           # 📐 Layout raiz da aplicação
-    │   ├── template.tsx         # 📄 Template compartilhado
-    │   ├── page.tsx             # 🏠 Página inicial (Home)
-    │   ├── loading.tsx          # ⏳ Estado de carregamento global
-    │   ├── not-found.tsx        # 🔍 Página de erro 404
-    │   │
-    │   ├── /about               # 📂 Rota /about
-    │   │   └── page.tsx         # 📄 Página sobre os desenvolvedores
-    │   │
-    │   ├── /contact             # 📂 Rota /contact
-    │   │   └── page.tsx         # 📄 Página de contato
-    │   │
-    │   ├── /experiences         # 📂 Rota /experiences
-    │   │   └── page.tsx         # 📄 Página de experiências
-    │   │
-    │   ├── /indications         # 📂 Rota /indications
-    │   │   └── page.tsx         # 📄 Página de indicações/recursos
-    │   │
-    │   └── /projects            # 📂 Rota /projects
-    │       └── page.tsx         # 📄 Página de projetos
-    │
-    ├── /components              # 📂 Componentes React reutilizáveis
-    │   ├── /Footer              # 🦶 Componente de rodapé
-    │   │   └── index.tsx
-    │   ├── /Header              # 📌 Componente de cabeçalho/navegação
-    │   │   └── index.tsx
-    │   ├── /Loading             # ⏳ Componente de loading
-    │   │   └── index.tsx
-    │   ├── /Logo                # 🎨 Componente do logo
-    │   │   └── index.tsx
-    │   └── /ui                  # 🧩 Componentes UI (shadcn/ui)
-    │       └── button.tsx       # 🔘 Componente de botão
-    │
-    └── /lib                     # 📂 Utilitários e helpers
-        └── utils.ts             # 🛠️ Funções auxiliares (clsx, tw-merge, etc.)
+├── public/                      # 🌍 Arquivos públicos (assets e mídias)
+│   ├── developers/
+│   ├── not-found/
+│   └── projects/
+└── src/                         # 📂 Código-fonte da aplicação
+    ├── __mocks__/               # 🧪 Mocks para testes
+    ├── app/                     # 📂 App Router (rotas e layouts)
+    │   ├── _components/         # 🧩 Componentes compartilhados do app
+    │   ├── __tests__/           # 🧪 Testes das páginas base
+    │   ├── about/
+    │   ├── contact/
+    │   ├── experiences/
+    │   ├── guestbook/
+    │   ├── indications/
+    │   └── projects/
+    ├── components/              # 📂 Componentes React reutilizáveis
+    │   ├── Footer/
+    │   ├── Header/
+    │   ├── IconBox/
+    │   ├── LanguageSwitcher/
+    │   ├── Loading/
+    │   ├── Logo/
+    │   ├── SectionContainer/
+    │   ├── Subtitle/
+    │   ├── ThemeSwitcher/
+    │   ├── Title/
+    │   └── ui/
+    ├── config/                  # ⚙️ Configurações da aplicação
+    ├── data/                    # 🗂️ Conteúdo estático e tipagens
+    │   ├── en/
+    │   ├── pt/
+    │   └── types/
+    ├── hooks/                   # 🪝 Hooks customizados
+    ├── lib/                     # 📂 Utilitários e integrações
+    │   ├── i18n/
+    │   ├── supabase/
+    │   └── theme/
+    ├── services/                # 🔌 Serviços externos
+    │   ├── github/
+    │   └── guestbook/
+    └── test-utils/              # 🧪 Utilitários de teste
 ```
 
 ---
@@ -304,11 +307,12 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 |                                        **Indicações**                                        |                                      **Experiências**                                      |
 |   <img src="./resources/prototype/indications.png" alt="Tela de Indicações" width="400px">   | <img src="./resources/prototype/experiences.png" alt="Tela de Experiências" width="400px"> |
 |                                         **Projetos**                                         |                                        **Contato**                                         |
-| <img src="./resources/prototype/projects.png" alt="Tela de Projetos" width="400px">         | <img src="./resources/prototype/contact.png" alt="Tela de Contato" width="400px">          |
-|                                    **Livro de Visitas**                                      |                                       **Erro 404**                                         |
-| <img src="./resources/prototype/guestbook.png" alt="Tela de Livro de Visitas" width="400px"> | <img src="./resources/prototype/not-found.png" alt="Página de Erro 404" width="400px">     |
+|     <img src="./resources/prototype/projects.png" alt="Tela de Projetos" width="400px">      |     <img src="./resources/prototype/contact.png" alt="Tela de Contato" width="400px">      |
+|                                     **Livro de Visitas**                                     |                                        **Erro 404**                                        |
+| <img src="./resources/prototype/guestbook.png" alt="Tela de Livro de Visitas" width="400px"> |   <img src="./resources/prototype/not-found.png" alt="Página de Erro 404" width="400px">   |
 
 ---
+
 ## 📖 Livro de Visitas
 
 Uma seção interativa onde visitantes podem deixar mensagens, comentários e feedback sobre a plataforma. Acesse a página de [Livro de Visitas](/guestbook) para compartilhar sua experiência com o Dev Resources.
@@ -320,7 +324,6 @@ Uma seção interativa onde visitantes podem deixar mensagens, comentários e fe
 - 🌟 **Avaliações:** Compartilhe sua opinião com uma experiência simples e intuitiva
 
 ---
-
 
 ## 🔗 Documentações utilizadas
 
