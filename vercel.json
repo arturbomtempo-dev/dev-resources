@@ -65,13 +65,5 @@
             "destination": "/",
             "permanent": true
         }
-    ],
-    "env": {
-        "NEXT_PUBLIC_SUPABASE_URL": "@supabase-url",
-        "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase-anon-key",
-        "NEXT_PUBLIC_EMAILJS_SERVICE_ID": "@emailjs-service-id",
-        "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_FOR_ME": "@emailjs-template-me",
-        "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_FOR_SENDER": "@emailjs-template-sender",
-        "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY": "@emailjs-public-key"
-    }
+    ]
 }
