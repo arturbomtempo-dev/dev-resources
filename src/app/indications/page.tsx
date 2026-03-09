@@ -41,6 +41,11 @@ export default function Indications() {
         );
     };
 
+    const translateAuthor = (author: string): string => {
+        if (author === ALL) return t.indications.filters.all;
+        return author;
+    };
+
     const filteredIndications = useMemo(() => {
         return indications.filter((indication) => {
             const matchesSearch =
@@ -127,6 +132,7 @@ export default function Indications() {
                     selectedAuthor={selectedAuthor}
                     showFavoritesOnly={showFavoritesOnly}
                     translateCategory={translateCategory}
+                    translateAuthor={translateAuthor}
                     onCategoryChange={handleCategoryChange}
                     onAuthorChange={handleAuthorChange}
                     onToggleFavorites={handleToggleFavorites}

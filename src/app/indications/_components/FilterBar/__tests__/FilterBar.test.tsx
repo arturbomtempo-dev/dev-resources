@@ -10,6 +10,13 @@ const mockTranslateCategory = (category: string) => {
     return translations[category] || category;
 };
 
+const mockTranslateAuthor = (author: string) => {
+    const translations: Record<string, string> = {
+        all: 'All',
+    };
+    return translations[author] || author;
+};
+
 jest.mock('@/lib/i18n/I18nProvider', () => ({
     useI18n: () => ({
         t: {
@@ -58,6 +65,7 @@ describe('FilterBar Component', () => {
         selectedAuthor: '',
         showFavoritesOnly: false,
         translateCategory: mockTranslateCategory,
+        translateAuthor: mockTranslateAuthor,
         onCategoryChange: jest.fn(),
         onAuthorChange: jest.fn(),
         onToggleFavorites: jest.fn(),
