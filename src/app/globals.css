@@ -143,6 +143,11 @@
     --radius-4xl: calc(var(--radius) + 16px);
 }
 
+::selection {
+    background: var(--blue-primary);
+    color: var(--color-white);
+}
+
 body {
     background: var(--white);
     color: var(--black);
