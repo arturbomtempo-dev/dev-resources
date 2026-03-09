@@ -25,6 +25,17 @@ export const indications: Indication[] = [
     },
     {
         id: 3,
+        title: 'Microsoft Designer',
+        description:
+            'Ferramenta de design com inteligência artificial para criação rápida de artes, imagens e conteúdos visuais.',
+        url: 'https://designer.microsoft.com/',
+        category: 'Design UI/UX',
+        tags: ['Design UI/UX'],
+        indicatedBy: 'Artur',
+        iconName: 'PaintBrush',
+    },
+    {
+        id: 4,
         title: 'Frontend Mentor',
         description:
             'Plataforma com desafios práticos de frontend para desenvolver habilidades reais de codificação em projetos contextualizados.',
@@ -35,7 +46,7 @@ export const indications: Indication[] = [
         iconName: 'Trophy',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Grainient',
         description:
             'Gerador avançado de gradientes modernos com efeitos visuais e estilos profissionais para implementação em projetos de design.',
@@ -46,7 +57,7 @@ export const indications: Indication[] = [
         iconName: 'Sparkle',
     },
     {
-        id: 5,
+        id: 6,
         title: '10015.io',
         description:
             'Plataforma centralizada que reúne diversas ferramentas online úteis para desenvolvimento, design e produtividade em um único lugar.',
@@ -57,7 +68,18 @@ export const indications: Indication[] = [
         iconName: 'Wrench',
     },
     {
-        id: 6,
+        id: 7,
+        title: 'Vercel',
+        description:
+            'Plataforma para deploy e hospedagem de aplicações web modernas, com foco em performance, integração com frameworks frontend e distribuição global.',
+        url: 'https://vercel.com/',
+        category: 'Ferramentas',
+        tags: ['Ferramentas'],
+        indicatedBy: 'Artur',
+        iconName: 'Rocket',
+    },
+    {
+        id: 8,
         title: 'Colorffy',
         description:
             'Ferramenta para geração de paletas de cores, visualização de temas e combinações visuais harmônicas para suas interfaces.',
@@ -68,7 +90,7 @@ export const indications: Indication[] = [
         iconName: 'Layout',
     },
     {
-        id: 7,
+        id: 9,
         title: 'MDN Web Docs',
         description:
             'Documentação completa e referências autoritativas para tecnologias web como HTML, CSS e JavaScript mantidas pela Mozilla.',
@@ -79,7 +101,18 @@ export const indications: Indication[] = [
         iconName: 'Browsers',
     },
     {
-        id: 8,
+        id: 10,
+        title: 'Curso de JavaScript',
+        description:
+            'Série de aulas ensinando os fundamentos da linguagem JavaScript e conceitos importantes para desenvolvimento web.',
+        url: 'https://www.youtube.com/playlist?list=PLeBlAOvjkM5huodqseyXgkQanu_CEtsUq',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'Video',
+    },
+    {
+        id: 11,
         title: 'Rocketseat',
         description:
             'Plataforma de ensino completa em programação e desenvolvimento de software com formação estruturada e conteúdo profissional.',
@@ -87,10 +120,21 @@ export const indications: Indication[] = [
         category: 'Estudos',
         tags: ['Cursos'],
         indicatedBy: 'Eduarda',
-        iconName: 'Rocket',
+        iconName: 'Atom',
     },
     {
-        id: 9,
+        id: 12,
+        title: 'Curso de Programação Modular em Java',
+        description:
+            'Curso que aborda modularização e organização de projetos Java utilizando boas práticas de estrutura e separação de responsabilidades.',
+        url: 'https://www.youtube.com/playlist?list=PLeBlAOvjkM5hIR_G3m-DJjcDMNKMUypkH',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'GraduationCap',
+    },
+    {
+        id: 13,
         title: 'Notion',
         description:
             'Ferramenta all-in-one para organização completa de projetos, anotações estruturadas e documentações colaborativas.',
@@ -101,7 +145,7 @@ export const indications: Indication[] = [
         iconName: 'Notebook',
     },
     {
-        id: 10,
+        id: 14,
         title: 'shadcn/ui',
         description:
             'Biblioteca de componentes React reutilizáveis, acessíveis e altamente personalizáveis para construção de interfaces modernas.',
@@ -112,7 +156,18 @@ export const indications: Indication[] = [
         iconName: 'Stack',
     },
     {
-        id: 11,
+        id: 15,
+        title: 'Desenvolvendo um Projeto com React do Zero | Link in Bio',
+        description:
+            'Mini curso prático que ensina a desenvolver uma aplicação completa em React construindo um projeto real do início ao fim.',
+        url: 'https://www.youtube.com/playlist?list=PLeBlAOvjkM5jyuQ0c1w2e3CYH3HB4DBOd',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'Sparkle',
+    },
+    {
+        id: 16,
         title: 'W3Schools',
         description:
             'Plataforma educacional com tutoriais práticos e interativos de HTML, CSS, JavaScript e outras tecnologias web essenciais.',
@@ -120,10 +175,10 @@ export const indications: Indication[] = [
         category: 'Estudos',
         tags: ['Documentação'],
         indicatedBy: 'Eduarda',
-        iconName: 'Atom',
+        iconName: 'Code',
     },
     {
-        id: 12,
+        id: 17,
         title: 'Framer Motion',
         description:
             'Biblioteca poderosa de animações para React com API simples e intuitiva para criar experiências interativas impressionantes.',
@@ -134,7 +189,18 @@ export const indications: Indication[] = [
         iconName: 'Video',
     },
     {
-        id: 13,
+        id: 18,
+        title: 'Aulas de Árvore Binária de Busca',
+        description:
+            'Aulas dedicadas à implementação e compreensão da estrutura de dados árvore binária de busca e suas principais operações.',
+        url: 'https://www.youtube.com/playlist?list=PLeBlAOvjkM5gf5vwnGKIy9Jh2AUXds-rm',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'Stack',
+    },
+    {
+        id: 19,
         title: 'NotebookLM',
         description:
             'Ferramenta inteligente para criação de resumos, mapas mentais e materiais de estudo usando inteligência artificial.',
@@ -142,10 +208,21 @@ export const indications: Indication[] = [
         category: 'Estudos',
         tags: ['IA'],
         indicatedBy: 'Eduarda',
-        iconName: 'Code',
+        iconName: 'Wrench',
     },
     {
-        id: 14,
+        id: 20,
+        title: 'Aulas de Expressão Booleana',
+        description:
+            'Conteúdo focado em lógica booleana e expressões lógicas aplicadas à programação e resolução de problemas computacionais.',
+        url: 'https://www.youtube.com/playlist?list=PLRKGEaxOX82miHxszeYs3nnjteIsSTzNu',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'Atom',
+    },
+    {
+        id: 21,
         title: 'freeCodeCamp',
         description:
             'Plataforma gratuita de ensino de programação e desenvolvimento de software com certificações reconhecidas pelo mercado.',
@@ -156,7 +233,18 @@ export const indications: Indication[] = [
         iconName: 'GraduationCap',
     },
     {
-        id: 15,
+        id: 22,
+        title: 'Masterclasses de POO',
+        description:
+            'Série de aulas aprofundando os principais conceitos de programação orientada a objetos como encapsulamento, herança e polimorfismo.',
+        url: 'https://www.youtube.com/playlist?list=PLeBlAOvjkM5jhpxHFU0SFfYf_Z3UbpUbY',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'Trophy',
+    },
+    {
+        id: 23,
         title: 'Material UI',
         description:
             'Biblioteca completa de componentes UI para o ecossistema React, seguindo os princípios do Material Design.',
@@ -167,7 +255,18 @@ export const indications: Indication[] = [
         iconName: 'Monitor',
     },
     {
-        id: 16,
+        id: 24,
+        title: 'Claude Code',
+        description:
+            'Assistente de programação baseado em IA que auxilia na escrita, revisão e compreensão de código durante o desenvolvimento.',
+        url: 'https://www.anthropic.com/claude-code',
+        category: 'Ferramentas',
+        tags: ['Ferramentas'],
+        indicatedBy: 'Artur',
+        iconName: 'Code',
+    },
+    {
+        id: 25,
         title: 'Tailwind CSS',
         description:
             'Framework de design baseado em utilitários para construção rápida e eficiente de interfaces responsivas e personalizadas.',
@@ -178,7 +277,18 @@ export const indications: Indication[] = [
         iconName: 'ChatCircle',
     },
     {
-        id: 17,
+        id: 26,
+        title: 'Insomnia',
+        description:
+            'Cliente para desenvolvimento e testes de APIs REST e GraphQL, sendo uma alternativa moderna e leve ao Postman.',
+        url: 'https://insomnia.rest/',
+        category: 'Ferramentas',
+        tags: ['Ferramentas'],
+        indicatedBy: 'Artur',
+        iconName: 'Wrench',
+    },
+    {
+        id: 27,
         title: 'Postman',
         description:
             'Plataforma colaborativa para desenvolvimento, teste e documentação de APIs com interface intuitiva e funcionalidades avançadas.',
@@ -189,7 +299,18 @@ export const indications: Indication[] = [
         iconName: 'Database',
     },
     {
-        id: 18,
+        id: 28,
+        title: 'Obsidian',
+        description:
+            'Aplicativo de anotações em Markdown voltado para organização de conhecimento, estudos e criação de um segundo cérebro digital.',
+        url: 'https://obsidian.md/',
+        category: 'Ferramentas',
+        tags: ['Ferramentas'],
+        indicatedBy: 'Artur',
+        iconName: 'Notebook',
+    },
+    {
+        id: 29,
         title: 'Swagger',
         description:
             'Conjunto de ferramentas para design, documentação e desenvolvimento de APIs REST com padrões de especificação OpenAPI.',
@@ -200,7 +321,18 @@ export const indications: Indication[] = [
         iconName: 'BracketsCurly',
     },
     {
-        id: 19,
+        id: 30,
+        title: 'IntelliJ IDEA',
+        description:
+            'IDE avançada da JetBrains voltada para desenvolvimento em Java e outras linguagens da JVM, com recursos poderosos de produtividade.',
+        url: 'https://www.jetbrains.com/idea/',
+        category: 'Ferramentas',
+        tags: ['Ferramentas'],
+        indicatedBy: 'Artur',
+        iconName: 'Monitor',
+    },
+    {
+        id: 31,
         title: 'Docker',
         description:
             'Plataforma de conteinerização de software que facilita deploy, escalabilidade e gerenciamento de aplicações.',
@@ -211,7 +343,18 @@ export const indications: Indication[] = [
         iconName: 'FileText',
     },
     {
-        id: 20,
+        id: 32,
+        title: 'Neon DB',
+        description:
+            'Banco de dados PostgreSQL serverless projetado para aplicações modernas, com escalabilidade automática e integração com ambientes cloud.',
+        url: 'https://neon.tech/',
+        category: 'Desenvolvimento',
+        tags: ['Desenvolvimento'],
+        indicatedBy: 'Artur',
+        iconName: 'Database',
+    },
+    {
+        id: 33,
         title: 'LeetCode',
         description:
             'Plataforma para prática de programação com desafios de algoritmos e preparação para entrevistas técnicas.',
@@ -222,7 +365,18 @@ export const indications: Indication[] = [
         iconName: 'GithubLogo',
     },
     {
-        id: 21,
+        id: 34,
+        title: 'WakaTime',
+        description:
+            'Ferramenta que monitora automaticamente o tempo gasto programando em diferentes linguagens e projetos.',
+        url: 'https://wakatime.com/',
+        category: 'Ferramentas',
+        tags: ['Ferramentas'],
+        indicatedBy: 'Artur',
+        iconName: 'BracketsCurly',
+    },
+    {
+        id: 35,
         title: 'HackerRank',
         description:
             'Plataforma de desafios de programação com avaliação técnica e preparação profissional para desenvolvimento de carreira.',
@@ -233,7 +387,18 @@ export const indications: Indication[] = [
         iconName: 'Code',
     },
     {
-        id: 22,
+        id: 36,
+        title: 'Debugging Thoughts',
+        description:
+            'Newsletter sobre programação, tecnologia e reflexões sobre carreira e aprendizado no mundo do desenvolvimento.',
+        url: 'https://www.linkedin.com/newsletters/debugging-thoughts-7389634213962125312/',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'ChatCircle',
+    },
+    {
+        id: 37,
         title: 'CodePen',
         description:
             'Plataforma social para criar, testar e compartilhar código HTML, CSS e JavaScript com comunidade de desenvolvedores.',
@@ -244,7 +409,18 @@ export const indications: Indication[] = [
         iconName: 'FileText',
     },
     {
-        id: 23,
+        id: 38,
+        title: 'Medium',
+        description:
+            'Plataforma de publicação e leitura de artigos onde desenvolvedores compartilham conhecimento e experiências em tecnologia.',
+        url: 'https://medium.com/',
+        category: 'Estudos',
+        tags: ['Estudos'],
+        indicatedBy: 'Artur',
+        iconName: 'FileText',
+    },
+    {
+        id: 39,
         title: 'GeeksforGeeks',
         description:
             'Portal educacional com conteúdo abrangente sobre programação, ciência da computação e estrutura de algoritmos.',
@@ -252,10 +428,10 @@ export const indications: Indication[] = [
         category: 'Estudos',
         tags: ['Documentação'],
         indicatedBy: 'Eduarda',
-        iconName: 'FileText',
+        iconName: 'Browsers',
     },
     {
-        id: 24,
+        id: 40,
         title: 'Ada Tech',
         description:
             'Plataforma de educação em tecnologia com formação estruturada em programação e desenvolvimento de software.',
@@ -266,7 +442,7 @@ export const indications: Indication[] = [
         iconName: 'GraduationCap',
     },
     {
-        id: 25,
+        id: 41,
         title: 'SwiperJS',
         description:
             'Biblioteca moderna de sliders e carrosséis para web com recursos avançados e suporte multi-dispositivo.',
@@ -277,7 +453,7 @@ export const indications: Indication[] = [
         iconName: 'Wrench',
     },
     {
-        id: 26,
+        id: 42,
         title: 'Phosphor Icons',
         description:
             'Biblioteca moderna de ícones versáteis para interfaces digitais com múltiplos estilos e pesos.',
@@ -288,7 +464,7 @@ export const indications: Indication[] = [
         iconName: 'Stack',
     },
     {
-        id: 27,
+        id: 43,
         title: 'Storyset',
         description:
             'Biblioteca de ilustrações customizáveis e de alta qualidade para enriquecer interfaces e projetos de design.',
@@ -299,7 +475,7 @@ export const indications: Indication[] = [
         iconName: 'Rocket',
     },
     {
-        id: 28,
+        id: 44,
         title: 'Freepik (Brasil)',
         description:
             'Banco de imagens e recursos gráficos gratuitos e premiuns para complementar seus projetos de design.',
@@ -310,7 +486,7 @@ export const indications: Indication[] = [
         iconName: 'PaintBrush',
     },
     {
-        id: 29,
+        id: 45,
         title: 'CodeDex',
         description:
             'Plataforma interativa para aprender programação através de desafios práticos e aprendizado gamificado.',
