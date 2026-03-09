@@ -177,7 +177,7 @@ export function Footer() {
                                 bgColor="bg-gray-200 hover:bg-teal-500/20 dark:bg-neutral-800 dark:hover:bg-teal-500/20"
                                 iconColor="text-teal-600 dark:text-teal-400"
                                 size={20}
-                                href="https://portifolio-eduardavieira.vercel.app/"
+                                href="https://portfolio-eduardavieira.vercel.app/"
                             />
                         </li>
                     </ul>

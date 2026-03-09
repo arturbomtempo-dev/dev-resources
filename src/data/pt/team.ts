@@ -44,7 +44,7 @@ export const aboutMembers: AboutMember[] = [
             github: 'https://github.com/eduardavieira-dev',
             linkedin: 'https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/',
             instagram: 'https://www.instagram.com/eduardavieira.dev/',
-            website: 'https://portifolio-eduardavieira.vercel.app/',
+            website: 'https://portfolio-eduardavieira.vercel.app/',
         },
     },
     {
