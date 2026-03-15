@@ -176,26 +176,67 @@ A estrutura do projeto segue o padrão de arquitetura em camadas, com organizaç
 
 ### 📦 Instalação de Dependências
 
-Clone o repositório e instale as dependências.
+Para instalar e executar o projeto:
 
-1. **Clone o Repositório:**
+1. **Clone o repositório:**
 
 ```bash
 git clone https://github.com/arturbomtempo-dev/dev-resources.git
 cd dev-resources
 ```
 
-2. **Instale as Dependências:**
-
-Instale as dependências do projeto Next.js:
+2. **Instale as dependências:**
 
 ```bash
 npm install
-# ou
-yarn install
 ```
 
----
+3. **Configuração de variáveis de ambiente:**
+
+Copie o arquivo `.env.example` para `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Em seguida, ajuste as chaves para suas próprias credenciais:
+
+- **EmailJS:** Crie uma conta em [EmailJS](https://www.emailjs.com/), configure um serviço de e-mail e obtenha suas chaves (Service ID, Template ID, Public Key) no painel da plataforma.
+- **Supabase:** Crie um projeto em [Supabase](https://supabase.com/), acesse o painel do projeto e obtenha as chaves de acesso (URL e anon/public key) na seção de API.
+
+Preencha o arquivo `.env` com essas informações antes de executar a aplicação.
+
+4. **Configuração da tabela guestbook no Supabase:**
+
+No painel do Supabase, acesse o menu **SQL Editor** e execute o seguinte comando para criar e configurar a tabela de livro de visitas:
+
+```sql
+CREATE TABLE guestbook (
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Habilitar Row Level Security
+ALTER TABLE guestbook ENABLE ROW LEVEL SECURITY;
+
+-- Política para permitir leitura pública
+CREATE POLICY "Allow public read" ON guestbook
+    FOR SELECT USING (true);
+
+-- Política para permitir inserção pública
+CREATE POLICY "Allow public insert" ON guestbook
+    FOR INSERT WITH CHECK (true);
+
+-- Habilitar Realtime para atualizações em tempo real
+ALTER PUBLICATION supabase_realtime ADD TABLE guestbook;
+
+-- (Opcional) Limpar a tabela guestbook
+DELETE FROM guestbook;
+```
+
+Esses comandos criam a tabela, habilitam segurança por linha, políticas de acesso público e permitem atualizações em tempo real. O último comando é opcional e serve para limpar a tabela.
 
 ### ⚡ Como Executar a Aplicação
 
@@ -203,8 +244,6 @@ Execute a aplicação em modo de desenvolvimento:
 
 ```bash
 npm run dev
-# ou
-yarn dev
 ```
 
 🎨 _A aplicação estará disponível em **http://localhost:3000**._
@@ -230,74 +269,87 @@ npm start
 
 ### 📂 Estrutura de Pastas
 
-A estrutura do projeto segue as convenções do Next.js 16 com App Router, organizando código, componentes e recursos de forma clara e escalável.
+Estrutura real do projeto:
 
 ```
 dev-resources/
-├── .gitignore                   # 🧹 Arquivos e pastas ignorados pelo Git
-├── .prettierrc                  # 🎨 Configuração do Prettier para formatação de código
-├── .vscode/                     # ⚙️ Configurações do VS Code (opcional)
-├── README.md                    # 📘 Documentação principal do projeto
-├── components.json              # 🧩 Configuração do shadcn/ui
-├── docs/                        # 📚 Documentação auxiliar
-│   └── TESTING.md               # 🧪 Guia de testes
-├── e2e/                         # 🎭 Testes end-to-end (Playwright)
-│   ├── fixtures/                # 🧰 Fixtures de testes
-│   └── *.spec.ts                # ✅ Cenários E2E
-├── eslint.config.mjs            # ✨ Configuração do ESLint para qualidade de código
-├── helpers/                     # 🛟 Utilitários de suporte para testes
-│   └── *.ts
-├── next.config.ts               # ⚙️ Configurações do Next.js
-├── next-env.d.ts                # 📝 Tipos TypeScript do Next.js
-├── package.json                 # 📦 Dependências e scripts do projeto
-├── package-lock.json            # 🔒 Lockfile das dependências
-├── playwright.config.ts         # 🎭 Configuração do Playwright
-├── postcss.config.mjs           # 🎨 Configuração do PostCSS
-├── resources/                   # 📂 Recursos do projeto
-│   ├── demonstrations/          # 🎥 GIFs e demonstrações
-│   └── prototype/               # 📸 Screenshots do protótipo Figma
-├── tsconfig.json                # 📘 Configuração do TypeScript
-├── public/                      # 🌍 Arquivos públicos (assets e mídias)
-│   ├── developers/
-│   ├── not-found/
-│   └── projects/
-└── src/                         # 📂 Código-fonte da aplicação
-    ├── __mocks__/               # 🧪 Mocks para testes
-    ├── app/                     # 📂 App Router (rotas e layouts)
-    │   ├── _components/         # 🧩 Componentes compartilhados do app
-    │   ├── __tests__/           # 🧪 Testes das páginas base
-    │   ├── about/
-    │   ├── contact/
-    │   ├── experiences/
-    │   ├── guestbook/
-    │   ├── indications/
-    │   └── projects/
-    ├── components/              # 📂 Componentes React reutilizáveis
-    │   ├── Footer/
-    │   ├── Header/
-    │   ├── IconBox/
-    │   ├── LanguageSwitcher/
-    │   ├── Loading/
-    │   ├── Logo/
-    │   ├── SectionContainer/
-    │   ├── Subtitle/
-    │   ├── ThemeSwitcher/
-    │   ├── Title/
-    │   └── ui/
-    ├── config/                  # ⚙️ Configurações da aplicação
-    ├── data/                    # 🗂️ Conteúdo estático e tipagens
-    │   ├── en/
-    │   ├── pt/
-    │   └── types/
-    ├── hooks/                   # 🪝 Hooks customizados
-    ├── lib/                     # 📂 Utilitários e integrações
-    │   ├── i18n/
-    │   ├── supabase/
-    │   └── theme/
-    ├── services/                # 🔌 Serviços externos
-    │   ├── github/
-    │   └── guestbook/
-    └── test-utils/              # 🧪 Utilitários de teste
+├── .env.example                # Exemplo de variáveis de ambiente
+├── .env                        # Variáveis de ambiente (não versionado)
+├── .gitignore                  # Ignora arquivos/pastas no Git
+├── LICENSE.md                  # Licença do projeto
+├── README.md                   # Documentação principal
+├── package.json                # Configuração de dependências e scripts
+├── tsconfig.json               # Configuração do TypeScript
+├── jest.config.ts              # Configuração do Jest
+├── jest.setup.tsx              # Setup de testes
+├── next.config.ts              # Configuração do Next.js
+├── eslint.config.mjs           # Configuração do ESLint
+├── postcss.config.mjs          # Configuração do PostCSS
+├── playwright.config.ts        # Configuração do Playwright
+├── vercel.json                 # Configuração de deploy na Vercel
+├── coverage/                   # Relatórios de cobertura de testes
+│   └── lcov-report/            # Relatório HTML de cobertura
+├── docs/                       # Documentação adicional
+├── e2e/                        # Testes end-to-end (Playwright)
+│   ├── fixtures/               # Fixtures para testes E2E
+│   ├── helpers/                # Helpers para testes E2E
+│   └── *.spec.ts               # Arquivos de teste E2E
+├── public/                     # Arquivos estáticos (imagens, etc)
+├── resources/                  # Recursos e demonstrações
+├── src/
+│   ├── __mocks__/              # Mocks para testes
+│   ├── app/                    # Rotas e páginas principais (Next.js)
+│   │   ├── __tests__/          # Testes das rotas/páginas
+│   │   ├── _components/        # Componentes exclusivos de páginas
+│   │   ├── about/              # Página sobre
+│   │   ├── contact/            # Página de contato
+│   │   ├── experiences/        # Página de experiências
+│   │   ├── guestbook/          # Livro de visitas
+│   │   ├── indications/        # Indicações/links curados
+│   │   ├── projects/           # Portfólio de projetos
+│   │   ├── layout.tsx          # Layout global
+│   │   ├── loading.tsx         # Estado de carregamento
+│   │   ├── not-found.tsx       # Página de erro
+│   │   ├── page.tsx            # Página inicial
+│   │   └── template.tsx        # Template base
+│   ├── components/             # Componentes reutilizáveis
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   ├── IconBox/
+│   │   ├── LanguageSwitcher/
+│   │   ├── Loading/
+│   │   ├── Logo/
+│   │   ├── SectionContainer/
+│   │   ├── Subtitle/
+│   │   ├── ThemeSwitcher/
+│   │   ├── Title/
+│   │   └── ui/
+│   ├── config/                 # Configurações (ex: EmailJS, i18n)
+│   │   ├── __tests__/
+│   │   ├── emailJsConfig.ts
+│   │   └── i18n.ts
+│   ├── data/                   # Dados, tipos e internacionalização
+│   │   ├── en/
+│   │   ├── pt/
+│   │   ├── types/
+│   │   └── index.ts
+│   ├── hooks/                  # Custom hooks
+│   │   ├── __tests__/
+│   │   ├── useGitHubUser.ts
+│   │   └── useGuestbook.ts
+│   ├── lib/                    # Utilitários e integrações
+│   │   ├── __tests__/
+│   │   ├── axios.ts
+│   │   ├── utils.ts
+│   │   ├── i18n/
+│   │   ├── supabase/
+│   │   └── theme/
+│   ├── services/               # Serviços (ex: github, guestbook)
+│   │   ├── github/
+│   │   └── guestbook/
+│   ├── test-utils/             # Utilitários para testes
+│   │   └── index.tsx
+├── test-results/               # Resultados de testes
 ```
 
 ---
