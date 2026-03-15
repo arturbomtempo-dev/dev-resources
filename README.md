@@ -2,9 +2,9 @@
   <h1>Dev Resources</h1>
   
   <p>
-    <img src="https://img.shields.io/badge/Status-Em_Desenvolvimento-yellow?style=flat-square" alt="Status">
+    <img src="https://img.shields.io/badge/Status-Concluído-dark_green?style=flat-square" alt="Status">
     <img src="https://img.shields.io/badge/Versão-v1.0.0-blue?style=flat-square" alt="Versão">
-    <img src="https://img.shields.io/badge/Licença-MIT-green?style=flat-square" alt="Licença">
+    <img src="https://img.shields.io/badge/Licença-MIT-red?style=flat-square" alt="Licença">
   </p>
   
   <p>
@@ -14,13 +14,16 @@
     <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
     <img src="https://img.shields.io/badge/Node.js-22.13.1-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
     <img src="https://img.shields.io/badge/Vercel-Deploy-black?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
+    <img src="https://img.shields.io/badge/Playwright-1.58.2-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright">
+    <img src="https://img.shields.io/badge/Jest-30.2.0-C21325?style=flat-square&logo=jest&logoColor=white" alt="Jest">
+    <img src="https://img.shields.io/badge/Supabase-2.98.0-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase">
   </p>
 </div>
 
 <br>
 
 <div align="justify">
-O <b>Dev Resources</b> é uma plataforma de <i>curadoria de recursos técnicos</i> desenvolvida por <a href="https://github.com/arturbomtempo-dev">Artur Bomtempo</a> e <a href="https://github.com/eduardavieira-dev">Eduarda Vieira</a>, estudantes do <i>quarto período</i> do curso de <b>Engenharia de Software</b> da <b>PUC Minas</b>. Como <i>criadores de conteúdo digital</i> apaixonados por compartilhar conhecimento, desenvolvemos este projeto com o propósito de <b>auxiliar estudantes e profissionais de engenharia de software</b> a encontrarem <i>materiais confiáveis</i>, <i>recursos de qualidade</i> e <i>referências técnicas</i> centralizadas para estudo e resolução de dúvidas. A plataforma reúne de forma <i>organizada</i> e <i>acessível</i> conteúdos selecionados, projetos de referência e documentações, promovendo o <b>compartilhamento de conhecimento</b> e facilitando o <i>aprendizado da comunidade</i>. Além disso, permite o <i>contato direto</i> com os desenvolvedores para troca de experiências e esclarecimentos. O Dev Resources demonstra a aplicação prática de <b>boas práticas de engenharia de software</b>, promovendo <i>qualidade</i>, <i>documentação técnica</i> e <i>colaboração</i> no ecossistema de desenvolvimento.
+O <b>Dev Resources</b> é uma plataforma de curadoria de recursos técnicos, criada por <a href="https://github.com/arturbomtempo-dev">Artur Bomtempo</a> e <a href="https://github.com/eduardavieira-dev">Eduarda Vieira</a>, estudantes de Engenharia de Software da PUC Minas. O objetivo é centralizar materiais confiáveis, projetos de referência e documentações para facilitar o aprendizado e a atualização profissional. A plataforma oferece contato direto com os desenvolvedores, incluindo o <b>Livro de Visitas</b> para feedbacks e sugestões, e promove uma cultura de colaboração. O projeto adota boas práticas de engenharia de software, com documentação técnica, testes automatizados (E2E e unitários/integrados) e foco em qualidade.
 </div>
 
 ---
@@ -67,97 +70,98 @@ Ao criar uma ponte entre a abundância de informação e o aprendizado efetivo, 
 
 ## ✨ Funcionalidades Principais
 
-- 📚 **Curadoria de Recursos:** Catálogo de links úteis e confiáveis para materiais de tecnologia, documentações e referências técnicas de qualidade.
-- 💼 **Portfólio de Projetos:** Galeria de projetos desenvolvidos pelos criadores, disponíveis para consulta, inspiração e estudo de código.
-- 🔍 **Sistema de Filtragem:** Ferramentas de busca e filtros avançados para projetos e materiais, facilitando a localização de conteúdos específicos.
-- 👥 **Sobre os Desenvolvedores:** Seção dedicada às informações, trajetória e experiências dos criadores da plataforma.
-- 📧 **Página de Contato:** Canal direto de comunicação para dúvidas, sugestões e troca de conhecimento com os desenvolvedores.
+- **Curadoria de Recursos:** Catálogo de links úteis e confiáveis para materiais de tecnologia, documentações e referências técnicas de qualidade.
+- **Portfólio de Projetos:** Galeria de projetos desenvolvidos pelos criadores, disponíveis para consulta, inspiração e estudo de código.
+- **Sistema de Filtragem:** Ferramentas de busca e filtros avançados para projetos e materiais, facilitando a localização de conteúdos específicos.
+- **Sobre os Desenvolvedores:** Seção dedicada às informações, trajetória e experiências dos criadores da plataforma.
+- **Página de Contato:** Canal direto de comunicação para dúvidas, sugestões e troca de conhecimento com os desenvolvedores.
+- **Livro de Visitas:** Espaço para usuários deixarem mensagens, feedbacks e sugestões, promovendo interação e engajamento.
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construção deste projeto. Recomenda-se o uso das versões listadas (ou superiores) para garantir a compatibilidade.
+As seguintes ferramentas, frameworks e bibliotecas foram utilizadas na construção deste projeto. Recomenda-se o uso das versões listadas (ou superiores) para garantir a compatibilidade.
 
-### 💻 Front-end
+### Front-end
 
-**Framework:** Next.js 16
-**Biblioteca UI:** React 19
-**Linguagem:** TypeScript 5
-**Estilização:** Tailwind CSS v4
-**Componentes UI:** shadcn/ui
-**Internacionalização:** i18n (custom)
-**Ícones:** Phosphor Icons
-**Linter:** ESLint 10 com simple-import-sort
-**Formatação:** Prettier 3.8 com tailwindcss plugin
-**Fontes:** Google Fonts (Inter, Manrope)
-**Notificações:** Sonner
-**Testes unitários:** Jest
-**Testes E2E:** Playwright
-**Integração com API:** Axios
+- **Framework:** Next.js 16
+- **Biblioteca UI:** React 19
+- **Linguagem:** TypeScript 5
+- **Estilização:** Tailwind CSS v4
+- **Componentes UI:** shadcn/ui
+- **Internacionalização:** i18n (custom)
+- **Ícones:** Phosphor Icons
+- **Linter:** ESLint 10 com simple-import-sort
+- **Formatação:** Prettier 3.8 com tailwindcss plugin
+- **Fontes:** Google Fonts (Inter, Manrope)
+- **Notificações:** Sonner
+- **Testes unitários:** Jest
+- **Testes E2E:** Playwright
+- **Integração com API:** Axios
 
-### 🗄️ Backend & Integrações
+### Backend & Integrações
 
-**Banco de dados e autenticação:** Supabase
-**Envio de e-mails:** EmailJS
-**Integração com API do GitHub:** Consumo de dados públicos de usuários e repositórios via GitHub REST API
+- **Banco de dados e autenticação:** Supabase
+- **Envio de e-mails:** EmailJS
+- **Integração com API do GitHub:** Consumo de dados públicos de usuários e repositórios via GitHub REST API
 
-### 🛠️ Outras ferramentas
+### Outras ferramentas
 
-**Processamento de CSS:** PostCSS
+- **Processamento de CSS:** PostCSS
 
-### ⚙️ Deploy
+### Deploy
 
-- **Plataforma:** Vercel (recomendado para Next.js)
-- **CI/CD:** GitHub Actions (opcional)
+- **Plataforma:** Vercel
+- **CI/CD:** GitHub Actions
 
 ---
 
 ## 🏗 Arquitetura
 
-O **Dev Resources** adota uma arquitetura moderna baseada no **Next.js 16** com **App Router**, aproveitando os recursos mais recentes do framework para criar uma aplicação web performática e escalável. A escolha dessa arquitetura foi motivada pela necessidade de oferecer uma experiência de usuário fluida, com carregamento rápido de páginas e otimização automática de recursos.
+O **Dev Resources** adota uma arquitetura moderna baseada no **Next.js 16** com App Router, aproveitando recursos avançados para criar uma aplicação web performática, escalável e bem organizada.
 
 ### Visão Geral
 
-A aplicação segue o padrão de **arquitetura em camadas** do Next.js, organizando o código de forma clara e modular:
+A estrutura do projeto segue o padrão de arquitetura em camadas, com organização clara e modular:
 
-- **Camada de Apresentação (UI):** Componentes React organizados e reutilizáveis, seguindo princípios de composição e separação de responsabilidades.
-- **Camada de Roteamento:** Utiliza o App Router do Next.js para gerenciamento de rotas baseado em arquivos, com suporte a layouts aninhados e loading states.
-- **Camada de Estilização:** Tailwind CSS v4 para estilização utilitária e consistente, com componentes UI customizados baseados em shadcn/ui.
-- **Camada de Utilitários:** Funções auxiliares centralizadas para manipulação de dados e lógica compartilhada.
+- **Camada de Apresentação (UI):** Componentes React reutilizáveis localizados em `src/components/`, como Header, Footer, Loading, Logo, SectionContainer, ThemeSwitcher, entre outros. Estes componentes são utilizados por diversas páginas, promovendo consistência visual e facilidade de manutenção.
+- **Componentes Específicos de Página:** Cada rota principal (como `about`, `contact`, `experiences`, `guestbook`, `indications`, `projects`) pode ter uma pasta `_components` dentro de `src/app/[rota]/`, contendo componentes exclusivos daquela página. Por exemplo, o guestbook possui `GuestbookCard` e `GuestbookForm` em `src/app/guestbook/_components/`.
+- **Roteamento:** Utiliza o App Router do Next.js, com rotas baseadas em arquivos e suporte a layouts aninhados, loading states e páginas de erro.
+- **Estilização:** Tailwind CSS v4 para estilização utilitária, com componentes UI customizados baseados em shadcn/ui.
+- **Utilitários:** Funções auxiliares centralizadas em `src/lib/` para manipulação de dados, classes CSS e integrações.
 
 ### Principais Componentes
 
-**App Router (`src/app/`):** Gerencia todas as rotas da aplicação seguindo a estrutura de arquivos do Next.js. Cada pasta representa uma rota:
+- **App Router (`src/app/`):** Gerencia todas as rotas da aplicação. Cada pasta representa uma rota, podendo conter subpastas `_components` para componentes exclusivos:
+    - `about/` - Página sobre os desenvolvedores (com `CardAbout`, `Pills`)
+    - `contact/` - Formulário de contato (com `Button`)
+    - `experiences/` - Trajetória e experiências
+    - `guestbook/` - Livro de visitas (com `GuestbookCard`, `GuestbookForm`)
+    - `indications/` - Links e recursos curados
+    - `projects/` - Portfólio de projetos
+    - `_components/` - Componentes exclusivos de páginas, como `ContentCard`, `Grainient`
 
-- `about/` - Página sobre os desenvolvedores
-- `contact/` - Formulário de contato
-- `experiences/` - Trajetória e experiências
-- `guestbook/` -
-  Livro de visitas
-- `indications/` - Links e recursos curados
-- `projects/` - Portfólio de projetos
+- **Componentes Reutilizáveis (`src/components/`):** Componentes modulares e reutilizáveis, como:
+    - `Header/`, `Footer/` - Layout global
+    - `Loading/` - Estados de carregamento
+    - `Logo/` - Identidade visual
+    - `ui/` - Biblioteca de componentes UI (buttons, inputs, etc.)
 
-**Componentes Reutilizáveis (`src/components/`):** Componentes modulares organizados por funcionalidade:
+- **Utilitários (`src/lib/`):** Funções auxiliares para manipulação de classes CSS (clsx, tailwind-merge), integrações e outras utilidades compartilhadas.
 
-- `Header/` e `Footer/` - Componentes de layout global
-- `Loading/` - Estados de carregamento
-- `Logo/` - Identidade visual
-- `ui/` - Biblioteca de componentes UI (buttons, inputs, etc.)
-
-**Utilitários (`src/lib/`):** Funções auxiliares para manipulação de classes CSS (clsx, tailwind-merge) e outras utilidades compartilhadas.
+- **Testes Automatizados:**
+    - **Testes unitários e de integração:** Implementados com Jest, organizados em pastas `__tests__` dentro de cada módulo ou página (`src/app/[rota]/__tests__`, `src/components/__tests__`, etc.), garantindo cobertura de funcionalidades isoladas e integradas.
+    - **Testes end-to-end (E2E):** Realizados com Playwright, localizados na pasta `e2e/` na raiz do projeto, simulando fluxos completos do usuário e validando a aplicação como um todo.
 
 ### Decisões Arquiteturais
 
-**Next.js App Router:** Escolhido por oferecer Server Components por padrão, melhorando performance e SEO, além de simplificar o code splitting e lazy loading.
-
-**TypeScript:** Implementado para garantir type safety, melhorar a experiência de desenvolvimento e reduzir bugs em produção.
-
-**Tailwind CSS v4:** Adotado pela sua abordagem utility-first que acelera o desenvolvimento, garante consistência visual e reduz o tamanho final do CSS.
-
-**Component-Based Architecture:** Estrutura modular que facilita manutenção, testes e reuso de código, seguindo as melhores práticas do ecossistema React.
-
-**File-Based Routing:** Simplifica a estrutura do projeto e torna a navegação mais intuitiva, com rotas diretamente mapeadas para a estrutura de pastas.
+- **Next.js App Router:** Utilizado para rotas baseadas em arquivos, layouts aninhados e Server Components, melhorando performance, SEO e organização.
+- **Componentização:** Separação clara entre componentes reutilizáveis (`src/components/`) e exclusivos de página (`src/app/[rota]/_components/`), facilitando manutenção, testes e reuso.
+- **TypeScript:** Garantia de type safety, melhor experiência de desenvolvimento e redução de bugs.
+- **Tailwind CSS v4:** Estilização utility-first, acelerando o desenvolvimento e garantindo consistência visual.
+- **File-Based Routing:** Navegação intuitiva, com rotas diretamente mapeadas para a estrutura de pastas.
+- **Testes Automatizados:** Testes unitários/integrados com Jest e E2E com Playwright, assegurando qualidade e robustez.
 
 ---
 
