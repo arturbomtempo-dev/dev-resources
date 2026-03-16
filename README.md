@@ -35,14 +35,22 @@ O <b>Dev Resources</b> é uma plataforma de curadoria de recursos técnicos, cri
 - [Funcionalidades Principais](#-funcionalidades-principais)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Arquitetura](#-arquitetura)
+    - [Visão Geral](#visão-geral)
+    - [Principais Componentes](#principais-componentes)
+    - [Decisões Arquiteturais](#decisões-arquiteturais)
 - [Instalação e Execução](#-instalação-e-execução)
     - [Pré-requisitos](#pré-requisitos)
+    - [Variáveis de Ambiente](#-variáveis-de-ambiente)
     - [Instalação de Dependências](#-instalação-de-dependências)
+    - [Inicialização do Banco de Dados (PostgreSQL)](#-inicialização-do-banco-de-dados-postgresql)
     - [Como Executar a Aplicação](#-como-executar-a-aplicação)
 - [Deploy](#-deploy)
-    - [Estrutura de Pastas](#-estrutura-de-pastas)
+- [Estrutura de Pastas](#-estrutura-de-pastas)
 - [Demonstração](#-demonstração)
-    - [Aplicação Web](#-aplicação-web)
+- [Testes](#-testes)
+    - [Testes Unitários e de Integração (Jest)](#testes-unitários-e-de-integração-jest)
+    - [Testes End-to-End (E2E) (Playwright)](#testes-end-to-end-e2e-playwright)
+    - [Estrutura dos arquivos de teste](#estrutura-dos-arquivos-de-teste)
 - [Documentações utilizadas](#-documentações-utilizadas)
 - [Autores](#-autores)
 - [Contribuição](#-contribuição)
@@ -277,7 +285,7 @@ npm start
 
 ---
 
-### 📂 Estrutura de Pastas
+## 📂 Estrutura de Pastas
 
 Estrutura real do projeto:
 
