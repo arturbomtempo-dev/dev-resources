@@ -12,6 +12,7 @@
     <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
     <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
     <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+        <img src="https://img.shields.io/badge/shadcn%2Fui-3.8.5-111827?style=flat-square&logoColor=white" alt="shadcn/ui">
     <img src="https://img.shields.io/badge/Node.js-22.13.1-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
     <img src="https://img.shields.io/badge/Vercel-Deploy-black?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
     <img src="https://img.shields.io/badge/Playwright-1.58.2-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright">

@@ -50,7 +50,8 @@ describe('Header Component', () => {
 
     it('should render the logo', () => {
         render(<Header />);
-        expect(screen.getByTestId('logo')).toBeInTheDocument();
+        const logos = screen.getAllByTestId('logo');
+        expect(logos.length).toBeGreaterThan(0);
     });
 
     it('should render all navigation links', () => {

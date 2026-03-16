@@ -46,7 +46,7 @@ describe('Logo Component', () => {
     it('should apply light variant when specified', () => {
         const { container } = render(<Logo variant="light" />);
         const wrapper = container.firstChild as HTMLElement;
-        expect(wrapper).toHaveClass('text-[#ffffff]');
+        expect(wrapper).toHaveClass('text-white');
     });
 
     it('should render heading element', () => {

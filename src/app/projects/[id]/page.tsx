@@ -41,21 +41,21 @@ export default function ProjectPage() {
                     priority
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-[#000000]/95 via-[#000000]/80 to-[#000000]/60" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/80 to-black/60" />
                 <div className="absolute inset-0 flex items-start">
                     <div className="w-full pt-5 md:pt-28">
                         <SectionContainer>
                             <Link
                                 href="/projects"
-                                className="mb-5 inline-flex items-center gap-2 text-base font-semibold text-[#ffffff] transition-colors hover:text-[#ffffff]/80"
+                                className="mb-5 inline-flex items-center gap-2 text-base font-semibold text-white transition-colors hover:text-white/80"
                             >
                                 <ArrowLeft size={24} weight="bold" />
                                 {t.projects.backToProjects}
                             </Link>
-                            <h1 className="font-family-manrope mb-3 text-3xl font-bold text-[#ffffff] md:text-4xl lg:text-5xl">
+                            <h1 className="font-family-manrope mb-3 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
                                 {project.title}
                             </h1>
-                            <p className="max-w-3xl text-lg text-[#ffffff]/90 md:text-xl">
+                            <p className="max-w-3xl text-lg text-white/90 md:text-xl">
                                 {project.description}
                             </p>
                         </SectionContainer>

@@ -114,11 +114,13 @@ test.describe('Internationalization (i18n)', () => {
     test('should maintain language after navigation', async ({ page }) => {
         await navigateAndWait(page, '/');
 
-        await page.goto('/about');
+        await page.goto('/about', { waitUntil: 'domcontentloaded' });
         await waitForPageLoad(page);
 
         await expect(page).toHaveURL(/.*about/);
 
+        // Wait for heading to be visible with timeout
+        await page.locator('h1, h2').first().waitFor({ state: 'visible', timeout: 5000 });
         const hasContent = await page.locator('h1, h2').first().isVisible();
         expect(hasContent).toBeTruthy();
     });

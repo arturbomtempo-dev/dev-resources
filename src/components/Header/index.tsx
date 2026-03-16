@@ -71,8 +71,8 @@ export function Header() {
                                 className={`group inline-flex flex-col items-center font-medium transition-colors duration-300 ${
                                     isTransparent
                                         ? isActive
-                                            ? 'text-[#ffffff]'
-                                            : 'text-[#ffffff]/80 hover:text-[#ffffff]'
+                                            ? 'text-white'
+                                            : 'text-white/80 hover:text-white'
                                         : isActive
                                           ? 'text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
                                           : 'text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-gray-100'
@@ -82,7 +82,7 @@ export function Header() {
                                 <span
                                     className={`mt-1 h-0.5 transition-all duration-300 ${
                                         isTransparent
-                                            ? 'bg-[#ffffff]'
+                                            ? 'bg-white'
                                             : 'bg-teal-primary dark:bg-teal-400'
                                     } ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
                                 />
@@ -97,7 +97,7 @@ export function Header() {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className={`flex h-10 w-10 cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden ${
                             isTransparent
-                                ? 'text-[#ffffff] hover:text-[#ffffff]/80'
+                                ? 'text-white hover:text-white/80'
                                 : 'hover:text-blue-primary text-neutral-500 dark:text-neutral-400 dark:hover:text-teal-400'
                         }`}
                         aria-label="Toggle menu"

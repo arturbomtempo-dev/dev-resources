@@ -23,7 +23,7 @@ export default function NotFound() {
                 </div>
 
                 <div className="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
-                    <h1 className="font-family-manrope text-7xl font-semibold text-[#00786F] sm:text-8xl lg:text-9xl dark:text-teal-400">
+                    <h1 className="font-family-manrope text-7xl font-semibold text-teal-600 sm:text-8xl lg:text-9xl dark:text-teal-400">
                         {t.common.notFound.code}
                     </h1>
 
@@ -33,7 +33,7 @@ export default function NotFound() {
 
                     <Link
                         href="/"
-                        className="font-family-manrope mt-8 inline-flex items-center justify-center rounded-full bg-linear-to-l from-[#00BBA7] to-[#009689] px-6 py-2.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:px-8 sm:py-3 sm:text-base dark:from-teal-500 dark:to-teal-600"
+                        className="font-family-manrope from-teal-light to-teal-primary mt-8 inline-flex items-center justify-center rounded-full bg-linear-to-l px-6 py-2.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:px-8 sm:py-3 sm:text-base dark:from-teal-500 dark:to-teal-600"
                     >
                         {t.common.notFound.button}
                     </Link>

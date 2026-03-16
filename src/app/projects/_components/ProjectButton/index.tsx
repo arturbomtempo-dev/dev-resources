@@ -13,7 +13,7 @@ export function ProjectButton({ children, variant = 'outline', href, icon }: Pro
 
     const variantClasses = {
         outline:
-            'border border-neutral-200 bg-white text-black hover:bg-neutral-50 hover:border-neutral-300 focus-visible:ring-neutral-300 dark:border-neutral-600 dark:bg-[#0a0a0a] dark:text-gray-100 dark:hover:bg-[#1a1a1a]',
+            'border border-neutral-200 bg-white text-black hover:bg-neutral-50 hover:border-neutral-300 focus-visible:ring-neutral-300 dark:border-neutral-600 dark:bg-black-900 dark:text-gray-100 dark:hover:bg-neutral-900',
         gradient:
             'border-0 bg-gradient-to-r from-blue-accent to-blue-accent-dark text-white hover:from-blue-accent-dark hover:to-blue-accent focus-visible:ring-blue-accent',
     };
