@@ -28,8 +28,7 @@ export const projects: Project[] = [
                 caption: 'Seção de indicações com recursos selecionados pela comunidade',
             },
             {
-                imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/about.png',
+                imageUrl: '/about.png',
                 caption: 'Seção sobre o projeto e os desenvolvedores',
             },
             {
@@ -95,7 +94,7 @@ export const projects: Project[] = [
         longDescription:
             'Projeto especial desenvolvido com o objetivo de oferecer uma experiência natalina única e personalizada através da integração de um chatbot inteligente com um website dedicado. A aplicação combina tecnologias modernas para criar uma plataforma conversacional que interage com os usuários, entregando mensagens de Natal personalizadas e conteúdo temático envolvente. O design cuidadoso e a implementação técnica criam uma jornada imersiva que celebra a época festiva de forma inovadora.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/chatbot.png',
+            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-01.png',
         imageAlt: 'ChatBot do projeto Christmas 2024',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Christmas24?tab=readme-ov-file',
         demoUrl:
@@ -233,7 +232,7 @@ export const projects: Project[] = [
         longDescription:
             'Portfólio profissional desenvolvido para compartilhar e apresentar as experiências acadêmicas e profissionais, bem como as competências técnicas e trajetória de desenvolvimento de Eduarda Vieira. A plataforma oferece uma visão abrangente das áreas de atuação, tecnologias dominadas e experiências vivenciadas, facilitando conexões profissionais e oportunidades de colaboração. Desenvolvido com as tecnologias web mais modernas, o portfólio reflete qualidade técnica e atenção ao design, criando um espaço profissional que comunica competência e dedicação.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/hero.png',
+            '/home-duda.png',
         imageAlt: 'Hero do portfólio de Eduarda Vieira',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Portfolio',
         demoUrl: 'https://portfolio-eduardavieira.vercel.app/',
@@ -243,12 +242,12 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/hero.png',
+                    '/home-duda.png',
                 caption: 'Seção hero com apresentação',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/about.png',
+                    '/about-duda.png',
                 caption: 'Seção sobre experiência profissional',
             },
             {
@@ -258,7 +257,7 @@ export const projects: Project[] = [
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/skills.png',
+                    '/skills-duda.png',
                 caption: 'Habilidades técnicas dominadas',
             },
             {

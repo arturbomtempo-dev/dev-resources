@@ -9,7 +9,7 @@ interface LogoProps {
 
 export function Logo({ size, variant = 'default' }: LogoProps) {
     const sizeClasses = {
-        small: 'text-base',
+        small: 'text-xl',
         large: 'text-2xl',
     };
 
@@ -18,7 +18,7 @@ export function Logo({ size, variant = 'default' }: LogoProps) {
 
     return (
         <div
-            className={`flex items-center gap-4 font-semibold transition-colors duration-300 ${className} ${
+            className={`flex items-center gap-3 font-semibold transition-colors duration-300 ${className} ${
                 isLight ? 'text-[#ffffff]' : 'text-black dark:text-gray-100'
             }`}
         >

@@ -92,7 +92,7 @@ export function IndicationCard({ indication, isFavorite, onToggleFavorite }: Ind
                     href={indication.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-teal-600 transition-colors hover:bg-teal-100 hover:text-teal-700 dark:text-teal-400 dark:hover:bg-teal-900/40 dark:hover:text-teal-300"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-teal-600 transition-colors rounded-md hover:bg-teal-100 hover:text-teal-700 dark:text-teal-400 dark:hover:bg-teal-900/40 dark:hover:text-teal-300"
                 >
                     <span>{t.indications.card.access}</span>
                     <ArrowSquareOutIcon size={16} weight="bold" className="ml-1" />

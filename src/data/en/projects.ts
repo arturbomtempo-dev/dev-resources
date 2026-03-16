@@ -29,7 +29,7 @@ export const projects: Project[] = [
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/about.png',
+                    '/about.png',
                 caption: 'About section with project and developer information',
             },
             {
@@ -95,7 +95,7 @@ export const projects: Project[] = [
         longDescription:
             'A special project developed to offer a unique and personalized Christmas experience through the integration of an intelligent chatbot with a dedicated website. The application combines modern technologies to create a conversational platform that interacts with users, delivering personalized Christmas messages and engaging themed content. The thoughtful design and technical implementation create an immersive journey that celebrates the festive season in an innovative way.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/chatbot.png',
+            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-01.png',
         imageAlt: 'Christmas 2024 project chatbot',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Christmas24?tab=readme-ov-file',
         demoUrl:
@@ -232,7 +232,7 @@ export const projects: Project[] = [
         longDescription:
             'A professional portfolio developed to share and present academic and professional experiences, as well as technical skills and development trajectory of Eduarda Vieira. The platform offers a comprehensive view of areas of practice, technologies mastered, and experiences gained, facilitating professional connections and collaboration opportunities. Developed with the most modern web technologies, the portfolio reflects technical quality and design attention, creating a professional space that communicates competence and dedication.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/hero.png',
+            '/home-duda.png',
         imageAlt: 'Eduarda Vieira portfolio hero',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Portfolio',
         demoUrl: 'https://portfolio-eduardavieira.vercel.app/',
@@ -242,12 +242,12 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/hero.png',
+                    '/home-duda.png',
                 caption: 'Hero section with introduction',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/about.png',
+                    '/about-duda.png',
                 caption: 'About section with professional experience',
             },
             {
@@ -257,7 +257,7 @@ export const projects: Project[] = [
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/skills.png',
+                    '/skills-duda.png',
                 caption: 'Technical skills mastered',
             },
             {
