@@ -172,6 +172,29 @@ A estrutura do projeto segue o padrão de arquitetura em camadas, com organizaç
 - **Node.js:** Versão LTS (v22.x ou superior)
 - **Gerenciador de Pacotes:** npm ou yarn
 
+### 🔑 Variáveis de Ambiente
+
+Crie um arquivo `.env` na raiz do projeto e preencha com as variáveis abaixo. Elas são essenciais para o funcionamento da aplicação e integrações externas:
+
+| Variável                         | Descrição                          | Exemplo                         |
+| :------------------------------- | :--------------------------------- | :------------------------------ |
+| `NEXT_PUBLIC_SUPABASE_URL`       | URL do projeto Supabase            | `https://<project>.supabase.co` |
+| `SUPABASE_SERVICE_ROLE_KEY`      | Chave service role do Supabase     | `eyKoLpciOoPl...`               |
+| `EMAILJS_SERVICE_ID`             | Service ID do EmailJS              | `service_xxxxx`                 |
+| `EMAILJS_TEMPLATE_ID_FOR_ME`     | Template ID para receber mensagens | `template_xxxxx`                |
+| `EMAILJS_TEMPLATE_ID_FOR_SENDER` | Template ID para enviar resposta   | `template_xxxxx`                |
+| `EMAILJS_PUBLIC_KEY`             | Chave pública do EmailJS           | `xxxxxxx`                       |
+| `GITHUB_ID`                      | Client ID do GitHub OAuth          | `xxxxxxx`                       |
+| `GITHUB_SECRET`                  | Client Secret do GitHub OAuth      | `xxxxxxx`                       |
+| `GOOGLE_ID`                      | Client ID do Google OAuth          | `xxxxxxx`                       |
+| `GOOGLE_SECRET`                  | Client Secret do Google OAuth      | `xxxxxxx`                       |
+| `LINKEDIN_ID`                    | Client ID do LinkedIn OAuth        | `xxxxxxx`                       |
+| `LINKEDIN_SECRET`                | Client Secret do LinkedIn OAuth    | `xxxxxxx`                       |
+| `AUTH_SECRET`                    | Chave secreta para autenticação    | `xxxxxxx`                       |
+| `AUTH_URL`                       | URL base para autenticação         | `http://localhost:3000`         |
+
+> As variáveis de EmailJS e Supabase são necessárias para envio de e-mails e integração com o banco de dados. As variáveis de OAuth são usadas para autenticação social (GitHub, Google, LinkedIn).
+
 ---
 
 ### 📦 Instalação de Dependências
@@ -191,24 +214,9 @@ cd dev-resources
 npm install
 ```
 
-3. **Configuração de variáveis de ambiente:**
+### 💾 Inicialização do Banco de Dados (PostgreSQL)
 
-Copie o arquivo `.env.example` para `.env`:
-
-```bash
-cp .env.example .env
-```
-
-Em seguida, ajuste as chaves para suas próprias credenciais:
-
-- **EmailJS:** Crie uma conta em [EmailJS](https://www.emailjs.com/), configure um serviço de e-mail e obtenha suas chaves (Service ID, Template ID, Public Key) no painel da plataforma.
-- **Supabase:** Crie um projeto em [Supabase](https://supabase.com/), acesse o painel do projeto e obtenha as chaves de acesso (URL e anon/public key) na seção de API.
-
-Preencha o arquivo `.env` com essas informações antes de executar a aplicação.
-
-4. **Configuração da tabela guestbook no Supabase:**
-
-No painel do Supabase, acesse o menu **SQL Editor** e execute o seguinte comando para criar e configurar a tabela de livro de visitas:
+O projeto utiliza PostgreSQL via Supabase. Para inicializar o banco de dados, execute o script SQL abaixo no painel do Supabase (SQL Editor):
 
 ```sql
 CREATE TABLE guestbook (
@@ -237,6 +245,8 @@ DELETE FROM guestbook;
 ```
 
 Esses comandos criam a tabela, habilitam segurança por linha, políticas de acesso público e permitem atualizações em tempo real. O último comando é opcional e serve para limpar a tabela.
+
+---
 
 ### ⚡ Como Executar a Aplicação
 
@@ -389,6 +399,71 @@ Veja a aplicação funcionando em tempo real:
 #### Erro 404
 
 <img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/not-found.gif" alt="Demonstração da Página Erro 404" width="800px">
+
+---
+
+## 🧪 Testes
+
+O projeto utiliza testes unitários, de integração e end-to-end (E2E) para garantir a qualidade do código.
+
+### Testes Unitários e de Integração (Jest)
+
+Para rodar os testes de unidade e integração:
+
+```bash
+npm test
+```
+
+Outros comandos úteis:
+
+```bash
+npm run test:watch      # Executa em modo watch
+npm run test:coverage   # Relatório de cobertura
+npm run test:ci         # Modo CI
+```
+
+### Testes End-to-End (E2E) (Playwright)
+
+Para rodar os testes E2E:
+
+```bash
+npm run test:e2e
+```
+
+Outros comandos:
+
+```bash
+npm run test:e2e:ui     # Abre interface visual do Playwright
+npm run test:e2e:debug  # Modo debug
+npm run test:e2e:report # Abre relatório HTML
+```
+
+### Executar todos os testes
+
+```bash
+npm run test:all
+```
+
+### Estrutura dos arquivos de teste
+
+Os testes estão organizados da seguinte forma:
+
+```
+dev-resources/
+├── e2e/                          # Testes E2E (Playwright)
+├── src/
+│   ├── __mocks__/                # Mocks globais
+│   ├── test-utils/               # Helpers, mocks de providers
+│   ├── hooks/                    # Testes de hooks
+│   ├── components/               # Testes de componentes
+│   └── app/                      # Testes de páginas e integrações
+├── jest.config.ts                # Configuração do Jest
+├── jest.setup.ts                 # Setup global do Jest
+├── playwright.config.ts          # Configuração do Playwright
+├── test-results/                 # Resultados dos testes E2E
+├── playwright-report/            # Relatório HTML do Playwright
+└── coverage/                     # Relatório de cobertura do Jest
+```
 
 ---
 
