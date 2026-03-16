@@ -35,6 +35,9 @@ const varelaRound = Varela_Round({
 export const metadata: Metadata = {
     title: 'DevResources',
     description: 'Hub colaborativo de curadoria digital, projetos e experiências em tecnologia',
+    icons: {
+        icon: '/favicon.png',
+    },
 };
 
 export default function RootLayout({
