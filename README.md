@@ -360,50 +360,58 @@ Veja a aplicação funcionando em tempo real:
 
 #### Página Inicial (Home)
 
-<img src="./resources/demonstrations/home.gif" alt="Demonstração da Página Home" width="800px">
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/home.gif" alt="Demonstração da Página Home" width="800px">
 
-_Navegação fluida com header transparente que se adapta ao scroll, animações suaves e design responsivo da página inicial com hero section e gradiente animado WebGL._
+#### Indicações
 
----
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/indications.gif" alt="Demonstração da Página Indicações" width="800px">
 
-> Mais demonstrações em vídeo de outras páginas serão adicionadas em breve.
+#### Sobre Nós
 
-### 🌐 Aplicação Web
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/about.gif" alt="Demonstração da Página Sobre Nós" width="800px">
 
-Para melhor visualização, as telas principais estão organizadas lado a lado.
+#### Projetos
 
-|                                             Tela                                             |                                      Captura de Tela                                       |
-| :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
-|                                  **Página Inicial (Home)**                                   |                                       **Sobre Nós**                                        |
-| <img src="./resources/prototype/home.png" alt="Tela Inicial da Aplicação Web" width="400px"> |       <img src="./resources/prototype/about.png" alt="Tela Sobre Nós" width="400px">       |
-|                                        **Indicações**                                        |                                      **Experiências**                                      |
-|   <img src="./resources/prototype/indications.png" alt="Tela de Indicações" width="400px">   | <img src="./resources/prototype/experiences.png" alt="Tela de Experiências" width="400px"> |
-|                                         **Projetos**                                         |                                        **Contato**                                         |
-|     <img src="./resources/prototype/projects.png" alt="Tela de Projetos" width="400px">      |     <img src="./resources/prototype/contact.png" alt="Tela de Contato" width="400px">      |
-|                                     **Livro de Visitas**                                     |                                        **Erro 404**                                        |
-| <img src="./resources/prototype/guestbook.png" alt="Tela de Livro de Visitas" width="400px"> |   <img src="./resources/prototype/not-found.png" alt="Página de Erro 404" width="400px">   |
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/projects.gif" alt="Demonstração da Página Projetos" width="800px">
 
----
+#### Experiências
 
-## 📖 Livro de Visitas
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/experiences.gif" alt="Demonstração da Página Experiências" width="800px">
 
-Uma seção interativa onde visitantes podem deixar mensagens, comentários e feedback sobre a plataforma. Acesse a página de [Livro de Visitas](/guestbook) para compartilhar sua experiência com o Dev Resources.
+#### Livro de Visitas
 
-### Funcionalidades
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/guestbook.gif" alt="Demonstração da Página Livro de Visitas" width="800px">
 
-- ✍️ **Deixar Mensagens:** Registre suas impressões e sugestões sobre o projeto
-- 💬 **Visualizar Comentários:** Veja o que outros visitantes acharam da plataforma
-- 🌟 **Avaliações:** Compartilhe sua opinião com uma experiência simples e intuitiva
+#### Contato
+
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/contact.gif" alt="Demonstração da Página Contato" width="800px">
+
+#### Erro 404
+
+<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/not-found.gif" alt="Demonstração da Página Erro 404" width="800px">
 
 ---
 
 ## 🔗 Documentações utilizadas
 
-- 📖 **Next.js:** [Documentação Oficial do Next.js](https://nextjs.org/docs)
-- 📖 **React:** [Documentação Oficial do React](https://react.dev/reference/react)
-- 📖 **TypeScript:** [Documentação do TypeScript](https://www.typescriptlang.org/docs/)
-- 📖 **Tailwind CSS:** [Documentação do Tailwind CSS](https://tailwindcss.com/docs)
-- 📖 **Vercel:** [Documentação de Deploy da Vercel](https://vercel.com/docs)
+As principais documentações utilizadas no desenvolvimento do sistema:
+
+- [Next.js](https://nextjs.org/docs) — Documentação oficial do framework
+- [React](https://react.dev/reference/react) — Documentação oficial da biblioteca
+- [TypeScript](https://www.typescriptlang.org/docs/) — Documentação da linguagem
+- [Tailwind CSS](https://tailwindcss.com/docs) — Documentação do framework de estilização
+- [Vercel](https://vercel.com/docs) — Documentação de deploy
+- [Playwright](https://playwright.dev/docs/intro) — Documentação de testes E2E
+- [Jest](https://jestjs.io/docs/getting-started) — Documentação de testes unitários/integrados
+- [Supabase](https://supabase.com/docs) — Documentação de banco de dados e autenticação
+- [EmailJS](https://www.emailjs.com/docs/) — Documentação de envio de e-mails
+- [GitHub Actions](https://docs.github.com/pt/actions) — Documentação de CI/CD
+- [PostCSS](https://postcss.org/docs/) — Documentação de processamento de CSS
+- [shadcn/ui](https://ui.shadcn.com/docs) — Documentação de componentes UI
+- [Phosphor Icons](https://phosphoricons.com/) — Documentação de ícones
+- [Sonner](https://sonner.emilkowal.dev/docs) — Documentação de notificações
+- [ESLint](https://eslint.org/docs/latest/) — Documentação de linter
+- [Prettier](https://prettier.io/docs/en/) — Documentação de formatação
 
 ---
 
@@ -415,7 +423,6 @@ Conheça os desenvolvedores responsáveis por este projeto:
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Artur Bomtempo Colen     | <div align="center"><img src="https://avatars.githubusercontent.com/u/96635074?v=4" width="70px" height="70px" style="object-fit: cover;"></div>  | <div align="center"><a href="https://github.com/arturbomtempo-dev"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/artur-bomtempo/"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div>                          | <div align="center"><a href="mailto:arturbcolen@gmail.com"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px"></a></div>                |
 | Eduarda Vieira Gonçalves | <div align="center"><img src="https://avatars.githubusercontent.com/u/159597766?v=4" width="70px" height="70px" style="object-fit: cover;"></div> | <div align="center"><a href="https://github.com/eduardavieira-dev"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:eduarda.vieira.goncalves7@gmail.com"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px" ></a></div> |
-| Henrique Azevedo Flores  | <div align="center"><img src="https://avatars.githubusercontent.com/u/73711171?v=4" width="70px" height="70px" style="object-fit: cover;"></div>  | <div align="center"><a href="https://github.com/Zev1n"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div>             | <div align="center"><a href="https://www.linkedin.com/in/henrique-azevedo-flores-278611235/"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div>       | <div align="center"><a href="mailto:henriqueflores2003@gmail.com"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px"></a></div>         |
 
 ---
 
