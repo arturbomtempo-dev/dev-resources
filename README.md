@@ -379,35 +379,35 @@ Veja a aplicação funcionando em tempo real:
 
 #### Página Inicial (Home)
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/home.gif" alt="Demonstração da Página Home" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/home.gif" alt="Demonstração da Página Home" width="800px">
 
 #### Indicações
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/indications.gif" alt="Demonstração da Página Indicações" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/indications.gif" alt="Demonstração da Página Indicações" width="800px">
 
 #### Sobre Nós
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/about.gif" alt="Demonstração da Página Sobre Nós" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/about.gif" alt="Demonstração da Página Sobre Nós" width="800px">
 
 #### Projetos
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/projects.gif" alt="Demonstração da Página Projetos" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/projects.gif" alt="Demonstração da Página Projetos" width="800px">
 
 #### Experiências
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/experiences.gif" alt="Demonstração da Página Experiências" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/experiences.gif" alt="Demonstração da Página Experiências" width="800px">
 
 #### Livro de Visitas
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/guestbook.gif" alt="Demonstração da Página Livro de Visitas" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/guestbook.gif" alt="Demonstração da Página Livro de Visitas" width="800px">
 
 #### Contato
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/contact.gif" alt="Demonstração da Página Contato" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/contact.gif" alt="Demonstração da Página Contato" width="800px">
 
 #### Erro 404
 
-<img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/demos/dev-resources/not-found.gif" alt="Demonstração da Página Erro 404" width="800px">
+<img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/demos/dev-resources/not-found.gif" alt="Demonstração da Página Erro 404" width="800px">
 
 ---
 
@@ -505,8 +505,8 @@ Conheça os desenvolvedores responsáveis por este projeto:
 
 | 👤 Nome                  | 🖼️ Foto                                                                                                                                           | :octocat: GitHub                                                                                                                                                                                   | 💼 LinkedIn                                                                                                                                                                                                                          | 📤 Gmail                                                                                                                                                                                                 |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Artur Bomtempo Colen     | <div align="center"><img src="https://avatars.githubusercontent.com/u/96635074?v=4" width="70px" height="70px" style="object-fit: cover;"></div>  | <div align="center"><a href="https://github.com/arturbomtempo-dev"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/artur-bomtempo/"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div>                          | <div align="center"><a href="mailto:arturbcolen@gmail.com"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px"></a></div>                |
-| Eduarda Vieira Gonçalves | <div align="center"><img src="https://avatars.githubusercontent.com/u/159597766?v=4" width="70px" height="70px" style="object-fit: cover;"></div> | <div align="center"><a href="https://github.com/eduardavieira-dev"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:eduarda.vieira.goncalves7@gmail.com"><img src="https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px" ></a></div> |
+| Artur Bomtempo Colen     | <div align="center"><img src="https://avatars.githubusercontent.com/u/96635074?v=4" width="70px" height="70px" style="object-fit: cover;"></div>  | <div align="center"><a href="https://github.com/arturbomtempo-dev"><img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/artur-bomtempo/"><img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div>                          | <div align="center"><a href="mailto:arturbcolen@gmail.com"><img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px"></a></div>                |
+| Eduarda Vieira Gonçalves | <div align="center"><img src="https://avatars.githubusercontent.com/u/159597766?v=4" width="70px" height="70px" style="object-fit: cover;"></div> | <div align="center"><a href="https://github.com/eduardavieira-dev"><img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/icons/github.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"><img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/icons/linkedin.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:eduarda.vieira.goncalves7@gmail.com"><img src="https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/icons/gmail.png" width="50px" height="50px" ></a></div> |
 
 ---
 

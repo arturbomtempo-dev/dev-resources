@@ -9,7 +9,7 @@ export const projects: Project[] = [
         longDescription:
             'DevResources é uma plataforma educacional colaborativa desenvolvida durante o quarto período do curso de Engenharia de Software na PUC Minas, na disciplina de Laboratório de Desenvolvimento de Software. O projeto funciona como um repositório centralizado de recursos, ferramentas, cursos e materiais selecionados para auxiliar desde estudantes iniciantes até profissionais experientes da área de desenvolvimento. Através de uma interface intuitiva e bem estruturada, a plataforma facilita a descoberta e o compartilhamento de conteúdo de qualidade, demonstrando os princípios de colaboração, escalabilidade e design focado no usuário.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/home.png',
+            'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/home.png',
         imageAlt: 'Página inicial do DevResources',
         repositoryUrl: 'https://github.com/arturbomtempo-dev/dev-resources',
         demoUrl: 'https://devresources-artur-eduarda.vercel.app/',
@@ -19,12 +19,12 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/home.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/home.png',
                 caption: 'Página inicial com curadoria de recursos para desenvolvedores',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/indications.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/indications.png',
                 caption: 'Seção de indicações com recursos selecionados pela comunidade',
             },
             {
@@ -33,22 +33,22 @@ export const projects: Project[] = [
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/projects.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/projects.png',
                 caption: 'Portfólio de projetos colaborativos da equipe',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/experiences.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/experiences.png',
                 caption: 'Histórico detalhado de experiências profissionais e acadêmicas',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/guestbook.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/guestbook.png',
                 caption: 'Livro de visitas da comunidade com depoimentos',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/dev-resources/contact.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/dev-resources/contact.png',
                 caption: 'Página de contato para comunicação direta',
             },
         ],
@@ -61,7 +61,7 @@ export const projects: Project[] = [
         longDescription:
             'Desenvolvido como material didático para um workshop de React, este projeto exemplifica os fundamentos essenciais do consumo de APIs e gerenciamento de estado no desenvolvimento web. A aplicação apresenta um catálogo visual e interativo de filmes e diretores do Studio Ghibli, permitindo aos usuários explorar informações detalhadas sobre suas obras-primas. Através de uma interface moderna e responsiva, o projeto serve como base prática para que iniciantes compreendam conceitos-chave do React, consolidando aprendizados teóricos em uma experiência real e envolvente.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/studio-ghibli-api/hero-section.png',
+            'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/studio-ghibli-api/hero-section.png',
         imageAlt: 'Hero section do projeto Studio Ghibli API',
         repositoryUrl: 'https://github.com/arturbomtempo-dev/react-app-workshop',
         demoUrl: 'https://studio-ghibli-react.vercel.app/',
@@ -71,17 +71,17 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/studio-ghibli-api/hero-section.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/studio-ghibli-api/hero-section.png',
                 caption: 'Hero section com apresentação do projeto',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/studio-ghibli-api/directos-and-films-section.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/studio-ghibli-api/directos-and-films-section.png',
                 caption: 'Seção de diretores e filmes do Studio Ghibli',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/studio-ghibli-api/films.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/studio-ghibli-api/films.png',
                 caption: 'Catálogo detalhado de filmes com informações',
             },
         ],
@@ -94,7 +94,7 @@ export const projects: Project[] = [
         longDescription:
             'Projeto especial desenvolvido com o objetivo de oferecer uma experiência natalina única e personalizada através da integração de um chatbot inteligente com um website dedicado. A aplicação combina tecnologias modernas para criar uma plataforma conversacional que interage com os usuários, entregando mensagens de Natal personalizadas e conteúdo temático envolvente. O design cuidadoso e a implementação técnica criam uma jornada imersiva que celebra a época festiva de forma inovadora.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-01.png',
+            'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/section-01.png',
         imageAlt: 'ChatBot do projeto Christmas 2024',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Christmas24?tab=readme-ov-file',
         demoUrl:
@@ -105,32 +105,32 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/chatbot.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/chatbot.png',
                 caption: 'Interface do chatbot conversacional',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-01.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/section-01.png',
                 caption: 'Primeira seção da página de Natal',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-02.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/section-02.png',
                 caption: 'Segunda seção com conteúdo temático',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-03.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/section-03.png',
                 caption: 'Terceira seção da experiência',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-04.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/section-04.png',
                 caption: 'Quarta seção do projeto',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/christmas-2024/section-05.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/christmas-2024/section-05.png',
                 caption: 'Quinta seção finalizando a experiência',
             },
         ],
@@ -143,7 +143,7 @@ export const projects: Project[] = [
         longDescription:
             'Desenvolvido na disciplina de Framework do curso técnico de Desenvolvimento Web e Mobile, este projeto consolida o aprendizado avançado sobre consumo de APIs, gerenciamento de estado com React Hooks e desenvolvimento full-stack com Node.js e Express. A aplicação permite explorar e consultar informações detalhadas sobre mobs, equipamentos e minérios do Minecraft através de uma API desenvolvida especificamente para o projeto. A interface visual, inspirada na estética pixelada do jogo, oferece uma experiência imersiva que combina funcionalidade com design contextual, tornando a descoberta de informações intuitiva e agradável.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/craft-api/mobs.png',
+            'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/craft-api/mobs.png',
         imageAlt: 'Seção de mobs do projeto Craft API',
         repositoryUrl: 'https://github.com/arturbomtempo-dev/craft-api',
         demoUrl: 'https://craft-api.vercel.app/',
@@ -161,22 +161,22 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/craft-api/hero.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/craft-api/hero.png',
                 caption: 'Página inicial do explorador Craft',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/craft-api/mobs.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/craft-api/mobs.png',
                 caption: 'Catálogo interativo de mobs do Minecraft',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/craft-api/equipment.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/craft-api/equipment.png',
                 caption: 'Listagem completa de equipamentos do jogo',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/craft-api/ores.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/craft-api/ores.png',
                 caption: 'Seção de minérios com informações detalhadas',
             },
         ],
@@ -189,7 +189,7 @@ export const projects: Project[] = [
         longDescription:
             'A versão mais recente do portfólio pessoal desenvolvido com React e tecnologias modernas, apresentando uma síntese cuidadosa da trajetória profissional, competências técnicas e projetos realizados. A plataforma foi construída com ênfase em performance, responsividade e acessibilidade, refletindo tanto as capacidades técnicas quanto o senso estético do desenvolvedor. O design limpo e intuitivo facilita a navegação e a descoberta de informações, criando uma impressão profissional e moderna que comunica claramente a visão e os valores do desenvolvedor.',
         imageUrl:
-            'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/portfolio/home.png',
+            'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/portfolio/home.png',
         imageAlt: 'Página inicial do portfólio de Artur Bomtempo',
         repositoryUrl: 'https://github.com/arturbomtempo-dev/portfolio',
         demoUrl: 'https://www.arturbomtempo.dev/',
@@ -199,27 +199,27 @@ export const projects: Project[] = [
         screenshots: [
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/portfolio/home.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/portfolio/home.png',
                 caption: 'Página inicial com apresentação profissional',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/portfolio/about.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/portfolio/about.png',
                 caption: 'Seção sobre experiência e trajetória',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/portfolio/projects.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/portfolio/projects.png',
                 caption: 'Portfólio de projetos realizados',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/portfolio/content.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/portfolio/content.png',
                 caption: 'Conteúdo e detalhes adicionais',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/portfolio/contact.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/portfolio/contact.png',
                 caption: 'Página de contato e redes profissionais',
             },
         ],
@@ -252,7 +252,7 @@ export const projects: Project[] = [
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/projects.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/projects.png',
                 caption: 'Projetos desenvolvidos',
             },
             {
@@ -262,12 +262,12 @@ export const projects: Project[] = [
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/experiences.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/experiences.png',
                 caption: 'Histórico de experiências',
             },
             {
                 imageUrl:
-                    'https://arturbomtempo-dev.github.io/artur-bomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/contact.png',
+                    'https://arturbomtempo-dev.github.io/arturbomtempo-cdn/assets/images/projects/eduarda-vieira-portfolio/contact.png',
                 caption: 'Página de contato e redes profissionais',
             },
         ],
