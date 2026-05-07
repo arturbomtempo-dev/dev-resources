@@ -150,7 +150,7 @@ export const experiences: ExperiencesData = {
             category: 'Acadêmico',
             iconName: 'GraduationCap',
         },
-         {
+        {
             title: 'Lecture on Design Patterns',
             organization: 'PUC Minas',
             period: 'Jul 2025',

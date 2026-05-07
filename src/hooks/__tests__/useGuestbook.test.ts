@@ -13,9 +13,15 @@ jest.mock('@/services/guestbook', () => ({
     subscribeToGuestbook: jest.fn(),
 }));
 
-const mockGetGuestbookEntries = getGuestbookEntries as jest.MockedFunction<typeof getGuestbookEntries>;
-const mockCreateGuestbookEntry = createGuestbookEntry as jest.MockedFunction<typeof createGuestbookEntry>;
-const mockSubscribeToGuestbook = subscribeToGuestbook as jest.MockedFunction<typeof subscribeToGuestbook>;
+const mockGetGuestbookEntries = getGuestbookEntries as jest.MockedFunction<
+    typeof getGuestbookEntries
+>;
+const mockCreateGuestbookEntry = createGuestbookEntry as jest.MockedFunction<
+    typeof createGuestbookEntry
+>;
+const mockSubscribeToGuestbook = subscribeToGuestbook as jest.MockedFunction<
+    typeof subscribeToGuestbook
+>;
 
 const mockEntries = [
     {

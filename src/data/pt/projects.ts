@@ -231,8 +231,7 @@ export const projects: Project[] = [
             'Portfólio profissional que apresenta experiências acadêmicas, profissionais e habilidades técnicas.',
         longDescription:
             'Portfólio profissional desenvolvido para compartilhar e apresentar as experiências acadêmicas e profissionais, bem como as competências técnicas e trajetória de desenvolvimento de Eduarda Vieira. A plataforma oferece uma visão abrangente das áreas de atuação, tecnologias dominadas e experiências vivenciadas, facilitando conexões profissionais e oportunidades de colaboração. Desenvolvido com as tecnologias web mais modernas, o portfólio reflete qualidade técnica e atenção ao design, criando um espaço profissional que comunica competência e dedicação.',
-        imageUrl:
-            '/home-duda.png',
+        imageUrl: '/home-duda.png',
         imageAlt: 'Hero do portfólio de Eduarda Vieira',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Portfolio',
         demoUrl: 'https://portfolio-eduardavieira.vercel.app/',
@@ -241,13 +240,11 @@ export const projects: Project[] = [
         authorIds: [2],
         screenshots: [
             {
-                imageUrl:
-                    '/home-duda.png',
+                imageUrl: '/home-duda.png',
                 caption: 'Seção hero com apresentação',
             },
             {
-                imageUrl:
-                    '/about-duda.png',
+                imageUrl: '/about-duda.png',
                 caption: 'Seção sobre experiência profissional',
             },
             {
@@ -256,8 +253,7 @@ export const projects: Project[] = [
                 caption: 'Projetos desenvolvidos',
             },
             {
-                imageUrl:
-                    '/skills-duda.png',
+                imageUrl: '/skills-duda.png',
                 caption: 'Habilidades técnicas dominadas',
             },
             {

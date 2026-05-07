@@ -28,8 +28,7 @@ export const projects: Project[] = [
                 caption: 'Indications section with community-selected resources',
             },
             {
-                imageUrl:
-                    '/about.png',
+                imageUrl: '/about.png',
                 caption: 'About section with project and developer information',
             },
             {
@@ -231,8 +230,7 @@ export const projects: Project[] = [
             'Professional portfolio presenting academic, professional experiences and technical skills.',
         longDescription:
             'A professional portfolio developed to share and present academic and professional experiences, as well as technical skills and development trajectory of Eduarda Vieira. The platform offers a comprehensive view of areas of practice, technologies mastered, and experiences gained, facilitating professional connections and collaboration opportunities. Developed with the most modern web technologies, the portfolio reflects technical quality and design attention, creating a professional space that communicates competence and dedication.',
-        imageUrl:
-            '/home-duda.png',
+        imageUrl: '/home-duda.png',
         imageAlt: 'Eduarda Vieira portfolio hero',
         repositoryUrl: 'https://github.com/eduardavieira-dev/Portfolio',
         demoUrl: 'https://portfolio-eduardavieira.vercel.app/',
@@ -241,13 +239,11 @@ export const projects: Project[] = [
         authorIds: [2],
         screenshots: [
             {
-                imageUrl:
-                    '/home-duda.png',
+                imageUrl: '/home-duda.png',
                 caption: 'Hero section with introduction',
             },
             {
-                imageUrl:
-                    '/about-duda.png',
+                imageUrl: '/about-duda.png',
                 caption: 'About section with professional experience',
             },
             {
@@ -256,8 +252,7 @@ export const projects: Project[] = [
                 caption: 'Completed projects',
             },
             {
-                imageUrl:
-                    '/skills-duda.png',
+                imageUrl: '/skills-duda.png',
                 caption: 'Technical skills mastered',
             },
             {

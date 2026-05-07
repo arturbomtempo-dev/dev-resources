@@ -7,13 +7,13 @@ jest.mock('@/lib/i18n/I18nProvider', () => ({
         t: {
             guestbook: {
                 form: {
-                    name: { 
+                    name: {
                         label: 'Name',
-                        placeholder: 'Your name' 
+                        placeholder: 'Your name',
                     },
-                    message: { 
+                    message: {
                         label: 'Message',
-                        placeholder: 'Your message' 
+                        placeholder: 'Your message',
                     },
                     submit: 'Send',
                     submitting: 'Sending...',
@@ -172,7 +172,7 @@ describe('GuestbookForm Component', () => {
             setup();
             const nameInput = screen.getByRole('textbox', { name: /name/i });
             const messageInput = screen.getByRole('textbox', { name: /message/i });
-            
+
             expect(nameInput).toHaveAttribute('id', 'guestbook-name');
             expect(messageInput).toHaveAttribute('id', 'guestbook-message');
         });
